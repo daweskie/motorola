@@ -2,7 +2,7 @@
 
 ZLIB=/home/zamek/c/zamek_lib
 
-MODULE=SerialPackets
+MODULE=socketclient
 
 DEBUG ?= y
 
