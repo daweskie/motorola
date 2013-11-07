@@ -1,6 +1,6 @@
 # Make for library testing 
 
-ZLIB=/home/hallgato/mamqabt1/3/prog3work
+ZLIB=../../
 
 SRC=.
 USE_UTIL=y

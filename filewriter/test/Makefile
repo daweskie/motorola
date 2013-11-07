@@ -1,6 +1,6 @@
 # Make for library testing 
 
-ZLIB=/home/szkkteam/prog3_work/prog3work
+ZLIB=../../
 
 SRC=.
 USE_UTIL=y

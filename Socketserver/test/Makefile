@@ -1,6 +1,6 @@
 # Make for library testing 
 
-ZLIB=/home/balazs/c/prog3work
+ZLIB=../../
 
 SRC=.
 USE_UTIL=y
