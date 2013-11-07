@@ -1,6 +1,6 @@
 # Make for library testing 
 
-ZLIB=/home/byp/mindenes/c/000000/prog3work
+ZLIB=../../
 
 SRC=.
 USE_UTIL=y

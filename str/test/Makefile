@@ -4,7 +4,7 @@ DEBUG=y
 
 ARCH=x86
 
-ZLIB=/home/zamek/c/zamek_lib
+ZLIB=../../
 
 USE_UTIL=y
 USE_STR=y

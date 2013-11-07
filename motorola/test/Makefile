@@ -1,6 +1,6 @@
 # Make for library testing 
 
-ZLIB=/tmp/q/prog3work
+ZLIB=../../
 
 SRC=.
 USE_UTIL=y
