@@ -2,7 +2,7 @@
 
 ZLIB=/home/zamek/c/zamek_lib
 
-MODULE=checksum
+MODULE=filewriter
 
 DEBUG ?= y
 
