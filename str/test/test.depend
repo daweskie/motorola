@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1319182494 source:/home/zamek/oktat/c/gyak/prog_III/mtask/mtask_lib/lib_str/test/main.c
+	"test.h"
+
+1322167826 /home/zamek/oktat/c/gyak/prog_III/mtask/mtask_lib/lib_str/test/test.h
+
+1322344160 source:/home/zamek/oktat/c/gyak/prog_III/mtask/mtask_lib/lib_str/test/test.c
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	"strutil.h"
+
+1322218234 /home/zamek/oktat/c/gyak/prog_III/mtask/mtask_lib/lib_str/include/strutil.h
+
+1319182494 source:/home/zamek/c/zamek_lib/str/test/main.c
+	"test.h"
+
+1322167826 /home/zamek/c/zamek_lib/str/test/test.h
+
+1378914378 source:/home/zamek/c/zamek_lib/str/test/test.c
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	"strutil.h"
+
+1378914408 /home/zamek/c/zamek_lib/str/include/strutil.h
+
