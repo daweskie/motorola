@@ -1,7 +1,7 @@
 #ifndef MOTOROLA_H_INCLUDED
 #define MOTOROLA_H_INCLUDED
 
-/** 
+/**
     Frame format:
 
     n*0x55      (MOTOROLA_PREAMBLE_COUNT*MOTOROLA_PREAMBLE)
@@ -29,20 +29,20 @@
 
 
 
-#include <motorola.h>
+//#include <motorola.h>
 
 
-struct adat *MotInit(char *serial_id);
+struct adat *MotInit(char *soros_azonosito);
 
-struct adat *MotInitDirect(char *serial_id,
-                                           int queue_size, int mtu,
-                                           char preamble, int preamble_counts);
+struct adat *MotInitDirect(char *soros_azonosito,
+                                           int sor_meret, int mtu,
+                                           char bevezetes, int bevezetes_sz);
 
-void MotReceive(struct adat *data);
+void MotReceive(struct adat *adat_m);
 
-int MotSend(struct adat *data,
-                         int address, int command,
-                         char *buffer, int data_length);
+int MotSend(struct adat *adat_m,
+                         int cim, int parancs,
+                         char *buff, int adat_hossz);
 
 
 #endif // MOTOROLA_H_INCLUDED

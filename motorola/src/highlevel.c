@@ -18,103 +18,112 @@
 #include <macros.h>
 #include <highlevel.h>
 
-static struct hls_frame_t *alloc_frame(int data_length)
+static struct keret *lok_keret(int adat_hossz)
 {
-    struct hls_frame_t *frame;
-    MALLOC(frame, sizeof(struct hls_frame_t));
-    frame->address = 0;
-    frame->address = 0;
-    frame->data_length = 0;
-    frame->valid = 0;
-    MALLOC(frame->data, data_length);
-    return frame;
+    struct keret *hl_keret;
+    MALLOC(hl_keret, sizeof(struct keret));
+    hl_keret->cim = 0;
+    hl_keret->cim = 0;
+    hl_keret->adat_hossz = 0;
+    hl_keret->ervenyesseg = 0;
+    MALLOC(hl_keret->anyag, adat_hossz);
+    return hl_keret;
 }
 
-struct hls_data_t *hls_init(char *serial_id,
-                            hls_receive_char_handler_t receive_char_handler,
-                            hls_send_packet_handler_t send_packet_handler,
-                            int max_frames,int mtu)
+struct adat *Init(char *soros_azonosito,
+                            hl_fogadott_karakter fogadott_karakter_k,
+                            hl_elkuldott_karakter kuldott_karakter_k,
+                            int max_keret,int mtu)
 {
-    struct hls_data_t *hls_data;
-    if (! (receive_char_handler
-           && send_packet_handler
-           && max_frames
-           && mtu) )
+    struct adat *hl_adat;
+    if (! (fogadott_karakter_k && kuldott_karakter_k && max_keret && mtu) )
+
         return NULL;
 
-    MALLOC(hls_data, sizeof(struct hls_data_t));
-    hls_data->receive_char_handler = receive_char_handler;
-    hls_data->send_packet_handler = send_packet_handler;
-    hls_data->max_frames = max_frames;
-    hls_data->mtu = mtu;
-    hls_data->serial_id = serial_id;
-    hls_data->error_frames = 0;
-    hls_data->overruns = 0;
-    hls_data->received_frames = 0;
-    hls_data->transmitted_frames = 0;
-    TAILQ_INIT(&hls_data->frame_queue);
-    TAILQ_INIT(&hls_data->frame_pool);
+    MALLOC(hl_adat, sizeof(struct adat));
+    hl_adat->fogadott_karakter_k = fogadott_karakter_k;
+    hl_adat->kuldott_karakter_k = kuldott_karakter_k;
+    hl_adat->max_keret = max_keret;
+    hl_adat->mtu = mtu;
+    hl_adat->soros_azonosito = soros_azonosito;
+    hl_adat->hibas_keret = 0;
+    hl_adat->tul_cs = 0;
+    hl_adat->be_keret = 0;
+    hl_adat->ki_keret = 0;
+    TAILQ_INIT(&hl_adat->frame_queue);
+    TAILQ_INIT(&hl_adat->frame_pool);
     int i;
-    for (i=0;i<max_frames;i++)
-        TAILQ_INSERT_TAIL(&hls_data->frame_pool,  alloc_frame(mtu), next);
-    return hls_data;
+    for (i=0;i<max_keret;i++)
+        TAILQ_INSERT_TAIL(&hl_adat->frame_pool, lok_keret(mtu), next);
+    return hl_adat;
 }
 
-int hls_close(struct hls_data_t *hls_data)
+/**int bezar(struct adat *hl_adat)
 {
-    if (hls_data)
-        serial_close(hls_data->serial_id);
+    if (hl_adat)
+        // ? serial_close(hl_adat->soros_azonosito);
     return EXIT_SUCCESS;
 }
+*/
 
-struct hls_frame_t *hls_get_next_frame(struct hls_data_t *hls_data)
+struct keret *kovetkezokeret(struct adat *hl_adat)
 {
-    if (!hls_data )
+    if (!hl_adat )
         return NULL;
 
-    struct hls_frame_t *result=hls_data->frame_queue.tqh_first;
-    TAILQ_REMOVE(&hls_data->frame_queue, result, next);
+
+    struct keret *result=hl_adat->frame_queue.tqh_first;
+    TAILQ_REMOVE(&hl_adat->frame_queue, result, next);
+
     return result;
+
 }
 
-int hls_send_frame(struct hls_data_t *hls_data, int address,
-                   int command, char *buffer, int buffer_length)
+int keretkuldesstruct adat *hl_adat, int cim, int parancs char *buff, int buff_hossz)
 {
-    if (!(hls_data && hls_data->send_packet_handler) )
+    if (!(hl_adat && hl_adat->kuldott_karakter_k) )
+
         return EXIT_FAILURE;
-    return hls_data->send_packet_handler(hls_data, address, command, buffer, buffer_length);
+
+    return hl_adat->kuldott_karakter_k(hl_adat, cim, parancs buff, buff_hossz);
 }
 
-int hls_add_receive_frame(struct hls_data_t *hls_data,
-                          struct hls_frame_t *frame)
+int hozzaadfogadottkeret(struct adat *hl_adat, struct keret *hl_keret)
 {
-    if (! (hls_data && frame))
+    if (! (hl_adat && hl_keret))
+
         return EXIT_FAILURE;
 
-    TAILQ_INSERT_HEAD(&hls_data->frame_queue, frame, next);
+    TAILQ_INSERT_HEAD(&hl_adat->frame_queue, hl_keret, next);
+
     return EXIT_SUCCESS;
 }
 
-struct hls_frame_t *hls_get_new_frame(struct hls_data_t *hls_data)
+struct keret *hls_get_new_frame(struct adat *hl_adat)
 {
-    struct hls_frame_t *result;
-    if (!hls_data || TAILQ_EMPTY(&hls_data->frame_pool))
+    struct keret *result;
+
+    if (!hl_adat || TAILQ_EMPTY(&hl_adat->frame_pool))
         return NULL;
 
-    result=hls_data->frame_pool.tqh_first;
-    TAILQ_REMOVE(&hls_data->frame_pool, result, next);
+
+    result=hl_adat->frame_pool.tqh_first;
+    TAILQ_REMOVE(&hl_adat->frame_pool, result, next);
     if (result) {
-        result->address=0;
+        result->cim=0;
         result->command=0;
-        result->valid=0;
+        result->ervenyesseg=0;
     }
+
     return result;
+
 }
 
-void hls_reinstate_frame(struct hls_data_t *hls_data,
-                     struct hls_frame_t *frame)
+void visszakeret(struct adat *hl_adat, struct keret *hl_keret)
 {
-    if (!(hls_data && frame) )
+    if (!(hl_adat && hl_keret) )
+
         return;
-    TAILQ_INSERT_TAIL(&hls_data->frame_pool, frame,  next);
+
+    TAILQ_INSERT_TAIL(&hls_ ->frame_pool, hl_keret,  next);
 }
