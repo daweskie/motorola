@@ -19,12 +19,12 @@
 #include <macros.h>
 #include <crc.h>
 #include <config_common.h>
-#include <highlevel.h>
+//#include <highlevel.h>
 
 #define MOTOROLA_UNKNOWN_ADDRESS -1
 #define MOTOROLA_UNKNOWN_COMMAND -1
 
-enum motorola_frame_state_t{
+enum MotFrameState{
     mfs_none,
     mfs_55,
     mfs_1,
@@ -37,7 +37,7 @@ enum motorola_frame_state_t{
     mfs_crc_hi
 };
 
-static struct motorola_t{
+static struct Motorola_t{
     enum motorola_frame_state_t frame_state;
     crc_t on_the_fly_crc;
     crc_t received_crc;
@@ -194,7 +194,7 @@ void motorola_receive_char(struct hls_data_t *hls_data)
     return;
 }
 
-int motorola_send_frame(struct hls_data_t *hls_data,
+int MotorolaSendFrame(struct hls_data_t *hls_data,
                          int address, int command,
                          char *buffer, int data_length)
 {
@@ -220,7 +220,7 @@ int motorola_send_frame(struct hls_data_t *hls_data,
     crc_t crc=0;
     send_ch(command);
     send_ch(address);
-    char ch = data_length & 0xff;
+    char ch = data_length & 0xff; //maskolas
     send_ch(ch);
     ch = (data_length >> 8) & 0xff;
     send_ch(ch);
