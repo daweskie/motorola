@@ -1,0 +1,47 @@
+2009-05-07 14:38  zamek
+
+	* client.c, global.h, kb.c, packet.c, serial.c, serialframe.depend:
+	  Windows platform
+
+2009-05-07 14:36  zamek
+
+	* client.c, client.h, crc.c, crc.h, doxyfile, global.h, kb.c, kb.h,
+	  main.c, master.c, master.h, packet.c, packet.h, serial.c,
+	  serial.h, serialframe.cbp, serialframe.layout, .cvsignore:
+	  hibajavitas
+
+2009-04-29 16:05  zamek
+
+	* client.c, crc.c, crc.h, client.h, doxyfile, global.h, kb.c, kb.h,
+	  macros.h, main.c, master.c, master.h, READ.ME, packet.h,
+	  packet.c, serial.c, serial.h, serialframe.depend: commentezes
+
+2009-04-29 13:40  zamek
+
+	* client.c, packet.c, serialframe.depend: packet
+
+2009-04-29 10:09  zamek
+
+	* READ.ME, global.h, main.c, master.c, packet.c, serial.c,
+	  serial.h, serialframe.depend, serialframe.layout: win32
+
+2009-04-29 08:45  zamek
+
+	* .cvsignore: cvsignore
+
+2009-04-29 08:40  zamek
+
+	* client.c, client.h, crc.c, crc.h, kb.c, kb.h, macros.h, main.c,
+	  master.c, master.h, packet.c, packet.h, serial.h,
+	  serialframe.cbp, serialframe.depend, serialframe.layout,
+	  resources/serial.dia, resources/serial.png, resources/serial.svg:
+	  Initial revision
+
+2009-04-29 08:40  zamek
+
+	* client.c, client.h, crc.c, crc.h, kb.c, kb.h, macros.h, main.c,
+	  master.c, master.h, packet.c, packet.h, serial.h,
+	  serialframe.cbp, serialframe.depend, serialframe.layout,
+	  resources/serial.dia, resources/serial.png, resources/serial.svg:
+	  enter repo
+

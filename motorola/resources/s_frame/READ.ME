@@ -1,0 +1,61 @@
+Hello,
+
+Ha idáig jutottál. akkor valószínűleg érdekel a soros port kezelés C-ben,
+vagy hozzám jársz ProgII-re.
+
+A feladat:
+
+Készítenünk kell egy programot, amely:
+1. Kliens módban emulál egy mikrokontroller alapú mérésadatgyűjtőt, amely
+   hőmérséklet és nyomás értékeket mér.
+
+2. Master módban a fenti mérésadatgyűjtőről soros porton keresztül ciklikusan
+   lekérdezi és kijelzi a mért értékeket.
+
+A programot mindkét módban el lehet inditani, célszerűen két gépen, majd egy
+nullmodem kábellel összekötve őket, ki lehet próbálni a működést.
+
+A használható billentyűparancsok a következők:
+
+    Esc: kilépés a programból
+Kliens:
+    e: hőmérséklet inkrementálása
+    x: hőmérséklet dekrementálása
+    r: nyomás inkrementálása
+    c: nyomás dekrementálása
+    h: hiba flag ki/be kapcsolása. Ha a bibflag be van kapcsolva, akkor a kliens
+        hibás crc-vel küldi el a kereteket a soros portra, hogy teszteljük
+        a hibás átvitelt.
+
+A kommunikáció a Motorola rádiós keretformátumot használja, ami a következőképpen
+néz ki:
+
+n* 0x55 (n>1) legalább 1 db 0x55
+0xff
+1
+address: a keret címzettje 1 byte
+cmd: a keret parancsa 1 byte
+dLen: adathossz 2 byte, LITTLE ENDIAN formátumban
+        ( http://en.wikipedia.org/wiki/Endianness )
+        lehet 0 is!
+data: a keret adatai ha dlen 0, akkor nincs
+crc: 2 byte crc az atvitel hibaellenőrzésére
+        http://en.wikipedia.org/wiki/Cyclic_redundancy_check
+
+Ha meg akarod érteni a programot, akkor a main.c-t kezd el olvasni, majd soronként
+próbáld megemészteni. A kommentek reményeim szerint sokat segíthetnek.
+Persze a Kernighan-Ritchie C programming ismerete elengedhetetlen.
+
+http://www.lysator.liu.se/c/bwk-tutor.html
+
+Ha találsz egy include file-t, ami nem <> között van, hanem "" között,
+pl. #include "packet.h", akkor lépj át arra és olvasd azt is.
+Ezekben nem csak az adott modul változói, hanem az általa
+prolongált függvények szignatúrája is megtalálható, tehát tudhatod, hogy
+melyik függvényt melyik modulban keresd.
+
+Ha az include file végére értél, lépj vissza a hívó file-ba.
+
+A html könyvtárban a Doxygen-nel készült dokumentációt találod.
+
+Jó szórakozást/tanulást.

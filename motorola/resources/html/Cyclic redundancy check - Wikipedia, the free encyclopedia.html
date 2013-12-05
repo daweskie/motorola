@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js ve-not-available" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8"><title>Cyclic redundancy check - Wikipedia, the free encyclopedia</title>
+<meta name="generator" content="MediaWiki 1.23wmf4">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit">
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit">
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png">
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd">
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Cyclic_redundancy_check">
+<link rel="stylesheet" href="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_002.css">
+<style>
+.tipsy{padding:5px;position:absolute;z-index:100000;cursor:default}.tipsy-inner{padding:5px 8px 4px 8px; background-color:#ffffff;border:solid 1px #a7d7f9;color:black;max-width:15em;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px; }.tipsy-arrow{position:absolute;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALAgMAAADUwp+1AAAACVBMVEX5+fmn1/n///9s6BFKAAAAAXRSTlMAQObYZgAAACpJREFUCB1jZBD4wMiQMoeRcUU4I9uSaYxSE54xZjn8AtMgPkgcJA9UBwAeDw1Qrb3pVAAAAABJRU5ErkJggg==) no-repeat top left;background:url(//bits.wikimedia.org/static-1.23wmf4/resources/jquery.tipsy/images/tipsy.png?2013-11-14T18:10:00Z) no-repeat top left!ie;width:11px;height:6px} .tipsy-n .tipsy-arrow{top:0px;left:50%;margin-left:-5px} .tipsy-nw .tipsy-arrow{top:1px;left:10px} .tipsy-ne .tipsy-arrow{top:1px;right:10px} .tipsy-s .tipsy-arrow{bottom:0px;left:50%;margin-left:-5px;background-position:bottom left} .tipsy-sw .tipsy-arrow{bottom:0px;left:10px;background-position:bottom left} .tipsy-se .tipsy-arrow{bottom:0px;right:10px;background-position:bottom left} .tipsy-e .tipsy-arrow{top:50%;margin-top:-5px;right:1px;width:5px;height:11px;background-position:top right} .tipsy-w .tipsy-arrow{top:50%;margin-top:-5px;left:0px;width:6px;height:11px}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ba28561960b6f903d47015297497d129 */
+.wbc-editpage{list-style:none none;text-align:right;padding-right:.5em !important}.wbc-editpage > a{padding-left:11px;background:no-repeat left center}.wbc-editpage > a:link,.wbc-editpage > a:visited{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEUZAAD///95eXmqqqrY2NjEIQ0cAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGIAASUFENNJCUiqmADZTM5OqExFFZAKRSG4YgBjcwODynSgDwAAAABJRU5ErkJggg==);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/Wikibase/client/resources/images/WBC-Asset-Pencil.png?2013-11-14T18:15:00Z)!ie;color:#797979 !important}.wbc-editpage > a:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEWBAADY2Nj///8GRa0zZrtW2AECAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGYAAWMDEFPYGEgaOgLZzCLCqEwjQ5AKI2W4YgBg5QOTQPzBuAAAAABJRU5ErkJggg==);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/Wikibase/client/resources/images/WBC-Asset-Pencil-Hover.png?2013-11-14T18:15:00Z)!ie;color:#0645AD !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:12a706c5a3716ed31f07360c556a3f3c */
+@media print{#centralNotice{display:none}}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ddb0c98a055632ae8e349c9cf48ac703 */</style><style>
+@-webkit-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-webkit-transform:translateY(-20px)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-moz-transform:translateY(-20px)}100%{opacity:1;-moz-transform:translateY(0)}}@-o-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-o-transform:translateY(-20px)}100%{opacity:1;-o-transform:translateY(0)}}@keyframes centralAuthPPersonalAnimation{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}.centralAuthPPersonalAnimation{-webkit-animation-duration:1s;-moz-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:centralAuthPPersonalAnimation;-moz-animation-name:centralAuthPPersonalAnimation;-o-animation-name:centralAuthPPersonalAnimation;animation-name:centralAuthPPersonalAnimation}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0dcacc990dd02e7db9669ab3090b80f1 */
+.mw-editsection{white-space:nowrap;padding-right:0.25em; unicode-bidi:-moz-isolate;unicode-bidi:-webkit-isolate;unicode-bidi:isolate}.mw-editsection-divider{color:#555} .mw-content-ltr .mw-editsection-expanded .mw-editsection-bracket:first-of-type,.mw-content-rtl .mw-editsection-expanded .mw-editsection-bracket:not(:first-of-type){margin-left:-0.25em;margin-right:0.25em;color:#555} .mw-content-rtl .mw-editsection-expanded .mw-editsection-bracket:first-of-type,.mw-content-ltr .mw-editsection-expanded .mw-editsection-bracket:not(:first-of-type){margin-right:-0.25em;margin-left:0.25em;color:#555}.ve-tabmessage-appendix{font-size:0.7em;vertical-align:top;line-height:1.43em;padding-left:0.5em; background-image:none !important;display:inline !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:542a80e9a1c6a06bda7dfcbb6858ab0f */
+.uls-trigger{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAQCAMAAADQzfSkAAABqlBMVEX////f3/+Ov+/n5+fp6enp6eno6Ojp6enn5+ff39/q6urp6enp6enp6enq6urp6en////q6urr6+upv+rU1NTJycnR0dEaGhrp6enT4/SEuuK9vb3l5eU2ktCxsbFdXV1paWmzwc9ITFDo6OhaWlpsbGxtbW2BipSZpK/X19d2dnZ8hI2/v79PT09gZm2CgoLIyMjD0eGksL1JTVHM2+spKywnKCkcHBzAzt3I1+cxMzZxcXFkZGSvr69WW2C8vLyFjphqcXiLlZ8dHh4gISLa2trQ3/Dc3NzZ2dl7e3uioqIfHyBCRko9QEPh4eFgYGDGxsZoaGiPj4/Ly8uRm6a6yNcbGxuSnKfL2uqVn6scHR20tLR/f3+Kioq4uLienp54gIipqanA2e+71u9GSk5yeoKgoKCAgIB0dHRLS0tlZWWDg4PBwcHFxcWxvsxkanGapbCKlJ7O4fNXo9hQn9bM3/OPmaRfZWve3t6mpqbR0dG+vr6JiYnKyspPVFl1s99+fn5srdzm5ubNzc1BREh2s99xsN7S0tIxMzUiIyQ2OTt/iJFwcHBbYWc3S28lAAAAF3RSTlMACBAg7P3LiTYIX6LmmDzeAYMnDN+1MJx17ncAAAEQSURBVHheddBTb0VREIbhVduYWVuHRm3btm3bNv9zJ2v3IE36Xk3yZG4+xkMKw0BREYwJMzkcO38MY37tG6AmYN48YZFxwsbeiys6y/02rT1Wa4TxwoYgpx4adLMbfRubs9tk0cJuYK8ACv1/Xy5LLlIYS5bf2FTUUlJapptiqKwyuOfJEsjq4M3j+YBPYc02X6utTWnvQEwk6wJRNxn29Pb1D2iIg0bEJMaHYWTU6RyfABPZ5BTa7xBxxo2YzPgcPPGFRb4Ey2Qrq2vrXlRk6xampDK+a94/ODw6PjGfkp2dX1y6ZOvVNWKavsutqt6HbGZ5QCqdMUmSnlXqhY6M12CZtKcaUnhtsKz/Tc5m7AfjN0jzWIipawAAAABJRU5ErkJggg==) no-repeat scroll left center;background:transparent url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.png?2013-11-14T18:13:20Z) no-repeat scroll left center!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.svg?2013-11-14T18:13:20Z);background-image:-moz-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.svg?2013-11-14T18:13:20Z);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.svg?2013-11-14T18:13:20Z);padding-left:30px}#pt-uls a.uls-trigger{padding-left:30px}#p-lang .uls-settings-trigger{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAgCAMAAAAVMLmlAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAALpQTFRF////W1tbgICAWVlZgICAUVFRgICAWVlZhYWFUlJShYWFVFRUgYGBVVVVgYGBVVVVgICAVFRUVVVVVlZWgYGBgICAVFRUgYGBVFRUgICAgYGBVVVVVVVVgYGBVlZWgYGBVFRUgICAVFRUgICAVVVVgICAVlZWgICAVFRUgICAVVVVgICAVFRUgICAVlZWgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICA9Fa9bgAAADx0Uk5TAA4OFBQWFhcXGRlJSUtLWlpbXV9fYGFhZGRlZmlpa2twcIiIioqPj5GRn5+goKGh6+vv7/Dw+fn8/P7+YuRUVgAAAOlJREFUGBmNwcdWAgEURMFLFCUaAcWAEhQYHBRmCN3//1u+BYcVC6s4p2U3OLrrVxN7Xn7uELoH5w65Dx1g6JNnoLazfz++VnZehkZir4pQ3NjzBg5TwtgBhzFh6kDr294UobiykxZc7ezVdLyx8yrw6pM+8GjnDjsf7gj3/WpiJ7Vhl6OW3eC/mlKdo5teZSHNSoM24XqvTCHTvg0MdDIASpn08/6ZSlkJ6jMpLUBhLc3qKEwIIwUURoSJAs2ltC5AIZUWTbjcSulktJayCvCikx7wJG0VttrfEp5eLpfS4uLtgaOmVOeMP8BAM9RClMO9AAAAAElFTkSuQmCC) no-repeat right top;background:transparent url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.png?2013-11-14T18:13:20Z) no-repeat right top!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2013-11-14T18:13:20Z);background-image:-moz-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2013-11-14T18:13:20Z);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2013-11-14T18:13:20Z);height:16px;width:14px;float:right;cursor:pointer}.skin-vector #p-lang .uls-settings-trigger{ margin-top:3px}#p-lang .uls-settings-trigger:hover{background-position:right -16px}   x:-o-prefocus,body.rtl li#pt-uls{ direction:ltr}#settings-block{border-top:1px solid #C9C9C9;background:#f8f8f8;background:-webkit-gradient(linear,left top,left bottom,from(#FBFBFB),to(#F0F0F0));background:-webkit-linear-gradient(top,#FBFBFB,#F0F0F0);background:-moz-linear-gradient(top,#FBFBFB,#F0F0F0);background:-o-linear-gradient(top,#FBFBFB,#F0F0F0);background:linear-gradient(#FBFBFB,#F0F0F0);padding-left:10px;line-height:1.2em;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;border-radius:0 0 5px 5px}.uls-menu a{cursor:pointer}.uls-menu.callout .caret-before{border-top:20px solid transparent;border-right:20px solid #AAA;border-bottom:20px solid transparent;display:inline-block;left:-21px;top:30px;position:absolute}.uls-menu.callout .caret-after{border-top:20px solid transparent;border-right:20px solid #FCFCFC;border-bottom:20px solid transparent;display:inline-block;left:-20px;top:30px;position:absolute}#settings-block div.display-settings-block,#settings-block div.input-settings-block{display:inline-block;margin:8px 15px;color:#565656}#settings-block div.display-settings-block:hover,#settings-block div.input-settings-block:hover{color:#252525}.uls-ui-languages button{width:23%;text-overflow:ellipsis;margin-right:4%}button.uls-more-languages{width:auto}.settings-title{font-size:11pt}.settings-text{color:#555555;font-size:9pt}div.display-settings-block:hover .settings-text{color:#252525} .ime-perime-help{display:none}.ime-checked .ime-perime-help{display:inline-block;width:20px;height:100%;position:absolute;top:0;bottom:0;right:0;opacity:0.75;padding:0;background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAFdQTFRF////AAAAZmZmVVVVSUlJW1tbVVVVV1dXWFhYVVVVV1dXVlZWWFhYV1dXWFhYVlZWV1dXVlZWV1dXV1dXWFhYV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXrNxhuAAAABx0Uk5TAAEFBgcOJCkxNlVla3KDi5WrsrbJ09ny9vf9/uWqFuIAAACESURBVBjTdZDBDsIgEERHai2KUqmllfr+/zs9AFYTnMsmL7uTmZX+yVjnrPkCnU8AyXeVDJGiOJSdCLzmsAIx73ngeZKOC+AlySSA8LjrCiQjyRafmzyAleQymQ7nFcDt6NItVFQOp5Cn/dgzjlDts+vW9xs1RI7KPLNHbRRq1W4951dvPF4RAFiSul8AAAAASUVORK5CYII=) left center no-repeat;background:transparent url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/help.png?2013-11-14T18:13:20Z) left center no-repeat!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB2ZXJzaW9uPSIxLjEiCiAgIHdpZHRoPSIxOCIKICAgaGVpZ2h0PSIxOCIKICAgdmlld0JveD0iMCAwIDE4IDE4LjAwMDAwMSIKICAgaWQ9IkxheWVyXzEiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiPjxtZXRhZGF0YQogICBpZD0ibWV0YWRhdGE5Ij48cmRmOlJERj48Y2M6V29yawogICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlCiAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+PGRjOnRpdGxlPjwvZGM6dGl0bGU+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPjxkZWZzCiAgIGlkPSJkZWZzNyIgLz4KPHBhdGgKICAgZD0ibSA5LjAwMDAwMDMsMS40OTk2NDM3IGMgLTQuMTQxNDE5MSwwIC03LjUwMDAwMDQsMy4zNTc4NjkgLTcuNTAwMDAwNCw3LjUwMDAwMTQgMCw0LjE0MjEzMDkgMy4zNTg1ODEzLDcuNTAwNzExOSA3LjUwMDAwMDQsNy41MDA3MTE5IEMgMTMuMTQyODQ0LDE2LjUwMDM1NyAxNi41LDEzLjE0MTc3NiAxNi41LDguOTk5NjQ1MSAxNi41LDQuODU3NTEyNyAxMy4xNDM1NTYsMS40OTk2NDM3IDkuMDAwMDAwMywxLjQ5OTY0MzcgeiBtIC0wLjAwMTQyLDExLjk0MzQ0MjMgYyAtMC42MTMzMDYyLDAgLTEuMDY3MDUzLC0wLjQ5MDA3NCAtMS4wNjcwNTMsLTEuMDc5ODc0IDAsLTAuNjE0MDE4IDAuNDUzNzQ2OCwtMS4wOTI2OTcgMS4wNjcwNTMsLTEuMDkyNjk3IDAuNTg5Nzk5NSwwIDEuMDY4NDc4NywwLjQ3ODY3OSAxLjA2ODQ3ODcsMS4wOTI2OTcgMCwwLjU4OTA4NyAtMC40Nzg2NzkyLDEuMDc5ODc0IC0xLjA2ODQ3ODcsMS4wNzk4NzQgeiBNIDEwLjUyMDgwOCw4LjgwNDQ3MDIgQyAxMC4wMDU4MDMsOS4yMDkwNjY4IDkuODA4NDg5Myw5LjQ2NzYzODQgOS44MDg0ODkzLDEwLjA0MzE5MSBWIDEwLjM5OTM1IEggOC4yMzc4MTk1IFYgOS45Njk4MjI2IGMgMCwtMS4wODA1ODY2IDAuMzE5ODMxLC0xLjUyMTUxMyAwLjgyMjAxNTgsLTEuOTE0NzEzIDAuNTAzNjA5MywtMC4zOTMxOTkxIDAuODExMzMwNiwtMC42MDE5MDkxIDAuODExMzMwNiwtMS4xNjYwNjQ4IDAsLTAuNDc4Njc4MSAtMC4yOTQ5LC0wLjc0ODY0NjcgLTAuODgzMjc0OCwtMC43NDg2NDY3IC0wLjUwMzYwOTQsMCAtMC45NDU5NTkxLDAuMTM0NjI4MSAtMS40MTE4MTUzLDAuNDU0NDU5MiBMIDYuODI3NDI5MSw1LjMwNzY5NzggQyA3LjQ0MDczNTMsNC44Nzc0NTc1IDguMjAyMjAzNiw0LjU3MTE2MDcgOS4yMDc5OTY5LDQuNTcxMTYwNyBjIDEuMzYxOTUzMSwwIDIuNTA0NTEyMSwwLjc0ODY0NjUgMi41MDQ1MTIxLDIuMTgzOTY4MiAtNy4xMmUtNCwxLjAxODYxNDkgLTAuNTY1NTgsMS41NTg1NTI1IC0xLjE5MTcwOSwyLjA0OTM0MTMgeiIKICAgaWQ9InBhdGgzIgogICBzdHlsZT0iZmlsbDojNTc1NzU3IiAvPgo8L3N2Zz4=);background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/help.svg?2013-11-14T18:13:20Z)!ie;background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB2ZXJzaW9uPSIxLjEiCiAgIHdpZHRoPSIxOCIKICAgaGVpZ2h0PSIxOCIKICAgdmlld0JveD0iMCAwIDE4IDE4LjAwMDAwMSIKICAgaWQ9IkxheWVyXzEiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiPjxtZXRhZGF0YQogICBpZD0ibWV0YWRhdGE5Ij48cmRmOlJERj48Y2M6V29yawogICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlCiAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+PGRjOnRpdGxlPjwvZGM6dGl0bGU+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPjxkZWZzCiAgIGlkPSJkZWZzNyIgLz4KPHBhdGgKICAgZD0ibSA5LjAwMDAwMDMsMS40OTk2NDM3IGMgLTQuMTQxNDE5MSwwIC03LjUwMDAwMDQsMy4zNTc4NjkgLTcuNTAwMDAwNCw3LjUwMDAwMTQgMCw0LjE0MjEzMDkgMy4zNTg1ODEzLDcuNTAwNzExOSA3LjUwMDAwMDQsNy41MDA3MTE5IEMgMTMuMTQyODQ0LDE2LjUwMDM1NyAxNi41LDEzLjE0MTc3NiAxNi41LDguOTk5NjQ1MSAxNi41LDQuODU3NTEyNyAxMy4xNDM1NTYsMS40OTk2NDM3IDkuMDAwMDAwMywxLjQ5OTY0MzcgeiBtIC0wLjAwMTQyLDExLjk0MzQ0MjMgYyAtMC42MTMzMDYyLDAgLTEuMDY3MDUzLC0wLjQ5MDA3NCAtMS4wNjcwNTMsLTEuMDc5ODc0IDAsLTAuNjE0MDE4IDAuNDUzNzQ2OCwtMS4wOTI2OTcgMS4wNjcwNTMsLTEuMDkyNjk3IDAuNTg5Nzk5NSwwIDEuMDY4NDc4NywwLjQ3ODY3OSAxLjA2ODQ3ODcsMS4wOTI2OTcgMCwwLjU4OTA4NyAtMC40Nzg2NzkyLDEuMDc5ODc0IC0xLjA2ODQ3ODcsMS4wNzk4NzQgeiBNIDEwLjUyMDgwOCw4LjgwNDQ3MDIgQyAxMC4wMDU4MDMsOS4yMDkwNjY4IDkuODA4NDg5Myw5LjQ2NzYzODQgOS44MDg0ODkzLDEwLjA0MzE5MSBWIDEwLjM5OTM1IEggOC4yMzc4MTk1IFYgOS45Njk4MjI2IGMgMCwtMS4wODA1ODY2IDAuMzE5ODMxLC0xLjUyMTUxMyAwLjgyMjAxNTgsLTEuOTE0NzEzIDAuNTAzNjA5MywtMC4zOTMxOTkxIDAuODExMzMwNiwtMC42MDE5MDkxIDAuODExMzMwNiwtMS4xNjYwNjQ4IDAsLTAuNDc4Njc4MSAtMC4yOTQ5LC0wLjc0ODY0NjcgLTAuODgzMjc0OCwtMC43NDg2NDY3IC0wLjUwMzYwOTQsMCAtMC45NDU5NTkxLDAuMTM0NjI4MSAtMS40MTE4MTUzLDAuNDU0NDU5MiBMIDYuODI3NDI5MSw1LjMwNzY5NzggQyA3LjQ0MDczNTMsNC44Nzc0NTc1IDguMjAyMjAzNiw0LjU3MTE2MDcgOS4yMDc5OTY5LDQuNTcxMTYwNyBjIDEuMzYxOTUzMSwwIDIuNTA0NTEyMSwwLjc0ODY0NjUgMi41MDQ1MTIxLDIuMTgzOTY4MiAtNy4xMmUtNCwxLjAxODYxNDkgLTAuNTY1NTgsMS41NTg1NTI1IC0xLjE5MTcwOSwyLjA0OTM0MTMgeiIKICAgaWQ9InBhdGgzIgogICBzdHlsZT0iZmlsbDojNTc1NzU3IiAvPgo8L3N2Zz4=);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/help.svg?2013-11-14T18:13:20Z)!ie}.ime-checked .ime-perime-help:hover{opacity:1}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ea93267c4906696831f86bae78aec87c */
+#p-lang ul,.autonym{ font-family:'Autonym',sans-serif}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:5107124d6c4454dabb7fc6e4dcb24c3e */</style><style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.autoellipsis-matched,.highlight{font-weight:bold}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:9780324491b653a3780e2d029bdc140c */
+.wp-teahouse-question-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}#wp-th-question-ask{float:right}.wp-teahouse-ask a.external{background-image:none !important}.wp-teahouse-respond-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}.wp-th-respond{float:right}.wp-teahouse-respond a.external{background-image:none !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ba4e3603af357b5172e85672664d39a8 */
+.referencetooltip{position:absolute;list-style:none;list-style-image:none;opacity:0;font-size:10px;margin:0;z-index:5;padding:0}.referencetooltip li{border:#080086 2px solid;max-width:260px;padding:10px 8px 13px 8px;margin:0px;background-color:#F7F7F7;box-shadow:2px 4px 2px rgba(0,0,0,0.3);-moz-box-shadow:2px 4px 2px rgba(0,0,0,0.3);-webkit-box-shadow:2px 4px 2px rgba(0,0,0,0.3)}.referencetooltip li+li{margin-left:7px;margin-top:-2px;border:0;padding:0;height:3px;width:0px;background-color:transparent;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;border-top:12px #080086 solid;border-right:7px transparent solid;border-left:7px transparent solid}.referencetooltip>li+li::after{content:'';border-top:8px #F7F7F7 solid;border-right:5px transparent solid;border-left:5px transparent solid;margin-top:-12px;margin-left:-5px;z-index:1;height:0px;width:0px;display:block}.client-js body .referencetooltip li li{border:none;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;height:auto;width:auto;margin:auto;padding:0;position:static}.RTflipped{padding-top:13px}.referencetooltip.RTflipped li+li{position:absolute;top:2px;border-top:0;border-bottom:12px #080086 solid}.referencetooltip.RTflipped li+li::after{border-top:0;border-bottom:8px #F7F7F7 solid;position:absolute;margin-top:7px}.RTsettings{float:right;height:16px;width:16px;cursor:pointer;background-image:url(//upload.wikimedia.org/wikipedia/commons/e/ed/Cog.png);margin-top:-9px;margin-right:-7px;-webkit-transition:opacity 0.15s;-moz-transition:opacity 0.15s;-o-transition:opacity 0.15s;-ms-transition:opacity 0.15s;transition:opacity 0.15s;opacity:0.6;filter:alpha(opacity=60)}.RTsettings:hover{opacity:1;filter:alpha(opacity=100)}.RTTarget{border:#080086 2px solid}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3c614aa75cecefe56b27b5e3c9197b7e */
+div#editpage-specialchars{display:block;margin-top:.5em;border:1px solid #c0c0c0;padding:.3em}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:29386c84f9c8f19dfb410df7e5be154b */
+#container{position:relative;min-height:100%}#container,video{width:100%;height:100%}#playerContainer{overflow:hidden;position:relative;height:100%;background:#000}#videoHolder{position:relative;overflow:hidden}.fullscreen #playerContainer{position:absolute !important;width:100% !important;height:100%! important;z-index:9999;min-height:100%;top:0;left:0;margin:0}.mwEmbedPlayer{width:100%;height:100%;overflow:hidden;position:absolute;top:0;left:0}.modal_editor{ left:10px;top:10px;right:10px;bottom:10px;position:fixed;z-index:100}.displayHTML a:visited{color:white}.loadingSpinner{width:32px;height:32px;display:block;padding:0px;background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/loading_ani.gif?2013-11-14T18:11:40Z)}.mw-imported-resource{border:thin solid black}.kaltura-icon{background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/kaltura_logo_sm_transparent.png?2013-11-14T18:11:40Z) !important;background-repeat:no-repeat;display:block;height:12px;width:12px;margin-top:2px !important;margin-left:3px !important}.mw-fullscreen-overlay{background:rgb(0,0,0) none repeat scroll 0% 0%;position:fixed;top:0pt;left:0pt;width:100%;height:100%;-moz-background-clip:border;-moz-background-origin:padding;-moz-background-inline-policy:continuous} .play-btn-large{width:70px;height:53px;background :url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button.png?2013-11-14T18:11:40Z);position :absolute;cursor :pointer;border :none !important;z-index :1}.play-btn-large:hover{background :url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button_hover.png?2013-11-14T18:11:40Z)}.carouselContainer{position :absolute;width :100%;z-index :2}.carouselVideoTitle{position :absolute;top :0px;left :0px;width :100%;background :rgba(0,0,0,0.8);color :white;font-size :small;font-weight :bold;z-index :2}.carouselVideoTitleText{display :block;padding :10px 10px 10px 20px}.carouselTitleDuration{position :absolute;top :0px;right :0px;padding :2px;background-color :#5A5A5A;color :#D9D9D9;font-size :smaller;z-index :2}.carouselImgTitle{position :absolute;width :100%;text-align :center;color :white;font-size :small;background :rgba(0,0,0,0.4)}.carouselImgDuration{position :absolute;top :2px;left :2px;background :rgba( 0,0,0,0.7 );color :white;padding :1px 6px;font-size :small}.carouselPrevButton,.carouselNextButton{display :block;position :absolute;bottom:23px}.carouselPrevButton{left :5px}.carouselNextButton{right:6px}.alert-container{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-image:linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-o-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-moz-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-ms-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0.04,rgb(215,215,215)),color-stop(0.55,rgb(230,230,230)),color-stop(1,rgb(255,255,255)));margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;max-width:80%;max-height:30%}.alert-title{background-color :#E6E6E6;padding :5px;border-bottom :1px solid #D1D1D1;font-weight :normal !important;font-size:14px !important;-webkit-border-top-left-radius:3px;-moz-border-radius-topleft:3px;border-top-left-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-radius-topright:3px;border-top-right-radius:3px }.alert-message{padding :5px;font-weight :normal !important;text-align:center;font-size:14px !important}.alert-buttons-container{text-align:center;padding-bottom:5px}.alert-button{background-color:#474747;color:white;-webkit-border-radius:.5em;-moz-border-radius:.5em;border-radius:.5em;padding:2px 10px;background-image:linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-o-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-moz-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-ms-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-gradient( linear,left bottom,left top,color-stop(0.04,rgb(25,25,25)),color-stop(0.55,rgb(47,47,47)),color-stop(0.68,rgb(71,71,71)) )}.alert-text{color :black !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:4246530442bfd8e2a81d76f365ae06f4 */
+.PopUpMediaTransform a .play-btn-large{position :absolute;top:50%;left :50%;width:70px;height:53px;margin-left:-35px;margin-top:-25px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAA1CAMAAADLRm3ZAAABnlBMVEUAAAAAAAAAAABaWlp4eHh7e3t/f393d3eDg4N0dHRtbW2FhYVra2uJiYmNjY1nZ2eRkZFkZGSUlJRiYmKYmJhgYGCcnJxeXl5cXFyfn58AAACioqKlpaWsrKwAAACpqakAAAAAAAAAAAAAAABEREQFBQUHBwdMTEwAAAAYGBgAAAAAAAABAQEXFxcAAAAAAAAAAABxcXGoqKh3d3eampp8fHyIiIgUFBQcHBw0NDSFhYV+fn5FRUUmJiaNjY11dXWPj4+Hh4c9PT14eHifn59nZ2eBgYFISEiBgYFubm5vb28ODg4lJSVra2tiYmJoaGgEBAQmJiZmZmaLi4saGhpiYmKYmJhZWVlgYGBfX19vb29DQ0MGBgZcXFyBgYFKSkoPDw9ZWVlzc3NQUFBXV1eKiopUVFQdHR1VVVUQEBBYWFglJSVTU1NXV1cKCgosLCySkpJRUVFISEgyMjJPT08dHR2GhoY4ODhNTU09PT0MDAwuLi57e3sTExNJSUkgICBOTk4hISEbGxtTU1MoKChBQUEsLCxXV1cAAABycnIdNM6eAAAAinRSTlOzj6jO1dbX1NfU09nS2drR29Hc0N3Q3c/O3gDf3+Ce4EgIGW7HtbXKnLouq7S5cHIq1ODQ3NTXuLq/1tXEvNjT2NjC093N18bW0dC2vNHM0LW90Ne5z9rLzsrTxbXN1Me3zdDKzdfLu8y3zb3Lyba/2svFwcq618PKxLa/1LjJu8q8u8y+xsDKrdJqj5XQAAABYklEQVR4Xu3XVVNCQRjH4VdQEbvFVRAOIRl2d3d3d3d317d2GEaGOOfM1oUXPB/gN7NX/30BIYPeGMPAqDcgBMhrBUZWLwJBAcwcAriBAzfogAMdKIADBUUmmqm64JAxl2m1k/XMmZkin+YaxsxYqd9iA1OmsfDPajVDZqMgoL1jhzpTmR+k/OCQMlObG+L4dJgq050d5rKVJlOXGaHijjxzny6i94k005YqatBFlmlKEdfy1UeS+UmS0tllwc/0JEhT9WNnBuJlqCy4maE4OSO4mdFYOeO4mQm1jCnAzUyXSJqdm8fOLCRKWVomWIaVZHFrLqJlWE8Ts7lFuAzbGZF294iXYT8rnPLICcSZk5xQyjMzzTKc5wXTXFnoluFaE+TmlnYZipUBpgcA5syjjWU1Tf7I8wvbhr/6Im/vTmDLgO3D9Gn+R5+2aIbXzeABDjwgOIDZtwDIzvwsnR1xujV/AS6zSfMs2bS9AAAAAElFTkSuQmCC);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/TimedMediaHandler/resources/player_big_play_button.png?2013-11-14T18:13:20Z)!ie}.PopUpMediaTransform a .play-btn-large :hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAA1CAMAAADLRm3ZAAABtlBMVEUAAAAAAAAAAAC5ubm1tbWwsLC+vr6Li4vExMSrq6umpqbIyMjOzs6ioqLT09OdnZ3Y2NiZmZnc3NyWlpbh4eGSkpLn5+eQkJCNjY0AAADr6+vv7+/z8/P39/cAAAD9/f0AAAAAAAAAAAAAAAB2dnYAAAAoKCj5+flra2sMDAwAAAAAAAAAAAAAAAAAAAACAgLW1tbPz88wMDCHh4fExMS8vLxKSkpubm6vr6+qqqo0NDQQEBDCwsK1tbUmJiaysrLT09PLy8uIiIgXFxetra2+vr7r6+tycnIbGxvMzMyTk5O1tbU8PDyjo6PR0dG0tLQLCwufn58HBwc9PT2bm5shISEqKiqXl5cICAiJiYmTk5Pj4+OoqKhpaWkKCgqOjo5TU1OXl5cYGBiKioo9PT18fHwlJSWGhoYuLi6CgoIvLy+Dg4Ofn5+oqKg7OzuAgIDk5OSLi4tHR0fIyMh9fX3Z2dlycnJPT08JCQl7e3vJyclhYWFZWVl4eHhhYWEUFBS6urpqamofHx9ycnK2trZzc3N6eno1NTUsLCyKioqAgIBBQUFmZmZHR0cICAjBwcEAAACIiIg+YVJpAAAAknRSTlOzj6jt6+ru4O/p5/Hy5vPl9eT24/ji+eHgAPr7/P2e/hlICG7YLr7+07accipwq7Tw777X6erGzuLjv7fs4rzn8PDYuObr+dK57tjqwuTu6rbjtcPiur3htdvg8+jRtt7H3Lndwdi83b7bwNze5cPb9t/G7drz0Mq22e7MzdjPuOrUu9fo1NnCwN/cxdLItu6t3VahkKcAAAFlSURBVHhe7dfFcgJBFIbRGyLEXegIDBAITtzd3d3d3d3d88ZJigqFzExNyyILzgN8Vb36+wJCGrXWj4JWrUEIkMUElEwWBJwMqNk4sAIDVlACA0qQAQMygowv05fNIDNYplKNFFBnmjN+ZU5SZtrTHHJnqTKVqX8KFykyWSlO9auNxJmmZBebOSWEmZ1EN3v73USZ0ngPxyckmbpYL3n5+JnLaB5FxbiZ20heU+V4mYpwflXVNTiZ2jAhHw1G6Zm1YGEtrZIzbUEiOjqlZrr8xfRIzfQGiOmXmhkIFDEEUjPDIYJGx8YlZyZChdxNYyzDTAS/uXmsZViI4rO0jLkMKzHevtaxl2EjztPWth2wM7sJ7uQHhyTLcJTkSnFqJFuGM4WL8wvSZUiXO11dA1BnbvQ0q2lwRO4f6Db88ekn8vxiB7oM6F8Nb+//6NPmy7C6GczAgBk4G1D75ADpqJ+l1CFGt+Y3XGRJEJqP8KwAAAAASUVORK5CYII=);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/TimedMediaHandler/resources/player_big_play_button_hover.png?2013-11-14T18:13:20Z)!ie}.PopUpMediaTransform{position :relative;display:inline-block}li.gallerybox div.thumb div.PopUpMediaTransform{margin:0 auto}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:1d9d796e8f6ec57bd5c8b8c44f680f32 */</style><style>
+.cite-accessibility-label{position:absolute !important; top:-99999px;clip:rect(1px 1px 1px 1px); clip:rect(1px,1px,1px,1px);padding:0 !important;border:0 !important;height:1px !important;width:1px !important;overflow:hidden}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:6989008023386f50501783f5c5ff5345 */
+.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:4250852ed2349a0d4d0fc6509a3e7d4c */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;-webkit-box-shadow:0 2px 5px 0 #ccc;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(//bits.wikimedia.org/static-1.23wmf4/resources/mediawiki.action/images/green-checkmark.png?2013-11-14T18:10:00Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:6282247611d5f95fa0dbf2f6ce149283 */
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{text-decoration:none;color:black}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:52b1797f70c7e4094dfa4191101944e8 */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load.css">
+<style>a:lang(ar),a:lang(ckb),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0de201fdea5d684523607ed88007b127 */</style>
+
+<script src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_004.php"></script><script src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_002.php"></script><style title="spinjs"></style>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Cyclic_redundancy_check","wgTitle":"Cyclic redundancy check","wgCurRevisionId":583829653,"wgRevisionId":583829653,"wgArticleId":38838,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages containing cite templates with deprecated parameters","Pages with citations using unsupported parameters","Use dmy dates from July 2013","Articles needing expert attention with no reason or talk parameter","Articles needing expert attention from August 2010","All articles needing expert attention","Mathematics articles needing expert attention","Miscellaneous articles needing expert attention","Binary arithmetic","Checksum algorithms","Finite fields","Hash functions"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Cyclic_redundancy_check","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgArticleFeedbackv5Permissions":{"aft-reader":true,"aft-member":false,"aft-editor":false,"aft-monitor":false,"aft-administrator":false,"aft-oversighter":false,"aft-noone":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf4/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr"},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["en-za"],"wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikipedia","aftv5Article":{"id":38838,"title":"Cyclic redundancy check","namespace":0,"categories":["All articles needing expert attention","Articles needing expert attention from August 2010","Articles needing expert attention with no reason or talk parameter","Binary arithmetic","Checksum algorithms","Finite fields","Hash functions","Mathematics articles needing expert attention","Miscellaneous articles needing expert attention","Pages containing cite templates with deprecated parameters","Pages with citations using unsupported parameters","Use dmy dates from July 2013"],"permissionLevel":false},"wgWikibaseItemId":"Q245471"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots"
+:0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"aftv5-last-filter":null,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,
+"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,"searchNs109":false,"searchNs446":false,"searchNs447":false
+,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:664b3f39123c8f67ad841d996d382105 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.wikimediaShopLink.core","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script><script src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_005.php"></script>
+<script src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/geoiplookup"></script><link rel="dns-prefetch" href="http://meta.wikimedia.org/"><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf4/skins/vector/csshover.min.htc")}</style><![endif]--><style>@font-face { font-family: 'Autonym';
+	src: url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/Autonym/Autonym.eot?version=20131112');
+	src: local('Autonym'),		url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/Autonym/Autonym.woff?version=20131112') format('woff'),		url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/Autonym/Autonym.ttf?version=20131112') format('truetype');
+	font-style: normal;}
+</style><script src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_003.php" async=""></script></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Cyclic_redundancy_check skin-vector action-view vector-animateLayout"><div class="cn-fundraising" id="centralNotice">
+
+<style>
+#centralNotice {
+  position: absolute;
+  top: 0;
+}
+#centralNotice.collapsed {
+  display: none;
+}
+div#B13_0701_txt_Cntrl_dr_enYY {
+  background: transparent;
+  display: none;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 9999;
+}
+div#B13_0701_txt_Cntrl_dr_enYY-collapsed {
+  background: #ffcc00 url(//upload.wikimedia.org/wikipedia/donate/c/c0/Information-icon.png) no-repeat 10px 8px;
+  cursor: pointer;
+  min-height: 65px;
+  padding: 10px 40px;
+}
+div#B13_0701_txt_Cntrl_dr_enYY-collapsed p {
+  color: #000;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 16px;
+  margin: 0;
+}
+
+div#B13_0701_txt_Cntrl_dr_enYY-tab-wrapper {
+  width: 100%;
+  text-align: center;
+}
+span#B13_0701_txt_Cntrl_dr_enYY-tab {
+  background: #ffcc00;
+  border: 1px solid #a7a7a7;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: bold;
+  height: 25px;
+  line-height: 25px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 100;
+  padding: 0 4em 0 4em;
+}
+
+span#B13_0701_txt_Cntrl_dr_enYY-close {
+  background: url(//upload.wikimedia.org/wikipedia/donate/1/1e/Small-black-close.png) no-repeat center center;
+  cursor: pointer;
+  display: block;
+  height: 21px;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  width: 21px;
+}
+
+div#B13_0701_txt_Cntrl_dr_enYY-expanded {
+  background: #fff;
+  border-bottom: 1px solid #a7a7a7;
+  display: none;
+  padding: 30px 0 10px 0;
+  position: relative;
+  width: 100%;
+}
+div#B13_0701_txt_Cntrl_dr_enYY-expanded:after {
+  clear: both;
+  content: '';
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+div#B13_0701_txt_Cntrl_dr_enYY-expanded div#B13_0701_txt_Cntrl_dr_enYY-expanded-left {
+  float: left;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 0 2%;
+  padding: 0;
+  width: 43%;
+}
+
+div#B13_0701_txt_Cntrl_dr_enYY-expanded div#B13_0701_txt_Cntrl_dr_enYY-expanded-right {
+  background: #ebf3f9;
+  border: 1px solid #adb8c1;
+  border-radius: 10px;
+  float: right;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0 2% 0 0;
+  padding: 0 1%;
+  text-align: left;
+  width: 48%;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+div#B13_0701_txt_Cntrl_dr_enYY-expanded div#B13_0701_txt_Cntrl_dr_enYY-expanded-right h4 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+  margin: 0 0 15px 0;
+}
+div#B13_0701_txt_Cntrl_dr_enYY-expanded div#B13_0701_txt_Cntrl_dr_enYY-expanded-right p span {
+  font-size: 10px;
+  line-height: 14px;
+}
+div#B13_0701_txt_Cntrl_dr_enYY-expanded div#B13_0701_txt_Cntrl_dr_enYY-expanded-right ul {
+  margin: 10px 0 0 0;
+}
+div#B13_0701_txt_Cntrl_dr_enYY-expanded div#B13_0701_txt_Cntrl_dr_enYY-expanded-right ul li {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 14px;
+}
+div#B13_0701_txt_Cntrl_dr_enYY-expanded div#B13_0701_txt_Cntrl_dr_enYY-expanded-right form span {
+  white-space: nowrap;
+}
+div#B13_0701_txt_Cntrl_dr_enYY-expanded div#B13_0701_txt_Cntrl_dr_enYY-expanded-right form label {
+  font-weight: bold;
+  margin: 0 10px 0 3px;
+}
+div#B13_0701_txt_Cntrl_dr_enYY-expanded div#B13_0701_txt_Cntrl_dr_enYY-expanded-right form button {
+  cursor: pointer;
+  margin: 10px 10px 0 0;
+}
+
+div#B13_0701_txt_Cntrl_dr_enYY-expanded div.B13_0701_txt_Cntrl_dr_enYY-expanded-smallprint {
+  display: block;
+  float: left;
+  font-size: 10px;
+  line-height: 14px;
+  margin: 20px 2% 0 2%;
+  width: 96%;
+}
+div#B13_0701_txt_Cntrl_dr_enYY-expanded div.B13_0701_txt_Cntrl_dr_enYY-expanded-smallprint p {
+  margin: 0;
+}
+
+div#B13_0701_txt_Cntrl_dr_enYY-collapsed p b {
+  color: #0645ad;
+}
+div#B13_0701_txt_Cntrl_dr_enYY:hover div#B13_0701_txt_Cntrl_dr_enYY-collapsed p b {
+  text-decoration: underline;
+}
+</style>
+
+<div style="display: block;" id="B13_0701_txt_Cntrl_dr_enYY">
+  <div id="B13_0701_txt_Cntrl_dr_enYY-collapsed">
+    <p><i>Dear Wikipedia readers:</i> We are the small non-profit that 
+runs the #5 website in the world. We have only 175 staff but serve 500 
+million users, and have costs like any other top site: servers, power, 
+rent, programs, and staff. Wikipedia is something special. It is like a 
+library or a public park. It is like a temple for the mind, a place we 
+can all go to think and learn. To protect our independence, we'll never 
+run ads. We take no government funds. We run on donations averaging 
+about 5000 Ft. <b>If everyone reading this gave 1000 Ft, our fundraiser would be done within an hour.</b>
+ If Wikipedia is useful to you, take one minute to keep it online 
+another year. Please help us forget fundraising and get back to 
+Wikipedia. <i>Thank you.</i></p>
+  </div>
+
+  <div id="B13_0701_txt_Cntrl_dr_enYY-expanded">
+    <div id="B13_0701_txt_Cntrl_dr_enYY-expanded-left">
+      <p>When I founded Wikipedia, I could have made it into a 
+for-profit company with advertising banners, but decided to do something
+ different. Commerce is fine. Advertising is not evil. But it doesn't 
+belong here. Not in Wikipedia.
+
+<b>— Wikipedia Founder, Jimmy Wales</b></p>
+    </div>
+    <div id="B13_0701_txt_Cntrl_dr_enYY-expanded-right">
+      <h4>Please give whatever you can to end the fundraiser today.</h4>
+      <form id="B13_0701_txt_Cntrl_dr_enYY-form" method="post" name="paypalcontribution">
+    <input name="payment_method" value="" type="hidden">
+    <input name="utm_source" value="B13_0701_txt_Cntrl_dr_enYY" type="hidden">
+    <input name="utm_medium" value="sitenotice" type="hidden">
+    <input name="utm_campaign" value="C13_wpdr_enWW_FR" type="hidden">
+    <input name="language" value="en" type="hidden">
+    <input name="referrer" value="" type="hidden">
+    <input name="country" value="HU" type="hidden">
+    <input name="returnto" value="" type="hidden">
+    <input name="currency_code" id="input_currency_code" value="HUF" type="hidden">
+    <div id="dropdown_frequency_options" style="margin-bottom: 18px;">
+        <span><input name="frequency" id="frequency_onetime" onclick="toggleMonthly(false);" value="onetime" checked="checked" type="radio"><label for="frequency_onetime">One-time</label></span>
+        <span style="white-space: normal;"><input name="frequency" id="frequency_monthly" onclick="toggleMonthly(true);" value="monthly" type="radio"><label for="frequency_monthly">Monthly*</label></span>
+    </div>
+    <div id="dropdown_amount_options">
+        <span><input name="amount" id="input_amount_0" onclick="document.paypalcontribution.amountGiven.value=''" value="500" type="radio"><label for="input_amount_0">500 Ft</label></span>
+        <span><input name="amount" id="input_amount_1" onclick="document.paypalcontribution.amountGiven.value=''" value="1000" type="radio"><label for="input_amount_1">1000 Ft</label></span>
+        <span><input name="amount" id="input_amount_2" onclick="document.paypalcontribution.amountGiven.value=''" value="2000" type="radio"><label for="input_amount_2">2000 Ft</label></span>
+        <span><input name="amount" id="input_amount_3" onclick="document.paypalcontribution.amountGiven.value=''" value="4000" type="radio"><label for="input_amount_3">4000 Ft</label></span>
+        <span><input name="amount" id="input_amount_4" onclick="document.paypalcontribution.amountGiven.value=''" value="5000" type="radio"><label for="input_amount_4">5000 Ft</label></span>
+        <span><input name="amount" id="input_amount_5" onclick="document.paypalcontribution.amountGiven.value=''" value="7000" type="radio"><label for="input_amount_5">7000 Ft</label></span>
+        <span><input name="amount" id="input_amount_6" onclick="document.paypalcontribution.amountGiven.value=''" value="10000" type="radio"><label for="input_amount_6">10000 Ft</label></span>
+        <span><input name="amount" id="input_amount_other" value="Other" type="radio"><label for="input_amount_other">Other  Ft</label><input placeholder="" name="amountGiven" size="4" autocomplete="off" onfocus="this.form.input_amount_other.checked=true;" type="text"></span>
+    </div>
+    <div id="dropdown_payment_buttons">
+        
+        
+        <button class="paymentmethod-cc" onclick="redirectPayment('cc'); return false;">
+            Donate with Debit/Credit Card</button>
+        
+        
+        <button class="paymentmethod-pp" onclick="redirectPayment('paypal'); return false;">
+            Donate with PayPal</button>
+        
+        
+        
+        
+        
+    </div>
+<input value="1" name="utm_key" type="hidden"></form>
+      <ul>
+        <li><a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?basic=true&amp;landing_page=Problems_donating&amp;country=HU&amp;language=en&amp;uselang=en">Problems donating?</a> | </li>
+        <li><a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?basic=true&amp;landing_page=Ways_to_Give&amp;country=HU&amp;language=en&amp;uselang=en">Other ways to give</a> | </li>
+        <li><a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?landing_page=FAQ&amp;basic=true&amp;country=HU&amp;language=en&amp;uselang=en">Frequently asked questions</a> | </li>
+        <li><a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?landing_page=Tax_Deductibility&amp;basic=true&amp;country=HU&amp;language=en&amp;uselang=en">Tax deductibility information</a></li>
+      </ul>
+    </div>
+    <div class="B13_0701_txt_Cntrl_dr_enYY-expanded-smallprint">
+      <p><span class="informationsharing-US" style="display: none;">
+By donating, you are agreeing to our <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?basic=true&amp;landing_page=Donor_policy&amp;country=HU&amp;language=en&amp;uselang=en">donor privacy policy</a>. The Wikimedia Foundation is a nonprofit, <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Tax_Deductibility/en?country=HU&amp;language=en&amp;uselang=en">tax-exempt organization</a>.
+</span>
+<span class="informationsharing-nonUS">
+By donating, you are agreeing to our <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?basic=true&amp;landing_page=Donor_policy&amp;country=HU&amp;language=en&amp;uselang=en">donor privacy policy</a> and to sharing your information with the <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?basic=true&amp;landing_page=Tax_Deductibility&amp;country=HU&amp;language=en&amp;uselang=en">Wikimedia Foundation</a> and its service providers in the U.S. and elsewhere.
+</span></p>
+      <p>*Monthly payments will be debited by the Wikimedia Foundation 
+until you notify us to stop. We'll send you an email receipt for each 
+payment, which will include a link to <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?landing_page=Cancel_or_change_recurring_payments&amp;basic=true&amp;country=HU&amp;language=en&amp;uselang=en">easy cancellation instructions.</a></p>
+    </div>
+  </div>
+
+  <div id="B13_0701_txt_Cntrl_dr_enYY-tab-wrapper">
+    <span id="B13_0701_txt_Cntrl_dr_enYY-tab">Please help</span>
+  </div>
+
+  <span id="B13_0701_txt_Cntrl_dr_enYY-close">&nbsp;</span>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+		<div style="padding-top: 111px;" id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Cyclic redundancy check</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><p>A <b>cyclic redundancy check</b> (<b>CRC</b>) is an <a href="http://en.wikipedia.org/wiki/Error_detection_and_correction" title="Error detection and correction">error-detecting code</a> commonly used in digital <a href="http://en.wikipedia.org/wiki/Telecommunications_network" title="Telecommunications network">networks</a> and storage devices to detect accidental changes to raw data. Blocks of data entering these systems get a short <i>check value</i> attached, based on the remainder of a <a href="http://en.wikipedia.org/wiki/Polynomial_long_division" title="Polynomial long division">polynomial division</a>
+ of their contents; on retrieval the calculation is repeated, and 
+corrective action can be taken against presumed data corruption if the 
+check values do not match.</p>
+<p>CRCs are so called because the <i>check</i> (data verification) value is a <i>redundancy</i> (it expands the message without adding <a href="http://en.wikipedia.org/wiki/Entropy_%28information_theory%29" title="Entropy (information theory)">information</a>) and the <a href="http://en.wikipedia.org/wiki/Algorithm" title="Algorithm">algorithm</a> is based on <a href="http://en.wikipedia.org/wiki/Cyclic_code" title="Cyclic code"><i>cyclic</i> codes</a>. CRCs are popular because they are simple to implement in binary <a href="http://en.wikipedia.org/wiki/Computer_hardware" title="Computer hardware">hardware</a>, easy to analyze mathematically, and particularly good at detecting common errors caused by <a href="http://en.wikipedia.org/wiki/Noise" title="Noise">noise</a> in transmission channels. Because the check value has a fixed length, the <a href="http://en.wikipedia.org/wiki/Function_%28mathematics%29" title="Function (mathematics)">function</a> that generates it is occasionally used as a <a href="http://en.wikipedia.org/wiki/Hash_function" title="Hash function">hash function</a>. The CRC was invented by <a href="http://en.wikipedia.org/wiki/W._Wesley_Peterson" title="W. Wesley Peterson">W. Wesley Peterson</a>
+ in 1961; the 32-bit CRC function of Ethernet and many other standards 
+is the work of several researchers and was published during 1975.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+<span class="toctoggle">&nbsp;[<a href="#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Application"><span class="tocnumber">2</span> <span class="toctext">Application</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#CRCs_and_data_integrity"><span class="tocnumber">3</span> <span class="toctext">CRCs and data integrity</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Computation_of_CRC"><span class="tocnumber">4</span> <span class="toctext">Computation of CRC</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Mathematics_of_CRC"><span class="tocnumber">5</span> <span class="toctext">Mathematics of CRC</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Designing_CRC_polynomials"><span class="tocnumber">5.1</span> <span class="toctext">Designing CRC polynomials</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Specification_of_CRC"><span class="tocnumber">6</span> <span class="toctext">Specification of CRC</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Commonly_used_and_standardized_CRCs"><span class="tocnumber">7</span> <span class="toctext">Commonly used and standardized CRCs</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Example_implementation"><span class="tocnumber">8</span> <span class="toctext">Example implementation</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">9</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">10</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#External_links"><span class="tocnumber">11</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=1" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>CRCs are based on the theory of <a href="http://en.wikipedia.org/wiki/Cyclic_code" title="Cyclic code">cyclic</a> <a href="http://en.wikipedia.org/wiki/Error-correcting_code" title="Error-correcting code" class="mw-redirect">error-correcting codes</a>. The use of <a href="http://en.wikipedia.org/wiki/Systematic_code" title="Systematic code">systematic</a>
+ cyclic codes, which encode messages by adding a fixed-length check 
+value, for the purpose of error detection in communication networks, was
+ first proposed by <a href="http://en.wikipedia.org/wiki/W._Wesley_Peterson" title="W. Wesley Peterson">W. Wesley Peterson</a> during 1961.<sup id="cite_ref-PetersonBrown1961_1-0" class="reference"><a href="#cite_note-PetersonBrown1961-1"><span>[</span>1<span>]</span></a></sup> Cyclic codes are not only simple to implement but have the benefit of being particularly well suited for the detection of <a href="http://en.wikipedia.org/wiki/Burst_error" title="Burst error">burst errors</a>,
+ contiguous sequences of erroneous data symbols in messages. This is 
+important because burst errors are common transmission errors in many <a href="http://en.wikipedia.org/wiki/Communication_channel" title="Communication channel" class="mw-redirect">communication channels</a>, including magnetic and optical storage devices. Typically an <i>n</i>-bit CRC applied to a data block of arbitrary length will detect any single error burst not longer than <i>n</i> bits and will detect a fraction 1&nbsp;−&nbsp;2<sup>−<i>n</i></sup> of all longer error bursts.</p>
+<p>Specification of a CRC code requires definition of a so-called <a href="http://en.wikipedia.org/wiki/Generator_polynomial" title="Generator polynomial" class="mw-redirect">generator polynomial</a>. This polynomial resembles the <a href="http://en.wikipedia.org/wiki/Divisor" title="Divisor">divisor</a> in a <a href="http://en.wikipedia.org/wiki/Polynomial_long_division" title="Polynomial long division">polynomial long division</a>, which takes the message as the <a href="http://en.wikipedia.org/wiki/Division_%28mathematics%29" title="Division (mathematics)">dividend</a> and in which the <a href="http://en.wikipedia.org/wiki/Quotient" title="Quotient">quotient</a> is discarded and the <a href="http://en.wikipedia.org/wiki/Remainder" title="Remainder">remainder</a> becomes the result, with the important distinction that the polynomial <a href="http://en.wikipedia.org/wiki/Coefficient" title="Coefficient">coefficients</a> are calculated according to the carry-less arithmetic of a <a href="http://en.wikipedia.org/wiki/Finite_field" title="Finite field">finite field</a>.
+ The length of the remainder is always less than the length of the 
+generator polynomial, which therefore determines how long the result can
+ be.</p>
+<p>In practice, all commonly used CRCs employ the finite field <a href="http://en.wikipedia.org/wiki/GF%282%29" title="GF(2)">GF(2)</a>. This is the field of two elements, usually called 0 and 1, comfortably matching computer architecture.</p>
+<p>A CRC is called an <i>n</i>-bit CRC when its check value is <i>n</i> bits. For a given <i>n</i>, multiple CRCs are possible, each with a different polynomial. Such a polynomial has highest degree <i>n</i>, which means it has <i>n</i>&nbsp;+&nbsp;1 terms. In other words, the polynomial has a length of <i>n</i>&nbsp;+&nbsp;1; its encoding requires <i>n</i>&nbsp;+&nbsp;1 bits. Note that most <a href="#Specification_of_CRC">integer encodings</a>
+ either drop the MSB or LSB bit, since they are always 1. The CRC and 
+associated polynomial typically have a name of the form CRC-<i>n</i>-XXX as in the <a href="#Commonly_used_and_standardized_CRCs">table</a> below.</p>
+<p>The simplest error-detection system, the <a href="http://en.wikipedia.org/wiki/Parity_bit" title="Parity bit">parity bit</a>, is in fact a trivial 1-bit CRC: it uses the generator polynomial&nbsp;<i>x</i>&nbsp;+&nbsp;1 (two terms), and has the name CRC-1.</p>
+<h2><span class="mw-headline" id="Application">Application</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=2" title="Edit section: Application">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A CRC-enabled device calculates a short, fixed-length binary sequence, known as the <i>check value</i> or improperly <i>the CRC</i>, for each block of data to be sent or stored and appends it to the data, forming a <i>codeword</i>.
+ When a codeword is received or read, the device either compares its 
+check value with one freshly calculated from the data block, or 
+equivalently, performs a CRC on the whole codeword and compares the 
+resulting check value with an expected <i>residue</i> constant. If the check values do not match, then the block contains a <i>data error</i>.
+ The device may take corrective action, such as rereading the block or 
+requesting that it be sent again. Otherwise, the data is assumed to be 
+error-free (though, with some small probability, it may contain 
+undetected errors; this is the fundamental nature of error-checking).<sup id="cite_ref-ritter-1986_2-0" class="reference"><a href="#cite_note-ritter-1986-2"><span>[</span>2<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="CRCs_and_data_integrity">CRCs and data integrity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=3" title="Edit section: CRCs and data integrity">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>CRCs are specifically designed to protect against common types of 
+errors on communication channels, where they can provide quick and 
+reasonable assurance of the <a href="http://en.wikipedia.org/wiki/Data_integrity" title="Data integrity">integrity</a> of messages delivered. However, they are not suitable for protecting against intentional alteration of data.</p>
+<p>Firstly, as there is no authentication, an attacker can edit a 
+message and recompute the CRC without the substitution being detected. 
+When stored alongside the data, CRCs and cryptographic hash functions by
+ themselves do not protect against <i>intentional</i> modification of 
+data. Any application that requires protection against such attacks must
+ use cryptographic authentication mechanisms, such as <a href="http://en.wikipedia.org/wiki/Message_authentication_code" title="Message authentication code">message authentication codes</a> or <a href="http://en.wikipedia.org/wiki/Digital_signatures" title="Digital signatures" class="mw-redirect">digital signatures</a> (which are commonly based on <a href="http://en.wikipedia.org/wiki/Cryptographic_hash" title="Cryptographic hash" class="mw-redirect">cryptographic hash</a> functions).</p>
+<p>Secondly, unlike <a href="http://en.wikipedia.org/wiki/Cryptographic_hash" title="Cryptographic hash" class="mw-redirect">cryptographic hash</a> functions, CRC is an easily reversible function, which makes it unsuitable for use in digital signatures.<sup id="cite_ref-stigge-reversecrc_3-0" class="reference"><a href="#cite_note-stigge-reversecrc-3"><span>[</span>3<span>]</span></a></sup></p>
+<p>Thirdly, CRC is a <a href="http://en.wikipedia.org/wiki/Linear_function" title="Linear function">linear function</a> with a property that <img class="tex" alt="\operatorname{crc}(x \oplus y) = \operatorname{crc}(x) \oplus \operatorname{crc}(y)" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/be0db828e499caa869ab8c1c309599ce.png">; as a result, even if the CRC is encrypted with a <a href="http://en.wikipedia.org/wiki/Stream_cipher" title="Stream cipher">stream cipher</a> (or <a href="http://en.wikipedia.org/wiki/Block_cipher_modes_of_operation" title="Block cipher modes of operation" class="mw-redirect">mode</a> of <a href="http://en.wikipedia.org/wiki/Block_cipher" title="Block cipher">block cipher</a>
+ which effectively turns it into a stream cipher, such as OFB or CFB), 
+both the message and the associated CRC can be manipulated without 
+knowledge of the encryption key; this was one of the well-known design 
+flaws of the Wired Equivalent Privacy (<a href="http://en.wikipedia.org/wiki/Wired_Equivalent_Privacy" title="Wired Equivalent Privacy">WEP</a>) protocol.<sup id="cite_ref-wep_4-0" class="reference"><a href="#cite_note-wep-4"><span>[</span>4<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Computation_of_CRC">Computation of CRC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=4" title="Edit section: Computation of CRC">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Computation_of_CRC" title="Computation of CRC" class="mw-redirect">Computation of CRC</a></div>
+<p>To compute an <i>n</i>-bit binary CRC, line the bits representing the input in a row, and position the (<i>n</i>&nbsp;+&nbsp;1)-bit pattern representing the CRC's divisor (called a "<a href="http://en.wikipedia.org/wiki/Polynomial" title="Polynomial">polynomial</a>") underneath the left-hand end of the row.</p>
+<p>In this example, we shall encode 14 bits of message with a 3-bit CRC,
+ with a polynomial x³+x+1. The polynomial is written in binary as the 
+coefficients; a 3rd order polynomial has 4 coefficients. In this case, 
+the coefficients are 1,0, 1 and 1. The result of the calculation is 3 
+bits long.</p>
+<p>Start with the message to be encoded:</p>
+<pre>11010011101100
+</pre>
+<p>This is first padded with zeroes corresponding to the bit length <i>n</i> of the CRC. Here is the first calculation for computing a 3-bit CRC:</p>
+<pre>11010011101100 000 &lt;--- input right padded by 3 bits
+1011               &lt;--- divisor (4 bits) = x³+x+1
+------------------
+01100011101100 000 &lt;--- result
+</pre>
+<p>The algorithm acts on the bits directly above the divisor in each 
+step. The result for that iteration is the bitwise XOR of the polynomial
+ divisor with the bits above it. The bits not above the divisor are 
+simply copied directly below for that step. The divisor is then shifted 
+one bit to the right, and the process is repeated until the divisor 
+reaches the right-hand end of the input row. Here is the entire 
+calculation:</p>
+<pre>11010011101100 000 &lt;--- input right padded by 3 bits
+1011               &lt;--- divisor
+01100011101100 000 &lt;--- result (note the first four bits are the XOR with the divisor beneath, the rest of the bits are unchanged)
+ 1011              &lt;--- divisor ...
+00111011101100 000
+  1011
+00010111101100 000
+   1011
+00000001101100 000 &lt;--- note that the divisor moves over to align with the next 1 in the dividend (since quotient for that step was zero)
+       1011             (in other words, it doesn't necessarily move one bit per iteration)
+00000000110100 000
+        1011
+00000000011000 000
+         1011
+00000000001110 000
+          1011
+00000000000101 000 
+           101 1
+-----------------
+00000000000000 100 &lt;--- remainder (3 bits).  Division algorithm stops here as quotient is equal to zero.
+</pre>
+<p>Since the leftmost divisor bit zeroed every input bit it touched, 
+when this process ends the only bits in the input row that can be 
+nonzero are the n bits at the right-hand end of the row. These <i>n</i> 
+bits are the remainder of the division step, and will also be the value 
+of the CRC function (unless the chosen CRC specification calls for some 
+postprocessing).</p>
+<p>The validity of a received message can easily be verified by 
+performing the above calculation again, this time with the check value 
+added instead of zeroes. The remainder should equal zero if there are no
+ detectable errors.</p>
+<pre>11010011101100 100 &lt;--- input with check value
+1011               &lt;--- divisor
+01100011101100 100 &lt;--- result
+ 1011              &lt;--- divisor ...
+00111011101100 100
+
+......
+  
+00000000001110 100
+          1011
+00000000000101 100 
+           101 1
+------------------
+                 0 &lt;--- remainder
+</pre>
+<h2><span class="mw-headline" id="Mathematics_of_CRC">Mathematics of CRC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=5" title="Edit section: Mathematics of CRC">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Mathematics_of_CRC" title="Mathematics of CRC" class="mw-redirect">Mathematics of CRC</a></div>
+<table class="metadata plainlinks ambox ambox-content" role="presentation">
+<tbody><tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/Ambox_content.png" height="40" width="40"></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This section <b>needs attention from an expert in Mathematics</b>. <span class="hide-when-compact">Please add a <i>reason</i> or a <i>talk</i> parameter to this template to explain the issue with the section. <a href="http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Mathematics" title="Wikipedia:WikiProject Mathematics">WikiProject Mathematics</a> (or its <a href="http://en.wikipedia.org/wiki/Wikipedia:P" title="Wikipedia:P" class="mw-redirect">Portal</a>) may be able to help recruit an expert.</span> <small><i>(August 2010)</i></small></span></td>
+</tr>
+</tbody></table>
+<p>Mathematical analysis of this division-like process reveals how to 
+select a divisor that guarantees good error-detection properties. In 
+this analysis, the digits of the bit strings are thought of as the 
+coefficients of a polynomial in some variable <i>x</i>—coefficients that are elements of the finite field <a href="http://en.wikipedia.org/wiki/GF%282%29" title="GF(2)">GF(2)</a>, instead of more familiar numbers. The set of binary polynomials is treated as a <a href="http://en.wikipedia.org/wiki/Ring_%28mathematics%29" title="Ring (mathematics)">ring</a>.</p>
+<h3><span class="mw-headline" id="Designing_CRC_polynomials">Designing CRC polynomials</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=6" title="Edit section: Designing CRC polynomials">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The selection of generator polynomial is the most important part of 
+implementing the CRC algorithm. The polynomial must be chosen to 
+maximize the error-detecting capabilities while minimizing overall 
+collision probabilities.</p>
+<p>The most important attribute of the polynomial is its length (largest
+ degree(exponent) +1 of any one term in the polynomial), because of its 
+direct influence on the length of the computed check value.</p>
+<p>The most commonly used polynomial lengths are:</p>
+<ul>
+<li>9 bits (CRC-8)</li>
+<li>17 bits (CRC-16)</li>
+<li>33 bits (CRC-32)</li>
+<li>65 bits (CRC-64)</li>
+</ul>
+<p>A CRC is called an <i>n</i>-bit CRC when its check value is <i>n</i>-bits. For a given <i>n</i>, multiple CRC's are possible, each with a different polynomial. Such a polynomial has highest degree <i>n</i>, and hence <i>n</i>&nbsp;+&nbsp;1 terms (the polynomial has a length of <i>n</i>&nbsp;+&nbsp;1). It has a name of the form CRC-<i>n</i>-XXX.</p>
+<p>The design of the CRC polynomial depends on the maximum total length 
+of the block to be protected (data + CRC bits), the desired error 
+protection features, and the type of resources for implementing the CRC,
+ as well as the desired performance. A common misconception is that the 
+"best" CRC polynomials are derived from either an <a href="http://en.wikipedia.org/wiki/Irreducible_polynomial" title="Irreducible polynomial">irreducible polynomial</a> or an irreducible polynomial times the factor&nbsp;(1&nbsp;+&nbsp;<i>x</i>), which adds to the code the ability to detect all errors affecting an odd number of bits.<sup id="cite_ref-williams93_5-0" class="reference"><a href="#cite_note-williams93-5"><span>[</span>5<span>]</span></a></sup>
+ In reality, all the factors described above should enter in the 
+selection of the polynomial. However, choosing a reducible polynomial 
+can result in missed errors, due to the rings having <a href="http://en.wikipedia.org/wiki/Zero_divisor" title="Zero divisor">zero divisors</a>.</p>
+<p>The advantage of choosing a <a href="http://en.wikipedia.org/wiki/Primitive_polynomial_%28field_theory%29" title="Primitive polynomial (field theory)">primitive polynomial</a>
+ as the generator for a CRC code is that the resulting code has maximal 
+total block length in the sense that all 1-bit errors within that block 
+length have different remainders (syndromes) and hence the code can 
+detect all 2-bit errors within that block length. If r is the degree of 
+the primitive generator polynomial, then the maximal total block length 
+is <img class="tex" alt="2 ^ {r} - 1 " src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/a827664cadeae649ac5250e1d070b4da.png">, and the associated code is able to detect any single-bit or double-bit errors.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> We can improve this situation. If we use the generator polynomial <img class="tex" alt="g(x) = p(x)(1 + x)" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/450664cb474d98e61b2c14396cc0e2d0.png">, where <img class="tex" alt="p(x)" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/4130c89f2d12c3ac81aba3adbff28685.png"> is a primitive polynomial of degree <img class="tex" alt="r - 1" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/4bafb3d0c4863848a59299854e083290.png">, then the maximal total block length is <img class="tex" alt="2^{r - 1} - 1" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/13a09ebd4b239efc850396a6232c54ad.png">, and the code is able to detect single, double, triple and all odd number of errors.</p>
+<p>A polynomial <img class="tex" alt="g(x)" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/e84fec1e074026d6fa8e3155482c35c3.png">
+ that admits other factorizations may be chosen then so as to balance 
+the maximal total blocklength with a desired error detection power. The <a href="http://en.wikipedia.org/wiki/BCH_code" title="BCH code">BCH codes</a>
+ are a powerful class of such polynomials. They subsume the two examples
+ above. Regardless of the reducibility properties of a generator 
+polynomial of degree&nbsp;<i>r</i>, if it includes the "+1" term, the code will be able to detect error patterns that are confined to a window of <i>r</i> contiguous bits. These patterns are called "error bursts".</p>
+<h2><span class="mw-headline" id="Specification_of_CRC">Specification of CRC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=7" title="Edit section: Specification of CRC">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The concept of the CRC as an error-detecting code gets complicated 
+when an implementer or standards committee uses it to design a practical
+ system. Here are some of the complications:</p>
+<ul>
+<li>Sometimes an implementation <b>prefixes a fixed bit pattern</b> to 
+the bitstream to be checked. This is useful when clocking errors might 
+insert 0-bits in front of a message, an alteration that would otherwise 
+leave the check value unchanged.</li>
+<li>Usually, but not always, an implementation <b>appends <i>n</i> 0-bits</b> (<i>n</i>
+ being the size of the CRC) to the bitstream to be checked before the 
+polynomial division occurs. Such appending is explicitly demonstrated in
+ the <a href="#Computation_of_CRC">Computation</a> section above. This 
+has the convenience that the remainder of the original bitstream with 
+the check value appended is exactly zero, so the CRC can be checked 
+simply by performing the polynomial division on the received bitstream 
+and comparing the remainder with zero. Due to the associative and 
+commutative properties of the exclusive-or operation, practical table 
+driven implementations can obtain a result numerically equivalent to 
+zero-appending without explicitly appending any zeroes, by using an 
+equivalent,<sup id="cite_ref-williams93_5-1" class="reference"><a href="#cite_note-williams93-5"><span>[</span>5<span>]</span></a></sup> faster algorithm that combines the message bitstream with the stream being shifted out of the CRC register.</li>
+<li>Sometimes an implementation <b>exclusive-ORs a fixed bit pattern</b> into the remainder of the polynomial division.</li>
+<li><b>Bit order:</b> Some schemes view the low-order bit of each byte 
+as "first", which then during polynomial division means "leftmost", 
+which is contrary to our customary understanding of "low-order". This 
+convention makes sense when <a href="http://en.wikipedia.org/wiki/Serial_port" title="Serial port">serial-port</a>
+ transmissions are CRC-checked in hardware, because some widespread 
+serial-port transmission conventions transmit bytes least-significant 
+bit first.</li>
+<li><b><a href="http://en.wikipedia.org/wiki/Byte_order" title="Byte order" class="mw-redirect">Byte order</a></b>:
+ With multi-byte CRCs, there can be confusion over whether the byte 
+transmitted first (or stored in the lowest-addressed byte of memory) is 
+the least-significant byte (LSB) or the most-significant byte (MSB). For
+ example, some 16-bit CRC schemes swap the bytes of the check value.</li>
+<li><b>Omission of the high-order bit</b> of the divisor polynomial: Since the high-order bit is always 1, and since an <i>n</i>-bit CRC must be defined by an (<i>n</i>&nbsp;+&nbsp;1)-bit divisor which <a href="http://en.wikipedia.org/wiki/Arithmetic_overflow" title="Arithmetic overflow">overflows</a> an <i>n</i>-bit <a href="http://en.wikipedia.org/wiki/Processor_register" title="Processor register">register</a>, some writers assume that it is unnecessary to mention the divisor's high-order bit.</li>
+<li><b>Omission of the low-order bit</b> of the divisor polynomial: 
+Since the low-order bit is always 1, authors such as Philip Koopman 
+represent polynomials with their high-order bit intact, but without the 
+low-order bit (the <img class="tex" alt="x^0" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/59b95a7f867ce9d4e0f0b5f86f1260ff.png"> or 1 term). This convention encodes the polynomial complete with its degree in one integer.</li>
+</ul>
+<p>These complications mean that there are three common ways to express a
+ polynomial as an integer: the first two, which are mirror images in 
+binary, are the constants found in code; the third is the number found 
+in Koopman's papers. <i>In each case, one term is omitted.</i> So the polynomial <img class="tex" alt="x^4 + x + 1" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/9cf56dfddae542d12f2e7b1ad2b7d5b1.png"> may be transcribed as:</p>
+<ul>
+<li>0x3 = 0b0011, representing <s><img class="tex" alt="x^4 +" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/28daf78d366169dd535f512de836c878.png"></s><img class="tex" alt="0x^3 + 0x^2 + 1x^1 + 1x^0" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/2a6ac7889af0b8bd815ad6a9113e5781.png"> (MSB-first code)</li>
+<li>0xC = 0b1100, representing <img class="tex" alt="1x^0 + 1x^1 + 0x^2 + 0x^3" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/9124c7c78d7ff6fae27f27ab1efd134c.png"><s><img class="tex" alt="+ x^4" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/477d0ad86c2b3fb3d9f5454755118edc.png"></s> (LSB-first code)</li>
+<li>0x9 = 0b1001, representing <img class="tex" alt="1x^4 + 0x^3 + 0x^2 + 1x^1" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/57b1b671f929c55c943b1ac67fc5b00e.png"><s><img class="tex" alt="+ x^0" src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/d6ad3b5938f00b8835d6e2758911bdd5.png"></s> (Koopman notation)</li>
+</ul>
+<p>In the table below they are shown as:</p>
+<table class="wikitable">
+<tbody><tr>
+<th colspan="4">Examples of CRC Representations</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>Normal</th>
+<th>Reversed</th>
+<th>Reversed reciprocal</th>
+</tr>
+<tr>
+<td>CRC-4</td>
+<td>0x3</td>
+<td>0xC</td>
+<td>0x9</td>
+</tr>
+</tbody></table>
+<h2><span class="mw-headline" id="Commonly_used_and_standardized_CRCs">Commonly used and standardized CRCs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=8" title="Edit section: Commonly used and standardized CRCs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Numerous varieties of cyclic redundancy checks have been incorporated into <a href="http://en.wikipedia.org/wiki/Technical_standard" title="Technical standard">technical standards</a>.
+ By no means does one algorithm, or one of each degree, suit every 
+purpose; Koopman and Chakravarty recommend selecting a polynomial 
+according to the application requirements and the expected distribution 
+of message lengths.<sup id="cite_ref-koop04_7-0" class="reference"><a href="#cite_note-koop04-7"><span>[</span>7<span>]</span></a></sup> The number of distinct CRCs in use has confused developers, a situation which authors have sought to address.<sup id="cite_ref-williams93_5-2" class="reference"><a href="#cite_note-williams93-5"><span>[</span>5<span>]</span></a></sup> There are three polynomials reported for CRC-12,<sup id="cite_ref-koop04_7-1" class="reference"><a href="#cite_note-koop04-7"><span>[</span>7<span>]</span></a></sup> sixteen conflicting definitions of CRC-16, and six of CRC-32.<sup id="cite_ref-cook-catalogue_8-0" class="reference"><a href="#cite_note-cook-catalogue-8"><span>[</span>8<span>]</span></a></sup></p>
+<p>The polynomials commonly applied are not the most efficient ones 
+possible. Between 1993 and 2004, Koopman, Castagnoli and others surveyed
+ the space of polynomials up to 16 bits,<sup id="cite_ref-koop04_7-2" class="reference"><a href="#cite_note-koop04-7"><span>[</span>7<span>]</span></a></sup> and of 24 and 32 bits,<sup id="cite_ref-cast93_9-0" class="reference"><a href="#cite_note-cast93-9"><span>[</span>9<span>]</span></a></sup><sup id="cite_ref-koop02_10-0" class="reference"><a href="#cite_note-koop02-10"><span>[</span>10<span>]</span></a></sup> finding examples that have much better performance (in terms of <a href="http://en.wikipedia.org/wiki/Hamming_distance" title="Hamming distance">Hamming distance</a>
+ for a given message size) than the polynomials of earlier protocols, 
+and publishing the best of these with the aim of improving the error 
+detection capacity of future standards.<sup id="cite_ref-koop02_10-1" class="reference"><a href="#cite_note-koop02-10"><span>[</span>10<span>]</span></a></sup> In particular, <a href="http://en.wikipedia.org/wiki/ISCSI" title="ISCSI">iSCSI</a> and <a href="http://en.wikipedia.org/wiki/SCTP" title="SCTP" class="mw-redirect">SCTP</a> have adopted one of the findings of this research, the <a href="#CRC-32C">CRC-32C</a> (Castagnoli) polynomial.</p>
+<p>The design of the 32-bit polynomial most commonly used by standards 
+bodies, CRC-32-IEEE, was the result of a joint effort for the <a href="http://en.wikipedia.org/wiki/Rome_Laboratory" title="Rome Laboratory">Rome Laboratory</a> and the Air Force Electronic Systems Division by Joseph Hammond, James Brown and Shyan-Shiang Liu of the <a href="http://en.wikipedia.org/wiki/Georgia_Institute_of_Technology" title="Georgia Institute of Technology">Georgia Institute of Technology</a> and Kenneth Brayer of the <a href="http://en.wikipedia.org/wiki/MITRE" title="MITRE" class="mw-redirect">MITRE</a>
+ Corporation. The earliest known appearances of the 32-bit polynomial 
+were in their 1975 publications: Technical Report 2956 by Brayer for 
+MITRE, published in January and released for public dissemination 
+through <a href="http://en.wikipedia.org/wiki/DTIC" title="DTIC" class="mw-redirect">DTIC</a> in August,<sup id="cite_ref-Brayer1975_11-0" class="reference"><a href="#cite_note-Brayer1975-11"><span>[</span>11<span>]</span></a></sup> and Hammond, Brown and Liu's report for the Rome Laboratory, published in May.<sup id="cite_ref-Hammond1975_12-0" class="reference"><a href="#cite_note-Hammond1975-12"><span>[</span>12<span>]</span></a></sup>
+ Both reports contained contributions from the other team. During 
+December 1975, Brayer and Hammond presented their work in a paper at the
+ IEEE National Telecommunications Conference: the IEEE CRC-32 polynomial
+ is the generating polynomial of a <a href="http://en.wikipedia.org/wiki/Hamming_code" title="Hamming code">Hamming code</a> and was selected for its error detection performance.<sup id="cite_ref-BrayerHammond1975_13-0" class="reference"><a href="#cite_note-BrayerHammond1975-13"><span>[</span>13<span>]</span></a></sup>
+ Even so, the Castagnoli CRC-32C polynomial used in iSCSI or SCTP 
+matches its performance on messages from 58 bits to 131 kbits, and 
+outperforms it in several size ranges including the two most common 
+sizes of Internet packet.<sup id="cite_ref-koop02_10-2" class="reference"><a href="#cite_note-koop02-10"><span>[</span>10<span>]</span></a></sup> The <a href="http://en.wikipedia.org/wiki/ITU-T" title="ITU-T">ITU-T</a> <a href="http://en.wikipedia.org/wiki/G.hn" title="G.hn">G.hn</a> standard also uses CRC-32C to detect errors in the payload (although it uses CRC-16-CCITT for PHY headers).</p>
+<p>The table below lists only the polynomials of the various algorithms 
+in use. Variations of a particular protocol can impose pre-inversion, 
+post-inversion and reversed bit ordering as described above. For 
+example, the CRC32 used in both Gzip and Bzip2 use the same polynomial, 
+but Bzip2 employs reversed bit ordering, while Gzip does not.</p>
+<p>CRCs in proprietary protocols might use a non-trivial initial value and final XOR for <a href="http://en.wikipedia.org/wiki/Obfuscation" title="Obfuscation">obfuscation</a>
+ but this does not add cryptographic strength to the algorithm. An 
+unknown error-detecting code can be characterized as a CRC, and as such 
+fully <a href="http://en.wikipedia.org/wiki/Reverse_engineering" title="Reverse engineering">reverse engineered</a>, from its output codewords.<sup id="cite_ref-ewing-rev-eng_14-0" class="reference"><a href="#cite_note-ewing-rev-eng-14"><span>[</span>14<span>]</span></a></sup></p>
+<p>See <a href="http://en.wikipedia.org/wiki/Polynomial_representations_of_cyclic_redundancy_checks" title="Polynomial representations of cyclic redundancy checks">Polynomial representations of cyclic redundancy checks</a> for the non-hex representations of the CRCs below.</p>
+<table class="wikitable">
+<tbody><tr>
+<th rowspan="2">Name</th>
+<th rowspan="2">Uses</th>
+<th colspan="3">Representations</th>
+</tr>
+<tr>
+<th>Normal</th>
+<th><a href="http://en.wikipedia.org/wiki/Mathematics_of_CRC#Reversed_representations_and_reciprocal_polynomials" title="Mathematics of CRC" class="mw-redirect">Reversed</a></th>
+<th><a href="http://en.wikipedia.org/wiki/Mathematics_of_CRC#Reciprocal_polynomials" title="Mathematics of CRC" class="mw-redirect">Reversed reciprocal</a></th>
+</tr>
+<tr>
+<td>CRC-1</td>
+<td>most hardware; also known as <i><a href="http://en.wikipedia.org/wiki/Parity_bit" title="Parity bit">parity bit</a></i></td>
+<td>0x1</td>
+<td>0x1</td>
+<td>0x1</td>
+</tr>
+<tr>
+<td>CRC-4-ITU</td>
+<td><a rel="nofollow" class="external text" href="http://www.itu.int/rec/T-REC-G.704-199810-I/en">G.704</a></td>
+<td>0x3</td>
+<td>0xC</td>
+<td>0x9</td>
+</tr>
+<tr>
+<td>CRC-5-EPC</td>
+<td><a href="http://en.wikipedia.org/wiki/Radio-frequency_identification" title="Radio-frequency identification">Gen 2 RFID</a><sup id="cite_ref-gen-2-spec_15-0" class="reference"><a href="#cite_note-gen-2-spec-15"><span>[</span>15<span>]</span></a></sup></td>
+<td>0x09</td>
+<td>0x12</td>
+<td>0x14</td>
+</tr>
+<tr>
+<td>CRC-5-ITU</td>
+<td><a rel="nofollow" class="external text" href="http://www.itu.int/rec/T-REC-G.704-199810-I/en">G.704</a></td>
+<td>0x15</td>
+<td>0x15</td>
+<td>0x1A</td>
+</tr>
+<tr>
+<td>CRC-5-USB</td>
+<td><a href="http://en.wikipedia.org/wiki/Universal_Serial_Bus" title="Universal Serial Bus" class="mw-redirect">USB</a> token packets</td>
+<td>0x05</td>
+<td>0x14</td>
+<td>0x12</td>
+</tr>
+<tr>
+<td>CRC-6-<a href="http://en.wikipedia.org/wiki/CDMA2000" title="CDMA2000">CDMA2000</a>-A</td>
+<td>mobile networks<sup id="cite_ref-cdma2000-spec_16-0" class="reference"><a href="#cite_note-cdma2000-spec-16"><span>[</span>16<span>]</span></a></sup></td>
+<td>0x27</td>
+<td>0x39</td>
+<td>0x33</td>
+</tr>
+<tr>
+<td>CRC-6-<a href="http://en.wikipedia.org/wiki/CDMA2000" title="CDMA2000">CDMA2000</a>-B</td>
+<td>mobile networks<sup id="cite_ref-cdma2000-spec_16-1" class="reference"><a href="#cite_note-cdma2000-spec-16"><span>[</span>16<span>]</span></a></sup></td>
+<td>0x07</td>
+<td>0x38</td>
+<td>0x23</td>
+</tr>
+<tr>
+<td>CRC-6-ITU</td>
+<td><a rel="nofollow" class="external text" href="http://www.itu.int/rec/T-REC-G.704-199810-I/en">G.704</a></td>
+<td>0x03</td>
+<td>0x30</td>
+<td>0x21</td>
+</tr>
+<tr>
+<td>CRC-7</td>
+<td>telecom systems, <a rel="nofollow" class="external text" href="http://www.itu.int/rec/T-REC-G.707/en">G.707</a>, <a rel="nofollow" class="external text" href="http://www.itu.int/rec/T-REC-G.832/en">G.832</a>, <a href="http://en.wikipedia.org/wiki/MultiMediaCard" title="MultiMediaCard">MMC</a>, <a href="http://en.wikipedia.org/wiki/Secure_Digital_card" title="Secure Digital card" class="mw-redirect">SD</a></td>
+<td>0x09</td>
+<td>0x48</td>
+<td>0x44</td>
+</tr>
+<tr>
+<td>CRC-7-MVB</td>
+<td><a href="http://en.wikipedia.org/wiki/Train_Communication_Network" title="Train Communication Network">Train Communication Network</a>, <a href="http://en.wikipedia.org/wiki/IEC_60870-5" title="IEC 60870-5">IEC 60870-5</a><sup id="cite_ref-chakravarty-thesis_17-0" class="reference"><a href="#cite_note-chakravarty-thesis-17"><span>[</span>17<span>]</span></a></sup></td>
+<td>0x65</td>
+<td>0x53</td>
+<td>0x72</td>
+</tr>
+<tr>
+<td>CRC-8</td>
+<td></td>
+<td>0xD5</td>
+<td>0xAB</td>
+<td>0xEA<sup id="cite_ref-koop04_7-3" class="reference"><a href="#cite_note-koop04-7"><span>[</span>7<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>CRC-8-<a href="http://en.wikipedia.org/wiki/CCITT" title="CCITT" class="mw-redirect">CCITT</a></td>
+<td><a rel="nofollow" class="external text" href="http://www.itu.int/rec/T-REC-I.432.1-199902-I/en">I.432.1</a>; <a href="http://en.wikipedia.org/wiki/Asynchronous_Transfer_Mode" title="Asynchronous Transfer Mode">ATM</a> <a href="http://en.wikipedia.org/wiki/CRC-based_framing" title="CRC-based framing">HEC</a>, <a href="http://en.wikipedia.org/wiki/ISDN" title="ISDN" class="mw-redirect">ISDN</a> HEC and cell delineation</td>
+<td>0x07</td>
+<td>0xE0</td>
+<td>0x83</td>
+</tr>
+<tr>
+<td>CRC-8-<a href="http://en.wikipedia.org/wiki/Dallas_Semiconductor" title="Dallas Semiconductor">Dallas</a>/<a href="http://en.wikipedia.org/wiki/Maxim_Integrated_Products" title="Maxim Integrated Products" class="mw-redirect">Maxim</a></td>
+<td><a href="http://en.wikipedia.org/wiki/1-Wire" title="1-Wire">1-Wire</a> <a href="http://en.wikipedia.org/wiki/Bus_%28computing%29" title="Bus (computing)">bus</a></td>
+<td>0x31</td>
+<td>0x8C</td>
+<td>0x98</td>
+</tr>
+<tr>
+<td>CRC-8-<a href="http://en.wikipedia.org/wiki/SAE-J1850" title="SAE-J1850" class="mw-redirect">SAE-J1850</a></td>
+<td><a href="http://en.wikipedia.org/wiki/AES3" title="AES3">AES3</a></td>
+<td>0x1D</td>
+<td>0xB8</td>
+<td>0x8E</td>
+</tr>
+<tr>
+<td>CRC-8-<a href="http://en.wikipedia.org/wiki/W-CDMA_%28UMTS%29" title="W-CDMA (UMTS)">WCDMA</a></td>
+<td>mobile networks<sup id="cite_ref-cdma2000-spec_16-2" class="reference"><a href="#cite_note-cdma2000-spec-16"><span>[</span>16<span>]</span></a></sup><sup id="cite_ref-richardson-wcdma_18-0" class="reference"><a href="#cite_note-richardson-wcdma-18"><span>[</span>18<span>]</span></a></sup></td>
+<td>0x9B</td>
+<td>0xD9</td>
+<td>0xCD<sup id="cite_ref-koop04_7-4" class="reference"><a href="#cite_note-koop04-7"><span>[</span>7<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>CRC-10</td>
+<td>ATM; <a rel="nofollow" class="external text" href="http://www.itu.int/rec/T-REC-I.610/en">I.610</a></td>
+<td>0x233</td>
+<td>0x331</td>
+<td>0x319</td>
+</tr>
+<tr>
+<td>CRC-10-<a href="http://en.wikipedia.org/wiki/CDMA2000" title="CDMA2000">CDMA2000</a></td>
+<td>mobile networks<sup id="cite_ref-cdma2000-spec_16-3" class="reference"><a href="#cite_note-cdma2000-spec-16"><span>[</span>16<span>]</span></a></sup></td>
+<td>0x3D9</td>
+<td>0x26F</td>
+<td>0x3EC</td>
+</tr>
+<tr>
+<td>CRC-11</td>
+<td><a href="http://en.wikipedia.org/wiki/FlexRay" title="FlexRay">FlexRay</a><sup id="cite_ref-flexray-spec_19-0" class="reference"><a href="#cite_note-flexray-spec-19"><span>[</span>19<span>]</span></a></sup></td>
+<td>0x385</td>
+<td>0x50E</td>
+<td>0x5C2</td>
+</tr>
+<tr>
+<td>CRC-12</td>
+<td>telecom systems<sup id="cite_ref-20" class="reference"><a href="#cite_note-20"><span>[</span>20<span>]</span></a></sup><sup id="cite_ref-21" class="reference"><a href="#cite_note-21"><span>[</span>21<span>]</span></a></sup></td>
+<td>0x80F</td>
+<td>0xF01</td>
+<td>0xC07<sup id="cite_ref-koop04_7-5" class="reference"><a href="#cite_note-koop04-7"><span>[</span>7<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>CRC-12-<a href="http://en.wikipedia.org/wiki/CDMA2000" title="CDMA2000">CDMA2000</a></td>
+<td>mobile networks<sup id="cite_ref-cdma2000-spec_16-4" class="reference"><a href="#cite_note-cdma2000-spec-16"><span>[</span>16<span>]</span></a></sup></td>
+<td>0xF13</td>
+<td>0xC8F</td>
+<td>0xF89</td>
+</tr>
+<tr>
+<td>CRC-13-BBC</td>
+<td>Time signal, <a href="http://en.wikipedia.org/wiki/Radio_teleswitch" title="Radio teleswitch">Radio teleswitch</a><sup id="cite_ref-22" class="reference"><a href="#cite_note-22"><span>[</span>22<span>]</span></a></sup></td>
+<td>0x1CF5</td>
+<td>0x15E7</td>
+<td>0x1E7A</td>
+</tr>
+<tr>
+<td>CRC-15-<a href="http://en.wikipedia.org/wiki/Controller_Area_Network" title="Controller Area Network" class="mw-redirect">CAN</a></td>
+<td></td>
+<td>0x4599</td>
+<td>0x4CD1</td>
+<td>0x62CC</td>
+</tr>
+<tr>
+<td>CRC-15-<a href="http://en.wikipedia.org/wiki/MPT1327" title="MPT1327" class="mw-redirect">MPT1327</a></td>
+<td><sup id="cite_ref-mpt1327_23-0" class="reference"><a href="#cite_note-mpt1327-23"><span>[</span>23<span>]</span></a></sup></td>
+<td>0x6815</td>
+<td>0x540B</td>
+<td>0x740A</td>
+</tr>
+<tr>
+<td>Chakravarty</td>
+<td>optimal for payloads ≤64 bits<sup id="cite_ref-chakravarty-thesis_17-1" class="reference"><a href="#cite_note-chakravarty-thesis-17"><span>[</span>17<span>]</span></a></sup></td>
+<td>0x2F15</td>
+<td>0xA8F4</td>
+<td>0x978A</td>
+</tr>
+<tr>
+<td>CRC-16-<a href="http://en.wikipedia.org/wiki/ARINC" title="ARINC">ARINC</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Aircraft_Communications_Addressing_and_Reporting_System" title="Aircraft Communications Addressing and Reporting System">ACARS</a> applications<sup id="cite_ref-rehmann-acars_24-0" class="reference"><a href="#cite_note-rehmann-acars-24"><span>[</span>24<span>]</span></a></sup></td>
+<td>0xA02B</td>
+<td>0xD405</td>
+<td>0xD015</td>
+</tr>
+<tr>
+<td>CRC-16-CCITT</td>
+<td><a href="http://en.wikipedia.org/wiki/X.25" title="X.25">X.25</a>, <a href="http://en.wikipedia.org/wiki/V.41" title="V.41" class="mw-redirect">V.41</a>, <a href="http://en.wikipedia.org/wiki/HDLC" title="HDLC" class="mw-redirect">HDLC</a> <i>FCS</i>, <a href="http://en.wikipedia.org/wiki/XMODEM" title="XMODEM">XMODEM</a>, <a href="http://en.wikipedia.org/wiki/Bluetooth" title="Bluetooth">Bluetooth</a>, <a href="http://en.wikipedia.org/wiki/PACTOR" title="PACTOR">PACTOR</a>, <a href="http://en.wikipedia.org/wiki/Secure_Digital_card" title="Secure Digital card" class="mw-redirect">SD</a>, many others; known as <i>CRC-CCITT</i></td>
+<td>0x1021</td>
+<td>0x8408</td>
+<td>0x8810<sup id="cite_ref-koop04_7-6" class="reference"><a href="#cite_note-koop04-7"><span>[</span>7<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>CRC-16-<a href="http://en.wikipedia.org/wiki/CDMA2000" title="CDMA2000">CDMA2000</a></td>
+<td>mobile networks<sup id="cite_ref-cdma2000-spec_16-5" class="reference"><a href="#cite_note-cdma2000-spec-16"><span>[</span>16<span>]</span></a></sup></td>
+<td>0xC867</td>
+<td>0xE613</td>
+<td>0xE433</td>
+</tr>
+<tr>
+<td>CRC-16-<a href="http://en.wikipedia.org/wiki/Digital_Enhanced_Cordless_Telecommunications" title="Digital Enhanced Cordless Telecommunications">DECT</a></td>
+<td>cordless telephones<sup id="cite_ref-en-300-175-3_25-0" class="reference"><a href="#cite_note-en-300-175-3-25"><span>[</span>25<span>]</span></a></sup></td>
+<td>0x0589</td>
+<td>0x91A0</td>
+<td>0x82C4</td>
+</tr>
+<tr>
+<td>CRC-16-<a href="http://en.wikipedia.org/wiki/International_Committee_for_Information_Technology_Standards" title="International Committee for Information Technology Standards">T10</a>-<a href="http://en.wikipedia.org/wiki/Data_Integrity_Field" title="Data Integrity Field">DIF</a></td>
+<td><a href="http://en.wikipedia.org/wiki/SCSI" title="SCSI">SCSI</a> DIF</td>
+<td>0x8BB7<sup id="cite_ref-thaler-t10-selection_26-0" class="reference"><a href="#cite_note-thaler-t10-selection-26"><span>[</span>26<span>]</span></a></sup></td>
+<td>0xEDD1</td>
+<td>0xC5DB</td>
+</tr>
+<tr>
+<td>CRC-16-<a href="http://en.wikipedia.org/wiki/DNP3" title="DNP3">DNP</a></td>
+<td>DNP, <a href="http://en.wikipedia.org/wiki/IEC_60870-5" title="IEC 60870-5">IEC 870</a>, <a href="http://en.wikipedia.org/wiki/Meter-Bus" title="Meter-Bus">M-Bus</a></td>
+<td>0x3D65</td>
+<td>0xA6BC</td>
+<td>0x9EB2</td>
+</tr>
+<tr>
+<td>CRC-16-<a href="http://en.wikipedia.org/wiki/IBM" title="IBM">IBM</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Binary_Synchronous_Communications" title="Binary Synchronous Communications">Bisync</a>, <a href="http://en.wikipedia.org/wiki/Modbus" title="Modbus">Modbus</a>, <a href="http://en.wikipedia.org/wiki/Universal_Serial_Bus" title="Universal Serial Bus" class="mw-redirect">USB</a>, <a href="http://en.wikipedia.org/wiki/ANSI" title="ANSI" class="mw-redirect">ANSI</a> <a rel="nofollow" class="external text" href="http://www.incits.org/press/1997/pr97020.htm">X3.28</a>, SIA DC-07, many others; also known as <i>CRC-16</i> and <i>CRC-16-ANSI</i></td>
+<td>0x8005</td>
+<td>0xA001</td>
+<td>0xC002</td>
+</tr>
+<tr>
+<td>Fletcher</td>
+<td>Used in <a href="http://en.wikipedia.org/wiki/Adler-32" title="Adler-32">Adler-32</a> A &amp; B CRCs</td>
+<td colspan="3" align="center"><i>Not a CRC; see <a href="http://en.wikipedia.org/wiki/Fletcher%27s_checksum" title="Fletcher's checksum">Fletcher's checksum</a></i></td>
+</tr>
+<tr>
+<td>CRC-17-CAN</td>
+<td>CAN FD<sup id="cite_ref-can-fd-spec_27-0" class="reference"><a href="#cite_note-can-fd-spec-27"><span>[</span>27<span>]</span></a></sup></td>
+<td>0x1685B</td>
+<td>0x1B42D</td>
+<td>0x1B42D</td>
+</tr>
+<tr>
+<td>CRC-21-CAN</td>
+<td>CAN FD<sup id="cite_ref-can-fd-spec_27-1" class="reference"><a href="#cite_note-can-fd-spec-27"><span>[</span>27<span>]</span></a></sup></td>
+<td>0x102899</td>
+<td>0x132281</td>
+<td>0x18144C</td>
+</tr>
+<tr>
+<td>CRC-24</td>
+<td><a href="http://en.wikipedia.org/wiki/FlexRay" title="FlexRay">FlexRay</a><sup id="cite_ref-flexray-spec_19-1" class="reference"><a href="#cite_note-flexray-spec-19"><span>[</span>19<span>]</span></a></sup></td>
+<td>0x5D6DCB</td>
+<td>0xD3B6BA</td>
+<td>0xAEB6E5</td>
+</tr>
+<tr>
+<td>CRC-24-<a href="http://en.wikipedia.org/wiki/Radix-64" title="Radix-64" class="mw-redirect">Radix-64</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP" title="Pretty Good Privacy">OpenPGP</a>, <a href="http://en.wikipedia.org/wiki/RTCM" title="RTCM">RTCM104v3</a></td>
+<td>0x864CFB</td>
+<td>0xDF3261</td>
+<td>0xC3267D</td>
+</tr>
+<tr>
+<td>CRC-30</td>
+<td><a href="http://en.wikipedia.org/wiki/CDMA" title="CDMA" class="mw-redirect">CDMA</a></td>
+<td>0x2030B9C7</td>
+<td>0x38E74301</td>
+<td>0x30185CE3</td>
+</tr>
+<tr>
+<td>Adler-32</td>
+<td><a href="http://en.wikipedia.org/wiki/Zlib" title="Zlib">Zlib</a></td>
+<td colspan="3" align="center"><i>Not a CRC; see <a href="http://en.wikipedia.org/wiki/Adler-32" title="Adler-32">Adler-32</a></i></td>
+</tr>
+<tr>
+<td>CRC-32</td>
+<td><a href="http://en.wikipedia.org/wiki/High-Level_Data_Link_Control" title="High-Level Data Link Control">HDLC</a>, <a href="http://en.wikipedia.org/wiki/ANSI" title="ANSI" class="mw-redirect">ANSI</a> X3.66, ITU-T <a href="http://en.wikipedia.org/wiki/V.42" title="V.42" class="mw-redirect">V.42</a>, <a href="http://en.wikipedia.org/wiki/Ethernet" title="Ethernet">Ethernet</a>, <a href="http://en.wikipedia.org/wiki/Serial_ATA" title="Serial ATA">Serial ATA</a>, <a href="http://en.wikipedia.org/wiki/MPEG-2" title="MPEG-2">MPEG-2</a>, <a href="http://en.wikipedia.org/wiki/PKZIP" title="PKZIP">PKZIP</a>, <a href="http://en.wikipedia.org/wiki/Gzip" title="Gzip">Gzip</a>, <a href="http://en.wikipedia.org/wiki/Bzip2" title="Bzip2">Bzip2</a>, <a href="http://en.wikipedia.org/wiki/Portable_Network_Graphics" title="Portable Network Graphics">PNG</a>,<sup id="cite_ref-28" class="reference"><a href="#cite_note-28"><span>[</span>28<span>]</span></a></sup> many others</td>
+<td>0x04C11DB7</td>
+<td>0xEDB88320</td>
+<td>0x82608EDB<sup id="cite_ref-koop02_10-3" class="reference"><a href="#cite_note-koop02-10"><span>[</span>10<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>CRC-32C (Castagnoli)</td>
+<td><a href="http://en.wikipedia.org/wiki/ISCSI" title="ISCSI">iSCSI</a>, <a href="http://en.wikipedia.org/wiki/SCTP" title="SCTP" class="mw-redirect">SCTP</a>, <a href="http://en.wikipedia.org/wiki/G.hn" title="G.hn">G.hn</a> payload, <a href="http://en.wikipedia.org/wiki/SSE4#SSE4.2" title="SSE4">SSE4.2</a>, <a href="http://en.wikipedia.org/wiki/Btrfs" title="Btrfs">Btrfs</a>, <a href="http://en.wikipedia.org/wiki/Ext4" title="Ext4">ext4</a></td>
+<td>0x1EDC6F41</td>
+<td>0x82F63B78</td>
+<td>0x8F6E37A0<sup id="cite_ref-koop02_10-4" class="reference"><a href="#cite_note-koop02-10"><span>[</span>10<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>CRC-32K (Koopman)</td>
+<td></td>
+<td>0x741B8CD7</td>
+<td>0xEB31D82E</td>
+<td>0xBA0DC66B<sup id="cite_ref-koop02_10-5" class="reference"><a href="#cite_note-koop02-10"><span>[</span>10<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>CRC-32Q</td>
+<td>aviation; <a href="http://en.wikipedia.org/wiki/AIXM" title="AIXM">AIXM</a><sup id="cite_ref-aixm-primer_29-0" class="reference"><a href="#cite_note-aixm-primer-29"><span>[</span>29<span>]</span></a></sup></td>
+<td>0x814141AB</td>
+<td>0xD5828281</td>
+<td>0xC0A0A0D5</td>
+</tr>
+<tr>
+<td>CRC-40-<a href="http://en.wikipedia.org/wiki/GSM" title="GSM">GSM</a></td>
+<td>GSM control channel<sup id="cite_ref-gammel_30-0" class="reference"><a href="#cite_note-gammel-30"><span>[</span>30<span>]</span></a></sup><sup id="cite_ref-geremia_31-0" class="reference"><a href="#cite_note-geremia-31"><span>[</span>31<span>]</span></a></sup></td>
+<td>0x0004820009</td>
+<td>0x9000412000</td>
+<td>0x8002410004</td>
+</tr>
+<tr>
+<td>CRC-64-<a href="http://en.wikipedia.org/wiki/Ecma_International" title="Ecma International">ECMA</a></td>
+<td><a rel="nofollow" class="external text" href="http://www.ecma-international.org/publications/standards/Ecma-182.htm">ECMA-182</a>, <a href="http://en.wikipedia.org/wiki/XZ_Utils" title="XZ Utils">XZ Utils</a></td>
+<td>0x42F0E1EBA9EA3693</td>
+<td>0xC96C5795D7870F42</td>
+<td>0xA17870F5D4F51B49</td>
+</tr>
+<tr>
+<td>CRC-64-ISO</td>
+<td><a href="http://en.wikipedia.org/wiki/High-Level_Data_Link_Control" title="High-Level Data Link Control">HDLC</a>, <a href="http://en.wikipedia.org/wiki/Swiss-Prot" title="Swiss-Prot" class="mw-redirect">Swiss-Prot</a>/<a href="http://en.wikipedia.org/wiki/TrEMBL" title="TrEMBL" class="mw-redirect">TrEMBL</a>; considered weak for hashing<sup id="cite_ref-jones-improved64_32-0" class="reference"><a href="#cite_note-jones-improved64-32"><span>[</span>32<span>]</span></a></sup></td>
+<td>0x000000000000001B</td>
+<td>0xD800000000000000</td>
+<td>0x800000000000000D</td>
+</tr>
+</tbody></table>
+<h2><span class="mw-headline" id="Example_implementation">Example implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=9" title="Edit section: Example implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://gnuradio.org/redmine/projects/gnuradio/repository/revisions/1cb52da49230c64c3719b4ab944ba1cf5a9abb92/entry/gr-digital/lib/digital_crc32.cc">Implementation of CRC32 in Gnuradio</a>;</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Mathematics_of_cyclic_redundancy_checks" title="Mathematics of cyclic redundancy checks">Mathematics of cyclic redundancy checks</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Computation_of_cyclic_redundancy_checks" title="Computation of cyclic redundancy checks">Computation of cyclic redundancy checks</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Polynomial_representations_of_cyclic_redundancy_checks" title="Polynomial representations of cyclic redundancy checks">Polynomial representations of cyclic redundancy checks</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Error_detection_and_correction" title="Error detection and correction">Error detection and correction</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_checksum_algorithms" title="List of checksum algorithms" class="mw-redirect">List of checksum algorithms</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Information_security" title="Information security">Information security</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Simple_file_verification" title="Simple file verification">Simple file verification</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cksum" title="Cksum">cksum</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CRC-based_framing" title="CRC-based framing">Header Error Correction</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-PetersonBrown1961-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-PetersonBrown1961_1-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Peterson, W. W. and Brown, D. T. (January 1961). "Cyclic Codes for Error Detection". <i>Proceedings of the IRE</i> <b>49</b> (1): 228–235. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FJRPROC.1961.287814">10.1109/JRPROC.1961.287814</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.atitle=Cyclic+Codes+for+Error+Detection&amp;rft.aulast=Peterson%2C+W.+W.+and+Brown%2C+D.+T.&amp;rft.au=Peterson%2C+W.+W.+and+Brown%2C+D.+T.&amp;rft.date=1961&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1109%2FJRPROC.1961.287814&amp;rft.issue=1&amp;rft.jtitle=Proceedings+of+the+IRE&amp;rft.pages=228%E2%80%93235&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=49" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-ritter-1986-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-ritter-1986_2-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Ritter, Terry (February 1986). <a rel="nofollow" class="external text" href="http://www.ciphersbyritter.com/ARTS/CRCMYST.HTM">"The Great CRC Mystery"</a>. <i><a href="http://en.wikipedia.org/wiki/Dr._Dobb%27s_Journal" title="Dr. Dobb's Journal">Dr. Dobb's Journal</a></i> <b>11</b> (2): 26–34, 76–83<span class="reference-accessdate">. Retrieved 21 May 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.atitle=The+Great+CRC+Mystery&amp;rft.aufirst=Terry&amp;rft.aulast=Ritter&amp;rft.au=Ritter%2C+Terry&amp;rft.date=1986&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.ciphersbyritter.com%2FARTS%2FCRCMYST.HTM&amp;rft.issue=2&amp;rft.jtitle=Dr.+Dobb%27s+Journal&amp;rft.pages=26%E2%80%9334%2C+76%E2%80%9383&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=11" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-stigge-reversecrc-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-stigge-reversecrc_3-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Stigge, Martin; Plötz, Henryk; Müller, Wolf; Redlich, Jens-Peter (May 2006). <a rel="nofollow" class="external text" href="http://sar.informatik.hu-berlin.de/research/publications/SAR-PR-2006-05/SAR-PR-2006-05_.pdf"><i>Reversing CRC – Theory and Practice</i></a>. Berlin: Humboldt University Berlin. p.&nbsp;17<span class="reference-accessdate">. Retrieved 4 February 2011</span>.
+ "The presented methods offer a very easy and efficient way to modify 
+your data so that it will compute to a CRC you want or at least know in 
+advance."</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.aufirst=Martin&amp;rft.aulast=Stigge&amp;rft.au=M%C3%BCller%2C+Wolf&amp;rft.au=Pl%C3%B6tz%2C+Henryk&amp;rft.au=Redlich%2C+Jens-Peter&amp;rft.au=Stigge%2C+Martin&amp;rft.btitle=Reversing+CRC+%E2%80%93+Theory+and+Practice&amp;rft.date=2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fsar.informatik.hu-berlin.de%2Fresearch%2Fpublications%2FSAR-PR-2006-05%2FSAR-PR-2006-05_.pdf&amp;rft.pages=17&amp;rft.place=Berlin&amp;rft.pub=Humboldt+University+Berlin&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-wep-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-wep_4-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Cam-Winget, Nancy; Housley, Russ; Wagner, David; Walker, Jesse (May 2003). "Security Flaws in 802.11 Data Link Protocols". <i>Communications of the ACM</i> <b>46</b> (5): 35–39. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F769800.769823">10.1145/769800.769823</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.atitle=Security+Flaws+in+802.11+Data+Link+Protocols&amp;rft.au=Cam-Winget%2C+Nancy&amp;rft.aufirst=Nancy&amp;rft.au=Housley%2C+Russ&amp;rft.aulast=Cam-Winget&amp;rft.au=Wagner%2C+David&amp;rft.au=Walker%2C+Jesse&amp;rft.date=May+2003&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F769800.769823&amp;rft.issue=5&amp;rft.jtitle=Communications+of+the+ACM&amp;rft.pages=35%E2%80%9339&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=46" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-williams93-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-williams93_5-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-williams93_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-williams93_5-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><span class="citation web">Williams, Ross N. (24 September 1996). <a rel="nofollow" class="external text" href="http://www.repairfaq.org/filipg/LINK/F_crc_v3.html">"A Painless Guide to CRC Error Detection Algorithms V3.00"</a><span class="reference-accessdate">. Retrieved 5 June 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.aufirst=Ross+N.&amp;rft.aulast=Williams&amp;rft.au=Williams%2C+Ross+N.&amp;rft.btitle=A+Painless+Guide+to+CRC+Error+Detection+Algorithms+V3.00&amp;rft.date=24+September+1996&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.repairfaq.org%2Ffilipg%2FLINK%2FF_crc_v3.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation book">Press, WH; Teukolsky, SA; Vetterling, WT; Flannery, BP (2007). <a rel="nofollow" class="external text" href="http://apps.nrbook.com/empanel/index.html#pg=1168">"Section 22.4 Cyclic Redundancy and Other Checksums"</a>. <i>Numerical Recipes: The Art of Scientific Computing</i> (3rd ed.). New York: Cambridge University Press. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-521-88068-8" title="Special:BookSources/978-0-521-88068-8">978-0-521-88068-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.atitle=Numerical+Recipes%3A+The+Art+of+Scientific+Computing&amp;rft.aufirst=WH&amp;rft.au=Flannery%2C+BP&amp;rft.aulast=Press&amp;rft.au=Press%2C+WH&amp;rft.au=Teukolsky%2C+SA&amp;rft.au=Vetterling%2C+WT&amp;rft.btitle=Section+22.4+Cyclic+Redundancy+and+Other+Checksums&amp;rft.date=2007&amp;rft.edition=3rd&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fapps.nrbook.com%2Fempanel%2Findex.html%23pg%3D1168&amp;rft.isbn=978-0-521-88068-8&amp;rft.place=New+York&amp;rft.pub=Cambridge+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-koop04-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-koop04_7-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-koop04_7-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-koop04_7-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-koop04_7-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-koop04_7-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-koop04_7-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-koop04_7-6"><sup><i><b>g</b></i></sup></a></span> <span class="reference-text"><span class="citation journal">Koopman, Philip; Chakravarty, Tridib (June 2004). <a rel="nofollow" class="external text" href="http://www.ece.cmu.edu/%7Ekoopman/roses/dsn04/koopman04_crc_poly_embedded.pdf">"Cyclic Redundancy Code (CRC) Polynomial Selection For Embedded Networks"</a>. <i>The International Conference on Dependable Systems and Networks</i>: 145–154. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FDSN.2004.1311885">10.1109/DSN.2004.1311885</a>. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-7695-2052-9" title="Special:BookSources/0-7695-2052-9">0-7695-2052-9</a><span class="reference-accessdate">. Retrieved 14 January 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.atitle=Cyclic+Redundancy+Code+%28CRC%29+Polynomial+Selection+For+Embedded+Networks&amp;rft.au=Chakravarty%2C+Tridib&amp;rft.aufirst=Philip&amp;rft.au=Koopman%2C+Philip&amp;rft.aulast=Koopman&amp;rft.date=2004&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.ece.cmu.edu%2F~koopman%2Froses%2Fdsn04%2Fkoopman04_crc_poly_embedded.pdf&amp;rft_id=info%3Adoi%2F10.1109%2FDSN.2004.1311885&amp;rft.isbn=0-7695-2052-9&amp;rft.jtitle=The+International+Conference+on+Dependable+Systems+and+Networks&amp;rft.pages=145%E2%80%93154&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-cook-catalogue-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-cook-catalogue_8-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Cook, Greg (6 July 2012). <a rel="nofollow" class="external text" href="http://reveng.sourceforge.net/crc-catalogue/all.htm">"Catalogue of parametrised CRC algorithms"</a><span class="reference-accessdate">. Retrieved 7 July 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.au=Cook%2C+Greg&amp;rft.aufirst=Greg&amp;rft.aulast=Cook&amp;rft.btitle=Catalogue+of+parametrised+CRC+algorithms&amp;rft.date=6+July+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Freveng.sourceforge.net%2Fcrc-catalogue%2Fall.htm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-cast93-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-cast93_9-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Castagnoli,
+ G.; Bräuer, S.; Herrmann, M. (June 1993). "Optimization of Cyclic 
+Redundancy-Check Codes with 24 and 32 Parity Bits". <i>IEEE Transactions on Communications</i> <b>41</b> (6): 883. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2F26.231911">10.1109/26.231911</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.atitle=Optimization+of+Cyclic+Redundancy-Check+Codes+with+24+and+32+Parity+Bits&amp;rft.au=Br%C3%A4uer%2C+S.&amp;rft.au=Castagnoli%2C+G.&amp;rft.aufirst=G.&amp;rft.au=Herrmann%2C+M.&amp;rft.aulast=Castagnoli&amp;rft.date=1993&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1109%2F26.231911&amp;rft.issue=6&amp;rft.jtitle=IEEE+Transactions+on+Communications&amp;rft.pages=883&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=41" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-koop02-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-koop02_10-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-koop02_10-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-koop02_10-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-koop02_10-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-koop02_10-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-koop02_10-5"><sup><i><b>f</b></i></sup></a></span> <span class="reference-text"><span class="citation journal">Koopman, Philip (July 2002). <a rel="nofollow" class="external text" href="http://www.ece.cmu.edu/%7Ekoopman/networks/dsn02/dsn02_koopman.pdf">"32-Bit Cyclic Redundancy Codes for Internet Applications"</a>. <i>The International Conference on Dependable Systems and Networks</i>: 459–468. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FDSN.2002.1028931">10.1109/DSN.2002.1028931</a>. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-7695-1597-5" title="Special:BookSources/0-7695-1597-5">0-7695-1597-5</a><span class="reference-accessdate">. Retrieved 14 January 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.atitle=32-Bit+Cyclic+Redundancy+Codes+for+Internet+Applications&amp;rft.aufirst=Philip&amp;rft.au=Koopman%2C+Philip&amp;rft.aulast=Koopman&amp;rft.date=2002&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.ece.cmu.edu%2F~koopman%2Fnetworks%2Fdsn02%2Fdsn02_koopman.pdf&amp;rft_id=info%3Adoi%2F10.1109%2FDSN.2002.1028931&amp;rft.isbn=0-7695-1597-5&amp;rft.jtitle=The+International+Conference+on+Dependable+Systems+and+Networks&amp;rft.pages=459%E2%80%93468&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-Brayer1975-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-Brayer1975_11-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Brayer, Kenneth (August 1975). <a rel="nofollow" class="external text" href="http://www.dtic.mil/srch/doc?collection=t3&amp;id=ADA014825"><i>Evaluation of 32 Degree Polynomials in Error Detection on the SATIN IV Autovon Error Patterns</i></a>. <a href="http://en.wikipedia.org/wiki/National_Technical_Information_Service" title="National Technical Information Service">National Technical Information Service</a>. p.&nbsp;74<span class="reference-accessdate">. Retrieved 3 February 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.au=Brayer%2C+Kenneth&amp;rft.aufirst=Kenneth&amp;rft.aulast=Brayer&amp;rft.btitle=Evaluation+of+32+Degree+Polynomials+in+Error+Detection+on+the+SATIN+IV+Autovon+Error+Patterns&amp;rft.date=August+1975&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.dtic.mil%2Fsrch%2Fdoc%3Fcollection%3Dt3%26id%3DADA014825&amp;rft.pages=74&amp;rft.pub=National+Technical+Information+Service&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-Hammond1975-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-Hammond1975_12-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Hammond, Joseph L., Jr.; Brown, James E.; Liu, Shyan-Shiang (1975). <a rel="nofollow" class="external text" href="http://www.dtic.mil/cgi-bin/GetTRDoc?AD=ADA013939&amp;Location=U2&amp;doc=GetTRDoc.pdf">"Development of a Transmission Error Model and an Error Control Model"</a>. <i>Unknown</i> (<a href="http://en.wikipedia.org/wiki/National_Technical_Information_Service" title="National Technical Information Service">National Technical Information Service</a>, published May 1975) <b>76</b>: 74. <a href="http://en.wikipedia.org/wiki/Bibcode" title="Bibcode">Bibcode</a>:<a rel="nofollow" class="external text" href="http://adsabs.harvard.edu/abs/1975STIN...7615344H">1975STIN...7615344H</a><span class="reference-accessdate">. Retrieved 7 July 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.atitle=Development+of+a+Transmission+Error+Model+and+an+Error+Control+Model&amp;rft.au=Brown%2C+James+E.&amp;rft.aufirst=Joseph+L.%2C+Jr.&amp;rft.au=Hammond%2C+Joseph+L.%2C+Jr.&amp;rft.aulast=Hammond&amp;rft.au=Liu%2C+Shyan-Shiang&amp;rft.date=1975&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.dtic.mil%2Fcgi-bin%2FGetTRDoc%3FAD%3DADA013939%26Location%3DU2%26doc%3DGetTRDoc.pdf&amp;rft_id=info%3Abibcode%2F1975STIN...7615344H&amp;rft.jtitle=Unknown&amp;rft.pages=74&amp;rft.pub=National+Technical+Information+Service&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=76" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-BrayerHammond1975-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-BrayerHammond1975_13-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation conference">Brayer,
+ Kenneth; Hammond, Joseph L., Jr. (December 1975). "Evaluation of error 
+detection polynomial performance on the AUTOVON channel". <i>Conference Record</i>. IEEE National Telecommunications Conference, New Orleans, La <b>1</b>. New York: Institute of Electrical and Electronics Engineers. pp.&nbsp;8–21 to 8–25. <a href="http://en.wikipedia.org/wiki/Bibcode" title="Bibcode">Bibcode</a>:<a rel="nofollow" class="external text" href="http://adsabs.harvard.edu/abs/1975ntc.....1....8B">1975ntc.....1....8B</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.atitle=Conference+Record&amp;rft.au=Brayer%2C+Kenneth&amp;rft.aufirst=Kenneth&amp;rft.au=Hammond%2C+Joseph+L.%2C+Jr.&amp;rft.aulast=Brayer&amp;rft.btitle=Evaluation+of+error+detection+polynomial+performance+on+the+AUTOVON+channel&amp;rft.date=1975&amp;rft.genre=bookitem&amp;rft_id=info%3Abibcode%2F1975ntc.....1....8B&amp;rft.pages=8%E2%80%9321+to+8%E2%80%9325&amp;rft.place=New+York&amp;rft.pub=Institute+of+Electrical+and+Electronics+Engineers&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=1" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-ewing-rev-eng-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-ewing-rev-eng_14-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Ewing, Gregory C. (March 2010). <a rel="nofollow" class="external text" href="http://www.cosc.canterbury.ac.nz/greg.ewing/essays/CRC-Reverse-Engineering.html">"Reverse-Engineering a CRC Algorithm"</a>. Christchurch: University of Canterbury<span class="reference-accessdate">. Retrieved 26 July 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.au=Ewing%2C+Gregory+C.&amp;rft.aufirst=Gregory+C.&amp;rft.aulast=Ewing&amp;rft.btitle=Reverse-Engineering+a+CRC+Algorithm&amp;rft.date=2010&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cosc.canterbury.ac.nz%2Fgreg.ewing%2Fessays%2FCRC-Reverse-Engineering.html&amp;rft.place=Christchurch&amp;rft.pub=University+of+Canterbury&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-gen-2-spec-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-gen-2-spec_15-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation book"><a rel="nofollow" class="external text" href="http://www.gs1.org/gsmp/kc/epcglobal/uhfc1g2/uhfc1g2_1_2_0-standard-20080511.pdf"><i>Class-1 Generation-2 UHF RFID Protocol</i></a>. 1.2.0. <a href="http://en.wikipedia.org/wiki/EPCglobal" title="EPCglobal">EPCglobal</a>. 23 October 2008. p.&nbsp;35<span class="reference-accessdate">. Retrieved 4 July 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.btitle=Class-1+Generation-2+UHF+RFID+Protocol&amp;rft.date=23+October+2008&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.gs1.org%2Fgsmp%2Fkc%2Fepcglobal%2Fuhfc1g2%2Fuhfc1g2_1_2_0-standard-20080511.pdf&amp;rft.pages=35&amp;rft.pub=EPCglobal&amp;rft.series=1.2.0&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span> (Table 6.12)</span></li>
+<li id="cite_note-cdma2000-spec-16"><span class="mw-cite-backlink">^ <a href="#cite_ref-cdma2000-spec_16-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-cdma2000-spec_16-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-cdma2000-spec_16-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-cdma2000-spec_16-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-cdma2000-spec_16-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-cdma2000-spec_16-5"><sup><i><b>f</b></i></sup></a></span> <span class="reference-text"><span class="citation book"><a rel="nofollow" class="external text" href="http://www.3gpp2.org/public_html/specs/C.S0002-D_v2.0_051006.pdf"><i>Physical layer standard for cdma2000 spread spectrum systems</i></a>. Revision D version 2.0. 3rd Generation Partnership Project 2. October 2005. pp.&nbsp;2–89–2–92<span class="reference-accessdate">. Retrieved 14 October 2013</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.btitle=Physical+layer+standard+for+cdma2000+spread+spectrum+systems&amp;rft.date=2005&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.3gpp2.org%2Fpublic_html%2Fspecs%2FC.S0002-D_v2.0_051006.pdf&amp;rft.pages=2%E2%80%9389%E2%80%932%E2%80%9392&amp;rft.pub=3rd+Generation+Partnership+Project+2&amp;rft.series=Revision+D+version+2.0&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-chakravarty-thesis-17"><span class="mw-cite-backlink">^ <a href="#cite_ref-chakravarty-thesis_17-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-chakravarty-thesis_17-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation thesis">Chakravarty, Tridib (December 2001). <a rel="nofollow" class="external text" href="http://www.ece.cmu.edu/%7Ekoopman/thesis/chakravarty.pdf"><i>Performance of Cyclic Redundancy Codes for Embedded Networks</i></a> (Thesis). Pittsburgh: Carnegie Mellon University. pp.&nbsp;5,18<span class="reference-accessdate">. Retrieved 8 July 2013</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.au=Chakravarty%2C+Tridib&amp;rft.aufirst=Tridib&amp;rft.aulast=Chakravarty&amp;rft.btitle=Performance+of+Cyclic+Redundancy+Codes+for+Embedded+Networks&amp;rft.date=2001&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.ece.cmu.edu%2F~koopman%2Fthesis%2Fchakravarty.pdf&amp;rft.pages=5%2C18&amp;rft.place=Pittsburgh&amp;rft.pub=Carnegie+Mellon+University&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span> <span style="font-size:100%" class="error citation-comment">Unknown parameter <code>|other=</code> ignored (<code>|others=</code> suggested) (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#parameter_ignored_suggest" title="Help:CS1 errors">help</a>)</span></span></li>
+<li id="cite_note-richardson-wcdma-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-richardson-wcdma_18-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation book">Richardson, Andrew (17 March 2005). <a rel="nofollow" class="external text" href="http://books.google.co.uk/books?id=yN5lve5L4vwC&amp;lpg=PA223&amp;dq=&amp;pg=PA223#v=onepage&amp;q&amp;f=false"><i>WCDMA Handbook</i></a>. Cambridge, UK: Cambridge University Press. p.&nbsp;223. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-521-82815-5" title="Special:BookSources/0-521-82815-5">0-521-82815-5</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.aufirst=Andrew&amp;rft.aulast=Richardson&amp;rft.au=Richardson%2C+Andrew&amp;rft.btitle=WCDMA+Handbook&amp;rft.date=17+March+2005&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.co.uk%2Fbooks%3Fid%3DyN5lve5L4vwC%26lpg%3DPA223%26dq%3D%26pg%3DPA223%23v%3Donepage%26q%26f%3Dfalse&amp;rft.isbn=0-521-82815-5&amp;rft.pages=223&amp;rft.place=Cambridge%2C+UK&amp;rft.pub=Cambridge+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-flexray-spec-19"><span class="mw-cite-backlink">^ <a href="#cite_ref-flexray-spec_19-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-flexray-spec_19-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation book"><i>FlexRay Protocol Specification</i>. 3.0.1. Flexray Consortium. October 2010. p.&nbsp;114.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.btitle=FlexRay+Protocol+Specification&amp;rft.date=October+2010&amp;rft.genre=book&amp;rft.pages=114&amp;rft.pub=Flexray+Consortium&amp;rft.series=3.0.1&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span> (4.2.8 Header CRC (11 bits))</span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Perez, A.; Wismer &amp; Becker (1983). "Byte-Wise CRC Calculations". <i>IEEE Micro</i> <b>3</b> (3): 40–50. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FMM.1983.291120">10.1109/MM.1983.291120</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.atitle=Byte-Wise+CRC+Calculations&amp;rft.aufirst=A.&amp;rft.aulast=Perez&amp;rft.au=Perez%2C+A.&amp;rft.date=1983&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1109%2FMM.1983.291120&amp;rft.issue=3&amp;rft.jtitle=IEEE+Micro&amp;rft.pages=40%E2%80%9350&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=3" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Ramabadran, T.V.; Gaitonde, S.S. (1988). "A tutorial on CRC computations". <i>IEEE Micro</i> <b>8</b> (4): 62–75. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2F40.7773">10.1109/40.7773</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.atitle=A+tutorial+on+CRC+computations&amp;rft.aufirst=T.V.&amp;rft.au=Gaitonde%2C+S.S.&amp;rft.aulast=Ramabadran&amp;rft.au=Ramabadran%2C+T.V.&amp;rft.date=1988&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1109%2F40.7773&amp;rft.issue=4&amp;rft.jtitle=IEEE+Micro&amp;rft.pages=62%E2%80%9375&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=8" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation book">Ely, S.R.; Wright, D.T. (March 1982). <a rel="nofollow" class="external text" href="http://downloads.bbc.co.uk/rd/pubs/reports/1982-02.pdf"><i>L.F. Radio-Data: specification of BBC experimental transmissions 1982</i></a>. Research Department, Engineering Division, The British Broadcasting Corporation. p.&nbsp;9<span class="reference-accessdate">. Retrieved 11 October 2013</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.au=Ely%2C+S.R.&amp;rft.aufirst=S.R.&amp;rft.aulast=Ely&amp;rft.au=Wright%2C+D.T.&amp;rft.btitle=L.F.+Radio-Data%3A+specification+of+BBC+experimental+transmissions+1982&amp;rft.date=1982&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdownloads.bbc.co.uk%2Frd%2Fpubs%2Freports%2F1982-02.pdf&amp;rft.pages=9&amp;rft.pub=Research+Department%2C+Engineering+Division%2C+The+British+Broadcasting+Corporation&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-mpt1327-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-mpt1327_23-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation book"><a rel="nofollow" class="external text" href="http://www.ofcom.org.uk/static/archive/ra/publication/mpt/mpt_pdf/mpt1327.pdf"><i>A signalling standard for trunked private land mobile radio systems (MPT 1327)</i></a> (3rd ed.). <a href="http://en.wikipedia.org/wiki/Ofcom" title="Ofcom">Ofcom</a>. June 1997. p.&nbsp;3-3<span class="reference-accessdate">. Retrieved 16 July 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.btitle=A+signalling+standard+for+trunked+private+land+mobile+radio+systems+%28MPT+1327%29&amp;rft.date=1997&amp;rft.edition=3rd&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.ofcom.org.uk%2Fstatic%2Farchive%2Fra%2Fpublication%2Fmpt%2Fmpt_pdf%2Fmpt1327.pdf&amp;rft.pages=3-3&amp;rft.pub=Ofcom&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span> (3.2.3 Encoding and error checking)</span></li>
+<li id="cite_note-rehmann-acars-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-rehmann-acars_24-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Rehmann, Albert; Mestre, José D. (February 1995). <a rel="nofollow" class="external text" href="http://ntl.bts.gov/lib/1000/1200/1290/tn95_66.pdf"><i>Air Ground Data Link VHF Airline Communications and Reporting System (ACARS) Preliminary Test Report</i></a>. Federal Aviation Authority Technical Center. p.&nbsp;5<span class="reference-accessdate">. Retrieved 7 July 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.aufirst=Albert&amp;rft.aulast=Rehmann&amp;rft.au=Mestre%2C+Jos%C3%A9+D.&amp;rft.au=Rehmann%2C+Albert&amp;rft.btitle=Air+Ground+Data+Link+VHF+Airline+Communications+and+Reporting+System+%28ACARS%29+Preliminary+Test+Report&amp;rft.date=1995&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fntl.bts.gov%2Flib%2F1000%2F1200%2F1290%2Ftn95_66.pdf&amp;rft.pages=5&amp;rft.pub=Federal+Aviation+Authority+Technical+Center&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-en-300-175-3-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-en-300-175-3_25-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal"><i>ETSI EN 300 175-3</i>. V2.2.1. Sophia Antipolis, France: European Telecommunications Standards Institute. November 2008.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.btitle=ETSI+EN+300+175-3&amp;rft.date=November+2008&amp;rft.genre=book&amp;rft.place=Sophia+Antipolis%2C+France&amp;rft.pub=European+Telecommunications+Standards+Institute&amp;rft.series=V2.2.1&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-thaler-t10-selection-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-thaler-t10-selection_26-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Thaler, Pat (28 August 2003). <a rel="nofollow" class="external text" href="http://www.t10.org/ftp/t10/document.03/03-290r0.pdf"><i>16-bit CRC polynomial selection</i></a>. INCITS T10<span class="reference-accessdate">. Retrieved 11 August 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.aufirst=Pat&amp;rft.aulast=Thaler&amp;rft.au=Thaler%2C+Pat&amp;rft.btitle=16-bit+CRC+polynomial+selection&amp;rft.date=28+August+2003&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.t10.org%2Fftp%2Ft10%2Fdocument.03%2F03-290r0.pdf&amp;rft.pub=INCITS+T10&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-can-fd-spec-27"><span class="mw-cite-backlink">^ <a href="#cite_ref-can-fd-spec_27-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-can-fd-spec_27-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation book"><a rel="nofollow" class="external text" href="http://www.bosch-semiconductors.de/media/pdf_1/canliteratur/can_fd_spec.pdf"><i>CAN with Flexible Data-Rate Specification</i></a>. 1.0. Robert Bosch GmbH. April 17, 2012. p.&nbsp;13.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.btitle=CAN+with+Flexible+Data-Rate+Specification&amp;rft.date=April+17%2C+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.bosch-semiconductors.de%2Fmedia%2Fpdf_1%2Fcanliteratur%2Fcan_fd_spec.pdf&amp;rft.pages=13&amp;rft.pub=Robert+Bosch+GmbH&amp;rft.series=1.0&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span> (3.2.1 DATA FRAME)</span></li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Boutell, Thomas; Randers-Pehrson, Glenn; <i>et al.</i> (14 July 1998). <a rel="nofollow" class="external text" href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">"PNG (Portable Network Graphics) Specification, Version 1.2"</a>. Libpng.org<span class="reference-accessdate">. Retrieved 3 February 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.au=Boutell%2C+Thomas&amp;rft.aufirst=Thomas&amp;rft.aulast=Boutell&amp;rft.au=Randers-Pehrson%2C+Glenn&amp;rft.btitle=PNG+%28Portable+Network+Graphics%29+Specification%2C+Version+1.2&amp;rft.date=14+July+1998&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.libpng.org%2Fpub%2Fpng%2Fspec%2F1.2%2FPNG-Structure.html&amp;rft.pub=Libpng.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-aixm-primer-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-aixm-primer_29-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation book"><a rel="nofollow" class="external text" href="http://www.eurocontrol.int/sites/default/files/content/documents/information-management/20060320-aixm-primer.pdf"><i>AIXM Primer</i></a>. 4.5. <a href="http://en.wikipedia.org/wiki/European_Organisation_for_the_Safety_of_Air_Navigation" title="European Organisation for the Safety of Air Navigation" class="mw-redirect">European Organisation for the Safety of Air Navigation</a>. 20 March 2006<span class="reference-accessdate">. Retrieved 4 July 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.btitle=AIXM+Primer&amp;rft.date=20+March+2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.eurocontrol.int%2Fsites%2Fdefault%2Ffiles%2Fcontent%2Fdocuments%2Finformation-management%2F20060320-aixm-primer.pdf&amp;rft.pub=European+Organisation+for+the+Safety+of+Air+Navigation&amp;rft.series=4.5&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-gammel-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-gammel_30-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation book">Gammel, Berndt M. (31 October 2005). <a rel="nofollow" class="external text" href="http://www.matpack.de/index.html#DOWNLOAD"><i>Matpack documentation: Crypto - Codes</i></a>. Matpack.de<span class="reference-accessdate">. Retrieved 21 April 2013</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.aufirst=Berndt+M.&amp;rft.au=Gammel%2C+Berndt+M.&amp;rft.aulast=Gammel&amp;rft.btitle=Matpack+documentation%3A+Crypto+-+Codes&amp;rft.date=31+October+2005&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.matpack.de%2Findex.html%23DOWNLOAD&amp;rft.pub=Matpack.de&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span> (Note: MpCRC.html is included with the Matpack compressed software source code, under /html/LibDoc/Crypto)</span></li>
+<li id="cite_note-geremia-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-geremia_31-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Geremia, Patrick (April 1999). <a rel="nofollow" class="external text" href="http://www.ti.com/lit/an/spra530/spra530.pdf"><i>Cyclic redundancy check computation: an implementation using the TMS320C54x</i></a> (SPRA530). Texas Instruments. p.&nbsp;5<span class="reference-accessdate">. Retrieved 4 July 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.aufirst=Patrick&amp;rft.au=Geremia%2C+Patrick&amp;rft.aulast=Geremia&amp;rft.btitle=Cyclic+redundancy+check+computation%3A+an+implementation+using+the+TMS320C54x&amp;rft.date=1999&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.ti.com%2Flit%2Fan%2Fspra530%2Fspra530.pdf&amp;rft.issue=SPRA530&amp;rft.pages=5&amp;rft.pub=Texas+Instruments&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-jones-improved64-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-jones-improved64_32-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Jones, David T. <a rel="nofollow" class="external text" href="http://www.cs.ucl.ac.uk/staff/d.jones/crcnote.pdf"><i>An Improved 64-bit Cyclic Redundancy Check for Protein Sequences</i></a>. University College London<span class="reference-accessdate">. Retrieved 15 December 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.aufirst=David+T.&amp;rft.au=Jones%2C+David+T.&amp;rft.aulast=Jones&amp;rft.btitle=An+Improved+64-bit+Cyclic+Redundancy+Check+for+Protein+Sequences&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cs.ucl.ac.uk%2Fstaff%2Fd.jones%2Fcrcnote.pdf&amp;rft.pub=University+College+London&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=12" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.mathpages.com/home/kmath458.htm">MathPages – Cyclic Redundancy Checks</a>: overview with an explanation of error-detection of different polynomials.</li>
+<li><a rel="nofollow" class="external text" href="http://www.ross.net/crc/">The CRC Pitstop</a> – home of <a rel="nofollow" class="external text" href="http://www.ross.net/crc/crcpaper.html">A Painless Guide to CRC Error Detection Algorithms</a></li>
+<li><span class="citation web">Black, R. (February 1994). <a rel="nofollow" class="external text" href="http://www.cl.cam.ac.uk/Research/SRG/bluebook/21/crc/crc.html">"Fast CRC32 in Software"</a>. <i>The Blue Book</i>. Systems Research Group, Computer Laboratory, University of Cambridge.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.atitle=Fast+CRC32+in+Software&amp;rft.au=Black%2C+R.&amp;rft.aulast=Black%2C+R.&amp;rft.date=February+1994&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.cl.cam.ac.uk%2FResearch%2FSRG%2Fbluebook%2F21%2Fcrc%2Fcrc.html&amp;rft.jtitle=The+Blue+Book&amp;rft.pub=Systems+Research+Group%2C+Computer+Laboratory%2C+University+of+Cambridge&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span> algorithm 4 is used in Linux and info-zip's zip and unzip.</li>
+<li><span class="citation web">Kounavis, M.; Berry, F. (2005). <a rel="nofollow" class="external text" href="http://www.intel.com/technology/comms/perfnet/download/CRC_generators.pdf">"A Systematic Approach to Building High Performance, Software-based, CRC generators"</a>. Intel.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.au=Kounavis%2C+M.%3B+Berry%2C+F.&amp;rft.aulast=Kounavis%2C+M.%3B+Berry%2C+F.&amp;rft.btitle=A+Systematic+Approach+to+Building+High+Performance%2C+Software-based%2C+CRC+generators&amp;rft.date=2005&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.intel.com%2Ftechnology%2Fcomms%2Fperfnet%2Fdownload%2FCRC_generators.pdf&amp;rft.pub=Intel&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span>, Slicing-by-4 and slicing-by-8 algorithms</li>
+<li><a rel="nofollow" class="external text" href="http://einstein.informatik.uni-oldenburg.de/papers/CRC-BitfilterEng.pdf">'CRC-Analysis with Bitfilters'.</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.hackersdelight.org/crc.pdf">Cyclic Redundancy Check</a>: theory, practice, hardware, and software with emphasis on CRC-32. A sample chapter from Henry S. Warren, Jr. <i><a href="http://en.wikipedia.org/wiki/Hacker%27s_Delight" title="Hacker's Delight">Hacker's Delight</a></i>.</li>
+<li><a rel="nofollow" class="external text" href="http://www.cosc.canterbury.ac.nz/greg.ewing/essays/CRC-Reverse-Engineering.html">Reverse-Engineering a CRC Algorithm</a></li>
+<li><a rel="nofollow" class="external text" href="http://reveng.sourceforge.net/crc-catalogue/all.htm">Catalogue of parametrised CRC algorithms</a></li>
+<li><span class="citation web">Koopman, Phil. <a rel="nofollow" class="external text" href="http://checksumcrc.blogspot.com/">"Blog: Checksum and CRC Central"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACyclic+redundancy+check&amp;rft.au=Koopman%2C+Phil&amp;rft.aulast=Koopman%2C+Phil&amp;rft.btitle=Blog%3A+Checksum+and+CRC+Central&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fchecksumcrc.blogspot.com%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span> — includes links to PDFs giving 16 and 32-bit CRC <a href="http://en.wikipedia.org/wiki/Hamming_distance" title="Hamming distance">Hamming distances</a></li>
+</ul>
+<table class="navbox" style="border-spacing:0;" cellspacing="0">
+<tbody><tr>
+<td style="padding:2px;">
+<table id="collapsibleTable0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;" cellspacing="0">
+<tbody><tr>
+<th scope="col" class="navbox-title" colspan="2"><span class="collapseButton">[<a href="#" id="collapseButton0">hide</a>]</span>
+<div class="noprint plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Ecma_International_Standards" title="Template:Ecma International Standards"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/w/index.php?title=Template_talk:Ecma_International_Standards&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Ecma International Standards (page does not exist)"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Ecma_International_Standards&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;">Standards of <a href="http://en.wikipedia.org/wiki/Ecma_International" title="Ecma International">Ecma International</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">Application Interfaces</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/ANSI_escape_code" title="ANSI escape code">ANSI escape code</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">Common Language Infrastructure</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Office_Open_XML" title="Office Open XML">Office Open XML</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Open_XML_Paper_Specification" title="Open XML Paper Specification">OpenXPS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">File Systems (Tape)</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Advanced_Intelligent_Tape" title="Advanced Intelligent Tape">Advanced Intelligent Tape</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Digital_Data_Storage" title="Digital Data Storage">DDS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Digital_Linear_Tape" title="Digital Linear Tape">DLT</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Digital_Linear_Tape" title="Digital Linear Tape">Super DLT</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Holographic_Versatile_Disc" title="Holographic Versatile Disc">Holographic Versatile Disc</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linear_Tape-Open" title="Linear Tape-Open">Linear Tape-Open</a> (Ultrium-1)</li>
+<li><a href="http://en.wikipedia.org/wiki/VXA" title="VXA">VXA</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">File Systems (Disk)</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/CD-ROM" title="CD-ROM">CD-ROM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ISO_9660" title="ISO 9660">CD File System</a> (CDFS)</li>
+<li><a href="http://en.wikipedia.org/wiki/File_Allocation_Table" title="File Allocation Table">FAT</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Floppy_disk" title="Floppy disk">FD</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Universal_Disk_Format" title="Universal Disk Format">UDF</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ultra_Density_Optical" title="Ultra Density Optical">Ultra Density Optical</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Universal_Media_Disc" title="Universal Media Disc">Universal Media Disc</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">Graphics</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Universal_3D" title="Universal 3D">Universal 3D</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">Programming Languages</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/C%2B%2B/CLI" title="C++/CLI">C++/CLI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29" title="C Sharp (programming language)">C#</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Eiffel_%28programming_language%29" title="Eiffel (programming language)">Eiffel</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a> (<a href="http://en.wikipedia.org/wiki/ECMAScript_for_XML" title="ECMAScript for XML">E4X</a>, <a href="http://en.wikipedia.org/wiki/ECMAScript" title="ECMAScript">ECMAScript</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">Radio Link Interfaces</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Near_Field_Communication" title="Near Field Communication" class="mw-redirect">NFC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ultra-wideband" title="Ultra-wideband">UWB</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">Other</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/w/index.php?title=TC20&amp;action=edit&amp;redlink=1" class="new" title="TC20 (page does not exist)">TC20</a> Electromagnetic Compatibility <a rel="nofollow" class="external autonumber" href="http://www.ecma-international.org/memento/TC20.htm">[1]</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=TC12&amp;action=edit&amp;redlink=1" class="new" title="TC12 (page does not exist)">TC12</a> Product safety <a rel="nofollow" class="external autonumber" href="http://www.ecma-international.org/memento/TC12.htm">[2]</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div><a href="http://en.wikipedia.org/wiki/List_of_Ecma_standards" title="List of Ecma standards">List of Ecma standards</a> (1961 - Present)</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1077
+CPU time usage: 1.072 seconds
+Real time usage: 1.191 seconds
+Preprocessor visited node count: 2694/1000000
+Preprocessor generated node count: 12831/1500000
+Post‐expand include size: 80919/2048000 bytes
+Template argument size: 1486/2048000 bytes
+Highest expansion depth: 16/40
+Expensive parser function count: 6/500
+Lua time usage: 0.122s
+Lua memory usage: 2.76 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:38838-0!0!0!!en!4!* and timestamp 20131201042520
+ -->
+<noscript><img src="//en.wikipedia.org/w/index.php?title=Special:CentralAutoLogin/start&amp;type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;oldid=583829653">http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;oldid=583829653</a>"				</div>
+												<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Binary_arithmetic" title="Category:Binary arithmetic">Binary arithmetic</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Checksum_algorithms" title="Category:Checksum algorithms">Checksum algorithms</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Finite_fields" title="Category:Finite fields">Finite fields</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Hash_functions" title="Category:Hash functions">Hash functions</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Pages_containing_cite_templates_with_deprecated_parameters" title="Category:Pages containing cite templates with deprecated parameters">Pages containing cite templates with deprecated parameters</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Pages_with_citations_using_unsupported_parameters" title="Category:Pages with citations using unsupported parameters">Pages with citations using unsupported parameters</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Use_dmy_dates_from_July_2013" title="Category:Use dmy dates from July 2013">Use dmy dates from July 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_expert_attention_with_no_reason_or_talk_parameter" title="Category:Articles needing expert attention with no reason or talk parameter">Articles needing expert attention with no reason or talk parameter</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_expert_attention_from_August_2010" title="Category:Articles needing expert attention from August 2010">Articles needing expert attention from August 2010</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_expert_attention" title="Category:All articles needing expert attention">All articles needing expert attention</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Mathematics_articles_needing_expert_attention" title="Category:Mathematics articles needing expert attention">Mathematics articles needing expert attention</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Miscellaneous_articles_needing_expert_attention" title="Category:Miscellaneous articles needing expert attention">Miscellaneous articles needing expert attention</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div style="top: 111px;" id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Cyclic+redundancy+check&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Cyclic+redundancy+check" title="You're encouraged to log in; however, it's not mandatory. [alt-shift-o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/Cyclic_redundancy_check" title="View the content page [alt-shift-c]" accesskey="c">Article</a></span></li>
+					<li id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Cyclic_redundancy_check" title="Discussion about the content page [alt-shift-t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 tabindex="0" id="p-variants-label"><span>Variants</span><a tabindex="-1" href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/Cyclic_redundancy_check">Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=edit" title="You can edit this page. 
+Please review your changes before saving. [alt-shift-e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=history" title="Past versions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 tabindex="0" id="p-cactions-label"><span>Actions</span><a tabindex="-1" href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input autocomplete="off" tabindex="1" name="search" placeholder="Search" title="Search Wikipedia [alt-shift-f]" accesskey="f" id="searchInput">						<button type="submit" name="button" title="Search Wikipedia for this text" id="searchButton"><img src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/search-ltr.png" alt="Search" height="13" width="12"></button>								<input name="title" value="Special:Search" type="hidden">
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div style="top: 271px;" class="collapsible-nav" id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page"></a></div>
+				<div class="portal first persistent" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label">Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [alt-shift-x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+	<h3 tabindex="2" id="p-interaction-label"><a aria-expanded="true" aria-pressed="true" role="button" aria-controls="p-interaction-list" aria-haspopup="true" href="#">Interaction</a></h3>
+	<div style="display: block;" class="body">
+		<ul id="p-interaction-list">
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+	<h3 tabindex="3" id="p-tb-label"><a aria-expanded="false" aria-pressed="false" role="button" aria-controls="p-tb-list" aria-haspopup="true" href="#">Tools</a></h3>
+	<div class="body">
+		<ul id="p-tb-list">
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Cyclic_redundancy_check" title="List of all English Wikipedia pages containing links to this page [alt-shift-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Cyclic_redundancy_check" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [alt-shift-u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;oldid=583829653" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q245471" title="Link to connected data repository item">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Cyclic_redundancy_check&amp;id=583829653" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+	<h3 tabindex="4" id="p-coll-print_export-label"><a aria-expanded="false" aria-pressed="false" role="button" aria-controls="p-coll-print_export-list" aria-haspopup="true" href="#">Print/export</a></h3>
+	<div class="body">
+		<ul id="p-coll-print_export-list">
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Cyclic+redundancy+check">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Cyclic+redundancy+check&amp;oldid=583829653&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;printable=yes" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-lang" aria-labelledby="p-lang-label"><span original-title="Language settings" aria-haspopup="true" role="button" tabindex="0" class="uls-settings-trigger"></span>
+	<h3 tabindex="5" id="p-lang-label"><a aria-expanded="true" aria-pressed="true" role="button" aria-controls="p-lang-list" aria-haspopup="true" href="#">Languages</a></h3>
+	<div style="display: block;" class="body">
+		<ul id="p-lang-list">
+			<li class="interwiki-ar"><a href="http://ar.wikipedia.org/wiki/%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1_%D8%A7%D9%84%D8%AA%D9%83%D8%B1%D8%A7%D8%B1_%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A" title="اختبار التكرار الدوري – Arabic" hreflang="ar" lang="ar">العربية</a></li>
+			<li class="interwiki-bg"><a href="http://bg.wikipedia.org/wiki/CRC" title="CRC – Bulgarian" hreflang="bg" lang="bg">Български</a></li>
+			<li class="interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Control_de_redund%C3%A0ncia_c%C3%ADclica" title="Control de redundància cíclica – Catalan" hreflang="ca" lang="ca">Català</a></li>
+			<li class="interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Cyklick%C3%BD_redundantn%C3%AD_sou%C4%8Det" title="Cyklický redundantní součet – Czech" hreflang="cs" lang="cs">Čeština</a></li>
+			<li class="interwiki-da"><a href="http://da.wikipedia.org/wiki/Cyklisk_redundanstjek" title="Cyklisk redundanstjek – Danish" hreflang="da" lang="da">Dansk</a></li>
+			<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Zyklische_Redundanzpr%C3%BCfung" title="Zyklische Redundanzprüfung – German" hreflang="de" lang="de">Deutsch</a></li>
+			<li class="interwiki-el"><a href="http://el.wikipedia.org/wiki/%CE%9A%CF%85%CE%BA%CE%BB%CE%B9%CE%BA%CF%8C%CF%82_%CE%88%CE%BB%CE%B5%CE%B3%CF%87%CE%BF%CF%82_%CE%A0%CE%BB%CE%B5%CE%BF%CE%BD%CE%B1%CF%83%CE%BC%CE%BF%CF%8D" title="Κυκλικός Έλεγχος Πλεονασμού – Greek" hreflang="el" lang="el">Ελληνικά</a></li>
+			<li class="interwiki-es"><a href="http://es.wikipedia.org/wiki/Comprobaci%C3%B3n_de_redundancia_c%C3%ADclica" title="Comprobación de redundancia cíclica – Spanish" hreflang="es" lang="es">Español</a></li>
+			<li class="interwiki-eu"><a href="http://eu.wikipedia.org/wiki/CRC" title="CRC – Basque" hreflang="eu" lang="eu">Euskara</a></li>
+			<li class="interwiki-fa"><a href="http://fa.wikipedia.org/wiki/%DA%A9%D8%AF_%D8%A7%D9%81%D8%B2%D9%88%D9%86%DA%AF%DB%8C_%DA%86%D8%B1%D8%AE%D8%B4%DB%8C" title="کد افزونگی چرخشی – Persian" hreflang="fa" lang="fa">فارسی</a></li>
+			<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Contr%C3%B4le_de_redondance_cyclique" title="Contrôle de redondance cyclique – French" hreflang="fr" lang="fr">Français</a></li>
+			<li class="interwiki-ko"><a href="http://ko.wikipedia.org/wiki/%EC%88%9C%ED%99%98_%EC%A4%91%EB%B3%B5_%EA%B2%80%EC%82%AC" title="순환 중복 검사 – Korean" hreflang="ko" lang="ko">한국어</a></li>
+			<li class="interwiki-id"><a href="http://id.wikipedia.org/wiki/CRC" title="CRC – Indonesian" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+			<li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/Cyclic_redundancy_check" title="Cyclic redundancy check – Italian" hreflang="it" lang="it">Italiano</a></li>
+			<li class="interwiki-he"><a href="http://he.wikipedia.org/wiki/%D7%91%D7%93%D7%99%D7%A7%D7%AA_%D7%99%D7%AA%D7%99%D7%A8%D7%95%D7%AA_%D7%9E%D7%97%D7%96%D7%95%D7%A8%D7%99%D7%AA" title="בדיקת יתירות מחזורית – Hebrew" hreflang="he" lang="he">עברית</a></li>
+			<li class="interwiki-mk"><a href="http://mk.wikipedia.org/wiki/Cyclic_redundancy_check" title="Cyclic redundancy check – Macedonian" hreflang="mk" lang="mk">Македонски</a></li>
+			<li class="interwiki-ml"><a href="http://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B5%88%E0%B4%95%E0%B5%8D%E0%B4%B2%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%8D_%E0%B4%B1%E0%B4%BF%E0%B4%A1%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%BB%E0%B4%B8%E0%B4%BF_%E0%B4%9A%E0%B5%86%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%8D" title="സൈക്ലിക്ക് റിഡണ്ടൻസി ചെക്ക് – Malayalam" hreflang="ml" lang="ml">മലയാളം</a></li>
+			<li class="interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Cyclic_redundancy_check" title="Cyclic redundancy check – Dutch" hreflang="nl" lang="nl">Nederlands</a></li>
+			<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/%E5%B7%A1%E5%9B%9E%E5%86%97%E9%95%B7%E6%A4%9C%E6%9F%BB" title="巡回冗長検査 – Japanese" hreflang="ja" lang="ja">日本語</a></li>
+			<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Cykliczny_kod_nadmiarowy" title="Cykliczny kod nadmiarowy – Polish" hreflang="pl" lang="pl">Polski</a></li>
+			<li class="interwiki-pt"><a href="http://pt.wikipedia.org/wiki/CRC" title="CRC – Portuguese" hreflang="pt" lang="pt">Português</a></li>
+			<li class="interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Cyclic_redundancy_check" title="Cyclic redundancy check – Romanian" hreflang="ro" lang="ro">Română</a></li>
+			<li class="interwiki-ru"><a href="http://ru.wikipedia.org/wiki/%D0%A6%D0%B8%D0%BA%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B8%D0%B7%D0%B1%D1%8B%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4" title="Циклический избыточный код – Russian" hreflang="ru" lang="ru">Русский</a></li>
+			<li class="interwiki-simple"><a href="http://simple.wikipedia.org/wiki/Cyclic_redundancy_check" title="Cyclic redundancy check – Simple English" hreflang="simple" lang="simple">Simple English</a></li>
+			<li class="interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Kontrola_cyklick%C3%BDm_k%C3%B3dom" title="Kontrola cyklickým kódom – Slovak" hreflang="sk" lang="sk">Slovenčina</a></li>
+			<li class="interwiki-fi"><a href="http://fi.wikipedia.org/wiki/CRC" title="CRC – Finnish" hreflang="fi" lang="fi">Suomi</a></li>
+			<li class="interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Cyclic_Redundancy_Check" title="Cyclic Redundancy Check – Swedish" hreflang="sv" lang="sv">Svenska</a></li>
+			<li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/D%C3%B6ng%C3%BCsel_art%C4%B1kl%C4%B1k_denetimi" title="Döngüsel artıklık denetimi – Turkish" hreflang="tr" lang="tr">Türkçe</a></li>
+			<li class="interwiki-uk"><a href="http://uk.wikipedia.org/wiki/%D0%A6%D0%B8%D0%BA%D0%BB%D1%96%D1%87%D0%BD%D0%B8%D0%B9_%D0%BD%D0%B0%D0%B4%D0%BB%D0%B8%D1%88%D0%BA%D0%BE%D0%B2%D0%B8%D0%B9_%D0%BA%D0%BE%D0%B4" title="Циклічний надлишковий код – Ukrainian" hreflang="uk" lang="uk">Українська</a></li>
+			<li class="interwiki-vi"><a href="http://vi.wikipedia.org/wiki/CRC" title="CRC – Vietnamese" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+			<li class="interwiki-zh"><a href="http://zh.wikipedia.org/wiki/%E5%BE%AA%E7%92%B0%E5%86%97%E9%A4%98%E6%A0%A1%E9%A9%97" title="循環冗餘校驗 – Chinese" hreflang="zh" lang="zh">中文</a></li>
+			
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q245471#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 29 November 2013 at 21:07.<br></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Cyclic_redundancy_check&amp;title=Cyclic_redundancy_check" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/wikimedia-button.png" alt="Wikimedia Foundation" height="31" width="88"></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" height="31" width="88"></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.articleFeedbackv5.startup","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","skins.vector.collapsibleNav"],null,true);
+}</script><div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div>
+<script src="Cyclic%20redundancy%20check%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load.php"></script>
+<!-- Served by mw1209 in 0.278 secs. -->
+	
+
+</body></html>

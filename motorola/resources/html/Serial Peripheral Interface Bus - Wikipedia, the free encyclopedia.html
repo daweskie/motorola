@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js ve-not-available" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8"><title>Serial Peripheral Interface Bus - Wikipedia, the free encyclopedia</title>
+<meta name="generator" content="MediaWiki 1.23wmf4">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit">
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit">
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png">
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd">
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">
+<link rel="stylesheet" href="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_002.css">
+<style>
+@-webkit-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-webkit-transform:translateY(-20px)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-moz-transform:translateY(-20px)}100%{opacity:1;-moz-transform:translateY(0)}}@-o-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-o-transform:translateY(-20px)}100%{opacity:1;-o-transform:translateY(0)}}@keyframes centralAuthPPersonalAnimation{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}.centralAuthPPersonalAnimation{-webkit-animation-duration:1s;-moz-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:centralAuthPPersonalAnimation;-moz-animation-name:centralAuthPPersonalAnimation;-o-animation-name:centralAuthPPersonalAnimation;animation-name:centralAuthPPersonalAnimation}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0dcacc990dd02e7db9669ab3090b80f1 */
+.mw-editsection{white-space:nowrap;padding-right:0.25em; unicode-bidi:-moz-isolate;unicode-bidi:-webkit-isolate;unicode-bidi:isolate}.mw-editsection-divider{color:#555} .mw-content-ltr .mw-editsection-expanded .mw-editsection-bracket:first-of-type,.mw-content-rtl .mw-editsection-expanded .mw-editsection-bracket:not(:first-of-type){margin-left:-0.25em;margin-right:0.25em;color:#555} .mw-content-rtl .mw-editsection-expanded .mw-editsection-bracket:first-of-type,.mw-content-ltr .mw-editsection-expanded .mw-editsection-bracket:not(:first-of-type){margin-right:-0.25em;margin-left:0.25em;color:#555}.ve-tabmessage-appendix{font-size:0.7em;vertical-align:top;line-height:1.43em;padding-left:0.5em; background-image:none !important;display:inline !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:542a80e9a1c6a06bda7dfcbb6858ab0f */
+.uls-trigger{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAQCAMAAADQzfSkAAABqlBMVEX////f3/+Ov+/n5+fp6enp6eno6Ojp6enn5+ff39/q6urp6enp6enp6enq6urp6en////q6urr6+upv+rU1NTJycnR0dEaGhrp6enT4/SEuuK9vb3l5eU2ktCxsbFdXV1paWmzwc9ITFDo6OhaWlpsbGxtbW2BipSZpK/X19d2dnZ8hI2/v79PT09gZm2CgoLIyMjD0eGksL1JTVHM2+spKywnKCkcHBzAzt3I1+cxMzZxcXFkZGSvr69WW2C8vLyFjphqcXiLlZ8dHh4gISLa2trQ3/Dc3NzZ2dl7e3uioqIfHyBCRko9QEPh4eFgYGDGxsZoaGiPj4/Ly8uRm6a6yNcbGxuSnKfL2uqVn6scHR20tLR/f3+Kioq4uLienp54gIipqanA2e+71u9GSk5yeoKgoKCAgIB0dHRLS0tlZWWDg4PBwcHFxcWxvsxkanGapbCKlJ7O4fNXo9hQn9bM3/OPmaRfZWve3t6mpqbR0dG+vr6JiYnKyspPVFl1s99+fn5srdzm5ubNzc1BREh2s99xsN7S0tIxMzUiIyQ2OTt/iJFwcHBbYWc3S28lAAAAF3RSTlMACBAg7P3LiTYIX6LmmDzeAYMnDN+1MJx17ncAAAEQSURBVHheddBTb0VREIbhVduYWVuHRm3btm3bNv9zJ2v3IE36Xk3yZG4+xkMKw0BREYwJMzkcO38MY37tG6AmYN48YZFxwsbeiys6y/02rT1Wa4TxwoYgpx4adLMbfRubs9tk0cJuYK8ACv1/Xy5LLlIYS5bf2FTUUlJapptiqKwyuOfJEsjq4M3j+YBPYc02X6utTWnvQEwk6wJRNxn29Pb1D2iIg0bEJMaHYWTU6RyfABPZ5BTa7xBxxo2YzPgcPPGFRb4Ey2Qrq2vrXlRk6xampDK+a94/ODw6PjGfkp2dX1y6ZOvVNWKavsutqt6HbGZ5QCqdMUmSnlXqhY6M12CZtKcaUnhtsKz/Tc5m7AfjN0jzWIipawAAAABJRU5ErkJggg==) no-repeat scroll left center;background:transparent url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.png?2013-11-14T18:13:20Z) no-repeat scroll left center!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.svg?2013-11-14T18:13:20Z);background-image:-moz-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.svg?2013-11-14T18:13:20Z);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.svg?2013-11-14T18:13:20Z);padding-left:30px}#pt-uls a.uls-trigger{padding-left:30px}#p-lang .uls-settings-trigger{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAgCAMAAAAVMLmlAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAALpQTFRF////W1tbgICAWVlZgICAUVFRgICAWVlZhYWFUlJShYWFVFRUgYGBVVVVgYGBVVVVgICAVFRUVVVVVlZWgYGBgICAVFRUgYGBVFRUgICAgYGBVVVVVVVVgYGBVlZWgYGBVFRUgICAVFRUgICAVVVVgICAVlZWgICAVFRUgICAVVVVgICAVFRUgICAVlZWgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICA9Fa9bgAAADx0Uk5TAA4OFBQWFhcXGRlJSUtLWlpbXV9fYGFhZGRlZmlpa2twcIiIioqPj5GRn5+goKGh6+vv7/Dw+fn8/P7+YuRUVgAAAOlJREFUGBmNwcdWAgEURMFLFCUaAcWAEhQYHBRmCN3//1u+BYcVC6s4p2U3OLrrVxN7Xn7uELoH5w65Dx1g6JNnoLazfz++VnZehkZir4pQ3NjzBg5TwtgBhzFh6kDr294UobiykxZc7ezVdLyx8yrw6pM+8GjnDjsf7gj3/WpiJ7Vhl6OW3eC/mlKdo5teZSHNSoM24XqvTCHTvg0MdDIASpn08/6ZSlkJ6jMpLUBhLc3qKEwIIwUURoSJAs2ltC5AIZUWTbjcSulktJayCvCikx7wJG0VttrfEp5eLpfS4uLtgaOmVOeMP8BAM9RClMO9AAAAAElFTkSuQmCC) no-repeat right top;background:transparent url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.png?2013-11-14T18:13:20Z) no-repeat right top!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2013-11-14T18:13:20Z);background-image:-moz-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2013-11-14T18:13:20Z);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2013-11-14T18:13:20Z);height:16px;width:14px;float:right;cursor:pointer}.skin-vector #p-lang .uls-settings-trigger{ margin-top:3px}#p-lang .uls-settings-trigger:hover{background-position:right -16px}   x:-o-prefocus,body.rtl li#pt-uls{ direction:ltr}#settings-block{border-top:1px solid #C9C9C9;background:#f8f8f8;background:-webkit-gradient(linear,left top,left bottom,from(#FBFBFB),to(#F0F0F0));background:-webkit-linear-gradient(top,#FBFBFB,#F0F0F0);background:-moz-linear-gradient(top,#FBFBFB,#F0F0F0);background:-o-linear-gradient(top,#FBFBFB,#F0F0F0);background:linear-gradient(#FBFBFB,#F0F0F0);padding-left:10px;line-height:1.2em;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;border-radius:0 0 5px 5px}.uls-menu a{cursor:pointer}.uls-menu.callout .caret-before{border-top:20px solid transparent;border-right:20px solid #AAA;border-bottom:20px solid transparent;display:inline-block;left:-21px;top:30px;position:absolute}.uls-menu.callout .caret-after{border-top:20px solid transparent;border-right:20px solid #FCFCFC;border-bottom:20px solid transparent;display:inline-block;left:-20px;top:30px;position:absolute}#settings-block div.display-settings-block,#settings-block div.input-settings-block{display:inline-block;margin:8px 15px;color:#565656}#settings-block div.display-settings-block:hover,#settings-block div.input-settings-block:hover{color:#252525}.uls-ui-languages button{width:23%;text-overflow:ellipsis;margin-right:4%}button.uls-more-languages{width:auto}.settings-title{font-size:11pt}.settings-text{color:#555555;font-size:9pt}div.display-settings-block:hover .settings-text{color:#252525} .ime-perime-help{display:none}.ime-checked .ime-perime-help{display:inline-block;width:20px;height:100%;position:absolute;top:0;bottom:0;right:0;opacity:0.75;padding:0;background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAFdQTFRF////AAAAZmZmVVVVSUlJW1tbVVVVV1dXWFhYVVVVV1dXVlZWWFhYV1dXWFhYVlZWV1dXVlZWV1dXV1dXWFhYV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXrNxhuAAAABx0Uk5TAAEFBgcOJCkxNlVla3KDi5WrsrbJ09ny9vf9/uWqFuIAAACESURBVBjTdZDBDsIgEERHai2KUqmllfr+/zs9AFYTnMsmL7uTmZX+yVjnrPkCnU8AyXeVDJGiOJSdCLzmsAIx73ngeZKOC+AlySSA8LjrCiQjyRafmzyAleQymQ7nFcDt6NItVFQOp5Cn/dgzjlDts+vW9xs1RI7KPLNHbRRq1W4951dvPF4RAFiSul8AAAAASUVORK5CYII=) left center no-repeat;background:transparent url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/help.png?2013-11-14T18:13:20Z) left center no-repeat!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB2ZXJzaW9uPSIxLjEiCiAgIHdpZHRoPSIxOCIKICAgaGVpZ2h0PSIxOCIKICAgdmlld0JveD0iMCAwIDE4IDE4LjAwMDAwMSIKICAgaWQ9IkxheWVyXzEiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiPjxtZXRhZGF0YQogICBpZD0ibWV0YWRhdGE5Ij48cmRmOlJERj48Y2M6V29yawogICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlCiAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+PGRjOnRpdGxlPjwvZGM6dGl0bGU+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPjxkZWZzCiAgIGlkPSJkZWZzNyIgLz4KPHBhdGgKICAgZD0ibSA5LjAwMDAwMDMsMS40OTk2NDM3IGMgLTQuMTQxNDE5MSwwIC03LjUwMDAwMDQsMy4zNTc4NjkgLTcuNTAwMDAwNCw3LjUwMDAwMTQgMCw0LjE0MjEzMDkgMy4zNTg1ODEzLDcuNTAwNzExOSA3LjUwMDAwMDQsNy41MDA3MTE5IEMgMTMuMTQyODQ0LDE2LjUwMDM1NyAxNi41LDEzLjE0MTc3NiAxNi41LDguOTk5NjQ1MSAxNi41LDQuODU3NTEyNyAxMy4xNDM1NTYsMS40OTk2NDM3IDkuMDAwMDAwMywxLjQ5OTY0MzcgeiBtIC0wLjAwMTQyLDExLjk0MzQ0MjMgYyAtMC42MTMzMDYyLDAgLTEuMDY3MDUzLC0wLjQ5MDA3NCAtMS4wNjcwNTMsLTEuMDc5ODc0IDAsLTAuNjE0MDE4IDAuNDUzNzQ2OCwtMS4wOTI2OTcgMS4wNjcwNTMsLTEuMDkyNjk3IDAuNTg5Nzk5NSwwIDEuMDY4NDc4NywwLjQ3ODY3OSAxLjA2ODQ3ODcsMS4wOTI2OTcgMCwwLjU4OTA4NyAtMC40Nzg2NzkyLDEuMDc5ODc0IC0xLjA2ODQ3ODcsMS4wNzk4NzQgeiBNIDEwLjUyMDgwOCw4LjgwNDQ3MDIgQyAxMC4wMDU4MDMsOS4yMDkwNjY4IDkuODA4NDg5Myw5LjQ2NzYzODQgOS44MDg0ODkzLDEwLjA0MzE5MSBWIDEwLjM5OTM1IEggOC4yMzc4MTk1IFYgOS45Njk4MjI2IGMgMCwtMS4wODA1ODY2IDAuMzE5ODMxLC0xLjUyMTUxMyAwLjgyMjAxNTgsLTEuOTE0NzEzIDAuNTAzNjA5MywtMC4zOTMxOTkxIDAuODExMzMwNiwtMC42MDE5MDkxIDAuODExMzMwNiwtMS4xNjYwNjQ4IDAsLTAuNDc4Njc4MSAtMC4yOTQ5LC0wLjc0ODY0NjcgLTAuODgzMjc0OCwtMC43NDg2NDY3IC0wLjUwMzYwOTQsMCAtMC45NDU5NTkxLDAuMTM0NjI4MSAtMS40MTE4MTUzLDAuNDU0NDU5MiBMIDYuODI3NDI5MSw1LjMwNzY5NzggQyA3LjQ0MDczNTMsNC44Nzc0NTc1IDguMjAyMjAzNiw0LjU3MTE2MDcgOS4yMDc5OTY5LDQuNTcxMTYwNyBjIDEuMzYxOTUzMSwwIDIuNTA0NTEyMSwwLjc0ODY0NjUgMi41MDQ1MTIxLDIuMTgzOTY4MiAtNy4xMmUtNCwxLjAxODYxNDkgLTAuNTY1NTgsMS41NTg1NTI1IC0xLjE5MTcwOSwyLjA0OTM0MTMgeiIKICAgaWQ9InBhdGgzIgogICBzdHlsZT0iZmlsbDojNTc1NzU3IiAvPgo8L3N2Zz4=);background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/help.svg?2013-11-14T18:13:20Z)!ie;background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB2ZXJzaW9uPSIxLjEiCiAgIHdpZHRoPSIxOCIKICAgaGVpZ2h0PSIxOCIKICAgdmlld0JveD0iMCAwIDE4IDE4LjAwMDAwMSIKICAgaWQ9IkxheWVyXzEiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiPjxtZXRhZGF0YQogICBpZD0ibWV0YWRhdGE5Ij48cmRmOlJERj48Y2M6V29yawogICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlCiAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+PGRjOnRpdGxlPjwvZGM6dGl0bGU+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPjxkZWZzCiAgIGlkPSJkZWZzNyIgLz4KPHBhdGgKICAgZD0ibSA5LjAwMDAwMDMsMS40OTk2NDM3IGMgLTQuMTQxNDE5MSwwIC03LjUwMDAwMDQsMy4zNTc4NjkgLTcuNTAwMDAwNCw3LjUwMDAwMTQgMCw0LjE0MjEzMDkgMy4zNTg1ODEzLDcuNTAwNzExOSA3LjUwMDAwMDQsNy41MDA3MTE5IEMgMTMuMTQyODQ0LDE2LjUwMDM1NyAxNi41LDEzLjE0MTc3NiAxNi41LDguOTk5NjQ1MSAxNi41LDQuODU3NTEyNyAxMy4xNDM1NTYsMS40OTk2NDM3IDkuMDAwMDAwMywxLjQ5OTY0MzcgeiBtIC0wLjAwMTQyLDExLjk0MzQ0MjMgYyAtMC42MTMzMDYyLDAgLTEuMDY3MDUzLC0wLjQ5MDA3NCAtMS4wNjcwNTMsLTEuMDc5ODc0IDAsLTAuNjE0MDE4IDAuNDUzNzQ2OCwtMS4wOTI2OTcgMS4wNjcwNTMsLTEuMDkyNjk3IDAuNTg5Nzk5NSwwIDEuMDY4NDc4NywwLjQ3ODY3OSAxLjA2ODQ3ODcsMS4wOTI2OTcgMCwwLjU4OTA4NyAtMC40Nzg2NzkyLDEuMDc5ODc0IC0xLjA2ODQ3ODcsMS4wNzk4NzQgeiBNIDEwLjUyMDgwOCw4LjgwNDQ3MDIgQyAxMC4wMDU4MDMsOS4yMDkwNjY4IDkuODA4NDg5Myw5LjQ2NzYzODQgOS44MDg0ODkzLDEwLjA0MzE5MSBWIDEwLjM5OTM1IEggOC4yMzc4MTk1IFYgOS45Njk4MjI2IGMgMCwtMS4wODA1ODY2IDAuMzE5ODMxLC0xLjUyMTUxMyAwLjgyMjAxNTgsLTEuOTE0NzEzIDAuNTAzNjA5MywtMC4zOTMxOTkxIDAuODExMzMwNiwtMC42MDE5MDkxIDAuODExMzMwNiwtMS4xNjYwNjQ4IDAsLTAuNDc4Njc4MSAtMC4yOTQ5LC0wLjc0ODY0NjcgLTAuODgzMjc0OCwtMC43NDg2NDY3IC0wLjUwMzYwOTQsMCAtMC45NDU5NTkxLDAuMTM0NjI4MSAtMS40MTE4MTUzLDAuNDU0NDU5MiBMIDYuODI3NDI5MSw1LjMwNzY5NzggQyA3LjQ0MDczNTMsNC44Nzc0NTc1IDguMjAyMjAzNiw0LjU3MTE2MDcgOS4yMDc5OTY5LDQuNTcxMTYwNyBjIDEuMzYxOTUzMSwwIDIuNTA0NTEyMSwwLjc0ODY0NjUgMi41MDQ1MTIxLDIuMTgzOTY4MiAtNy4xMmUtNCwxLjAxODYxNDkgLTAuNTY1NTgsMS41NTg1NTI1IC0xLjE5MTcwOSwyLjA0OTM0MTMgeiIKICAgaWQ9InBhdGgzIgogICBzdHlsZT0iZmlsbDojNTc1NzU3IiAvPgo8L3N2Zz4=);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/help.svg?2013-11-14T18:13:20Z)!ie}.ime-checked .ime-perime-help:hover{opacity:1}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ea93267c4906696831f86bae78aec87c */
+.tipsy{padding:5px;position:absolute;z-index:100000;cursor:default}.tipsy-inner{padding:5px 8px 4px 8px; background-color:#ffffff;border:solid 1px #a7d7f9;color:black;max-width:15em;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px; }.tipsy-arrow{position:absolute;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALAgMAAADUwp+1AAAACVBMVEX5+fmn1/n///9s6BFKAAAAAXRSTlMAQObYZgAAACpJREFUCB1jZBD4wMiQMoeRcUU4I9uSaYxSE54xZjn8AtMgPkgcJA9UBwAeDw1Qrb3pVAAAAABJRU5ErkJggg==) no-repeat top left;background:url(//bits.wikimedia.org/static-1.23wmf4/resources/jquery.tipsy/images/tipsy.png?2013-11-14T18:10:00Z) no-repeat top left!ie;width:11px;height:6px} .tipsy-n .tipsy-arrow{top:0px;left:50%;margin-left:-5px} .tipsy-nw .tipsy-arrow{top:1px;left:10px} .tipsy-ne .tipsy-arrow{top:1px;right:10px} .tipsy-s .tipsy-arrow{bottom:0px;left:50%;margin-left:-5px;background-position:bottom left} .tipsy-sw .tipsy-arrow{bottom:0px;left:10px;background-position:bottom left} .tipsy-se .tipsy-arrow{bottom:0px;right:10px;background-position:bottom left} .tipsy-e .tipsy-arrow{top:50%;margin-top:-5px;right:1px;width:5px;height:11px;background-position:top right} .tipsy-w .tipsy-arrow{top:50%;margin-top:-5px;left:0px;width:6px;height:11px}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ba28561960b6f903d47015297497d129 */
+#p-lang ul,.autonym{ font-family:'Autonym',sans-serif}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:5107124d6c4454dabb7fc6e4dcb24c3e */
+.wbc-editpage{list-style:none none;text-align:right;padding-right:.5em !important}.wbc-editpage > a{padding-left:11px;background:no-repeat left center}.wbc-editpage > a:link,.wbc-editpage > a:visited{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEUZAAD///95eXmqqqrY2NjEIQ0cAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGIAASUFENNJCUiqmADZTM5OqExFFZAKRSG4YgBjcwODynSgDwAAAABJRU5ErkJggg==);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/Wikibase/client/resources/images/WBC-Asset-Pencil.png?2013-11-14T18:15:00Z)!ie;color:#797979 !important}.wbc-editpage > a:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEWBAADY2Nj///8GRa0zZrtW2AECAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGYAAWMDEFPYGEgaOgLZzCLCqEwjQ5AKI2W4YgBg5QOTQPzBuAAAAABJRU5ErkJggg==);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/Wikibase/client/resources/images/WBC-Asset-Pencil-Hover.png?2013-11-14T18:15:00Z)!ie;color:#0645AD !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:12a706c5a3716ed31f07360c556a3f3c */
+@media print{#centralNotice{display:none}}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ddb0c98a055632ae8e349c9cf48ac703 */</style><style>
+.cite-accessibility-label{position:absolute !important; top:-99999px;clip:rect(1px 1px 1px 1px); clip:rect(1px,1px,1px,1px);padding:0 !important;border:0 !important;height:1px !important;width:1px !important;overflow:hidden}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:6989008023386f50501783f5c5ff5345 */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;-webkit-box-shadow:0 2px 5px 0 #ccc;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(//bits.wikimedia.org/static-1.23wmf4/resources/mediawiki.action/images/green-checkmark.png?2013-11-14T18:10:00Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:6282247611d5f95fa0dbf2f6ce149283 */
+.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:4250852ed2349a0d4d0fc6509a3e7d4c */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.autoellipsis-matched,.highlight{font-weight:bold}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:9780324491b653a3780e2d029bdc140c */
+.wp-teahouse-question-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}#wp-th-question-ask{float:right}.wp-teahouse-ask a.external{background-image:none !important}.wp-teahouse-respond-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}.wp-th-respond{float:right}.wp-teahouse-respond a.external{background-image:none !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ba4e3603af357b5172e85672664d39a8 */
+.referencetooltip{position:absolute;list-style:none;list-style-image:none;opacity:0;font-size:10px;margin:0;z-index:5;padding:0}.referencetooltip li{border:#080086 2px solid;max-width:260px;padding:10px 8px 13px 8px;margin:0px;background-color:#F7F7F7;box-shadow:2px 4px 2px rgba(0,0,0,0.3);-moz-box-shadow:2px 4px 2px rgba(0,0,0,0.3);-webkit-box-shadow:2px 4px 2px rgba(0,0,0,0.3)}.referencetooltip li+li{margin-left:7px;margin-top:-2px;border:0;padding:0;height:3px;width:0px;background-color:transparent;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;border-top:12px #080086 solid;border-right:7px transparent solid;border-left:7px transparent solid}.referencetooltip>li+li::after{content:'';border-top:8px #F7F7F7 solid;border-right:5px transparent solid;border-left:5px transparent solid;margin-top:-12px;margin-left:-5px;z-index:1;height:0px;width:0px;display:block}.client-js body .referencetooltip li li{border:none;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;height:auto;width:auto;margin:auto;padding:0;position:static}.RTflipped{padding-top:13px}.referencetooltip.RTflipped li+li{position:absolute;top:2px;border-top:0;border-bottom:12px #080086 solid}.referencetooltip.RTflipped li+li::after{border-top:0;border-bottom:8px #F7F7F7 solid;position:absolute;margin-top:7px}.RTsettings{float:right;height:16px;width:16px;cursor:pointer;background-image:url(//upload.wikimedia.org/wikipedia/commons/e/ed/Cog.png);margin-top:-9px;margin-right:-7px;-webkit-transition:opacity 0.15s;-moz-transition:opacity 0.15s;-o-transition:opacity 0.15s;-ms-transition:opacity 0.15s;transition:opacity 0.15s;opacity:0.6;filter:alpha(opacity=60)}.RTsettings:hover{opacity:1;filter:alpha(opacity=100)}.RTTarget{border:#080086 2px solid}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3c614aa75cecefe56b27b5e3c9197b7e */
+div#editpage-specialchars{display:block;margin-top:.5em;border:1px solid #c0c0c0;padding:.3em}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:29386c84f9c8f19dfb410df7e5be154b */
+#container{position:relative;min-height:100%}#container,video{width:100%;height:100%}#playerContainer{overflow:hidden;position:relative;height:100%;background:#000}#videoHolder{position:relative;overflow:hidden}.fullscreen #playerContainer{position:absolute !important;width:100% !important;height:100%! important;z-index:9999;min-height:100%;top:0;left:0;margin:0}.mwEmbedPlayer{width:100%;height:100%;overflow:hidden;position:absolute;top:0;left:0}.modal_editor{ left:10px;top:10px;right:10px;bottom:10px;position:fixed;z-index:100}.displayHTML a:visited{color:white}.loadingSpinner{width:32px;height:32px;display:block;padding:0px;background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/loading_ani.gif?2013-11-14T18:11:40Z)}.mw-imported-resource{border:thin solid black}.kaltura-icon{background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/kaltura_logo_sm_transparent.png?2013-11-14T18:11:40Z) !important;background-repeat:no-repeat;display:block;height:12px;width:12px;margin-top:2px !important;margin-left:3px !important}.mw-fullscreen-overlay{background:rgb(0,0,0) none repeat scroll 0% 0%;position:fixed;top:0pt;left:0pt;width:100%;height:100%;-moz-background-clip:border;-moz-background-origin:padding;-moz-background-inline-policy:continuous} .play-btn-large{width:70px;height:53px;background :url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button.png?2013-11-14T18:11:40Z);position :absolute;cursor :pointer;border :none !important;z-index :1}.play-btn-large:hover{background :url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button_hover.png?2013-11-14T18:11:40Z)}.carouselContainer{position :absolute;width :100%;z-index :2}.carouselVideoTitle{position :absolute;top :0px;left :0px;width :100%;background :rgba(0,0,0,0.8);color :white;font-size :small;font-weight :bold;z-index :2}.carouselVideoTitleText{display :block;padding :10px 10px 10px 20px}.carouselTitleDuration{position :absolute;top :0px;right :0px;padding :2px;background-color :#5A5A5A;color :#D9D9D9;font-size :smaller;z-index :2}.carouselImgTitle{position :absolute;width :100%;text-align :center;color :white;font-size :small;background :rgba(0,0,0,0.4)}.carouselImgDuration{position :absolute;top :2px;left :2px;background :rgba( 0,0,0,0.7 );color :white;padding :1px 6px;font-size :small}.carouselPrevButton,.carouselNextButton{display :block;position :absolute;bottom:23px}.carouselPrevButton{left :5px}.carouselNextButton{right:6px}.alert-container{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-image:linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-o-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-moz-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-ms-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0.04,rgb(215,215,215)),color-stop(0.55,rgb(230,230,230)),color-stop(1,rgb(255,255,255)));margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;max-width:80%;max-height:30%}.alert-title{background-color :#E6E6E6;padding :5px;border-bottom :1px solid #D1D1D1;font-weight :normal !important;font-size:14px !important;-webkit-border-top-left-radius:3px;-moz-border-radius-topleft:3px;border-top-left-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-radius-topright:3px;border-top-right-radius:3px }.alert-message{padding :5px;font-weight :normal !important;text-align:center;font-size:14px !important}.alert-buttons-container{text-align:center;padding-bottom:5px}.alert-button{background-color:#474747;color:white;-webkit-border-radius:.5em;-moz-border-radius:.5em;border-radius:.5em;padding:2px 10px;background-image:linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-o-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-moz-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-ms-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-gradient( linear,left bottom,left top,color-stop(0.04,rgb(25,25,25)),color-stop(0.55,rgb(47,47,47)),color-stop(0.68,rgb(71,71,71)) )}.alert-text{color :black !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:4246530442bfd8e2a81d76f365ae06f4 */
+.PopUpMediaTransform a .play-btn-large{position :absolute;top:50%;left :50%;width:70px;height:53px;margin-left:-35px;margin-top:-25px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAA1CAMAAADLRm3ZAAABnlBMVEUAAAAAAAAAAABaWlp4eHh7e3t/f393d3eDg4N0dHRtbW2FhYVra2uJiYmNjY1nZ2eRkZFkZGSUlJRiYmKYmJhgYGCcnJxeXl5cXFyfn58AAACioqKlpaWsrKwAAACpqakAAAAAAAAAAAAAAABEREQFBQUHBwdMTEwAAAAYGBgAAAAAAAABAQEXFxcAAAAAAAAAAABxcXGoqKh3d3eampp8fHyIiIgUFBQcHBw0NDSFhYV+fn5FRUUmJiaNjY11dXWPj4+Hh4c9PT14eHifn59nZ2eBgYFISEiBgYFubm5vb28ODg4lJSVra2tiYmJoaGgEBAQmJiZmZmaLi4saGhpiYmKYmJhZWVlgYGBfX19vb29DQ0MGBgZcXFyBgYFKSkoPDw9ZWVlzc3NQUFBXV1eKiopUVFQdHR1VVVUQEBBYWFglJSVTU1NXV1cKCgosLCySkpJRUVFISEgyMjJPT08dHR2GhoY4ODhNTU09PT0MDAwuLi57e3sTExNJSUkgICBOTk4hISEbGxtTU1MoKChBQUEsLCxXV1cAAABycnIdNM6eAAAAinRSTlOzj6jO1dbX1NfU09nS2drR29Hc0N3Q3c/O3gDf3+Ce4EgIGW7HtbXKnLouq7S5cHIq1ODQ3NTXuLq/1tXEvNjT2NjC093N18bW0dC2vNHM0LW90Ne5z9rLzsrTxbXN1Me3zdDKzdfLu8y3zb3Lyba/2svFwcq618PKxLa/1LjJu8q8u8y+xsDKrdJqj5XQAAABYklEQVR4Xu3XVVNCQRjH4VdQEbvFVRAOIRl2d3d3d3d317d2GEaGOOfM1oUXPB/gN7NX/30BIYPeGMPAqDcgBMhrBUZWLwJBAcwcAriBAzfogAMdKIADBUUmmqm64JAxl2m1k/XMmZkin+YaxsxYqd9iA1OmsfDPajVDZqMgoL1jhzpTmR+k/OCQMlObG+L4dJgq050d5rKVJlOXGaHijjxzny6i94k005YqatBFlmlKEdfy1UeS+UmS0tllwc/0JEhT9WNnBuJlqCy4maE4OSO4mdFYOeO4mQm1jCnAzUyXSJqdm8fOLCRKWVomWIaVZHFrLqJlWE8Ts7lFuAzbGZF294iXYT8rnPLICcSZk5xQyjMzzTKc5wXTXFnoluFaE+TmlnYZipUBpgcA5syjjWU1Tf7I8wvbhr/6Im/vTmDLgO3D9Gn+R5+2aIbXzeABDjwgOIDZtwDIzvwsnR1xujV/AS6zSfMs2bS9AAAAAElFTkSuQmCC);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/TimedMediaHandler/resources/player_big_play_button.png?2013-11-14T18:13:20Z)!ie}.PopUpMediaTransform a .play-btn-large :hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAA1CAMAAADLRm3ZAAABtlBMVEUAAAAAAAAAAAC5ubm1tbWwsLC+vr6Li4vExMSrq6umpqbIyMjOzs6ioqLT09OdnZ3Y2NiZmZnc3NyWlpbh4eGSkpLn5+eQkJCNjY0AAADr6+vv7+/z8/P39/cAAAD9/f0AAAAAAAAAAAAAAAB2dnYAAAAoKCj5+flra2sMDAwAAAAAAAAAAAAAAAAAAAACAgLW1tbPz88wMDCHh4fExMS8vLxKSkpubm6vr6+qqqo0NDQQEBDCwsK1tbUmJiaysrLT09PLy8uIiIgXFxetra2+vr7r6+tycnIbGxvMzMyTk5O1tbU8PDyjo6PR0dG0tLQLCwufn58HBwc9PT2bm5shISEqKiqXl5cICAiJiYmTk5Pj4+OoqKhpaWkKCgqOjo5TU1OXl5cYGBiKioo9PT18fHwlJSWGhoYuLi6CgoIvLy+Dg4Ofn5+oqKg7OzuAgIDk5OSLi4tHR0fIyMh9fX3Z2dlycnJPT08JCQl7e3vJyclhYWFZWVl4eHhhYWEUFBS6urpqamofHx9ycnK2trZzc3N6eno1NTUsLCyKioqAgIBBQUFmZmZHR0cICAjBwcEAAACIiIg+YVJpAAAAknRSTlOzj6jt6+ru4O/p5/Hy5vPl9eT24/ji+eHgAPr7/P2e/hlICG7YLr7+07accipwq7Tw777X6erGzuLjv7fs4rzn8PDYuObr+dK57tjqwuTu6rbjtcPiur3htdvg8+jRtt7H3Lndwdi83b7bwNze5cPb9t/G7drz0Mq22e7MzdjPuOrUu9fo1NnCwN/cxdLItu6t3VahkKcAAAFlSURBVHhe7dfFcgJBFIbRGyLEXegIDBAITtzd3d3d3d3d88ZJigqFzExNyyILzgN8Vb36+wJCGrXWj4JWrUEIkMUElEwWBJwMqNk4sAIDVlACA0qQAQMygowv05fNIDNYplKNFFBnmjN+ZU5SZtrTHHJnqTKVqX8KFykyWSlO9auNxJmmZBebOSWEmZ1EN3v73USZ0ngPxyckmbpYL3n5+JnLaB5FxbiZ20heU+V4mYpwflXVNTiZ2jAhHw1G6Zm1YGEtrZIzbUEiOjqlZrr8xfRIzfQGiOmXmhkIFDEEUjPDIYJGx8YlZyZChdxNYyzDTAS/uXmsZViI4rO0jLkMKzHevtaxl2EjztPWth2wM7sJ7uQHhyTLcJTkSnFqJFuGM4WL8wvSZUiXO11dA1BnbvQ0q2lwRO4f6Db88ekn8vxiB7oM6F8Nb+//6NPmy7C6GczAgBk4G1D75ADpqJ+l1CFGt+Y3XGRJEJqP8KwAAAAASUVORK5CYII=);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/TimedMediaHandler/resources/player_big_play_button_hover.png?2013-11-14T18:13:20Z)!ie}.PopUpMediaTransform{position :relative;display:inline-block}li.gallerybox div.thumb div.PopUpMediaTransform{margin:0 auto}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:1d9d796e8f6ec57bd5c8b8c44f680f32 */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{text-decoration:none;color:black}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:52b1797f70c7e4094dfa4191101944e8 */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load.css">
+<style>a:lang(ar),a:lang(ckb),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0de201fdea5d684523607ed88007b127 */</style>
+
+<script src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_003.php"></script><script src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_002.php"></script><style title="spinjs"></style>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Serial_Peripheral_Interface_Bus","wgTitle":"Serial Peripheral Interface Bus","wgCurRevisionId":580960345,"wgRevisionId":580960345,"wgArticleId":340476,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from May 2013","Articles with unsourced statements from July 2010","Commons category with local link same as on Wikidata","Computer buses","Serial buses"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Serial_Peripheral_Interface_Bus","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgArticleFeedbackv5Permissions":{"aft-reader":true,"aft-member":false,"aft-editor":false,"aft-monitor":false,"aft-administrator":false,"aft-oversighter":false,"aft-noone":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf4/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr"},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["en-us","en"],"wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikipedia","aftv5Article":{"id":340476,"title":"Serial Peripheral Interface Bus","namespace":0,"categories":["All articles with unsourced statements","Articles with unsourced statements from July 2010","Articles with unsourced statements from May 2013","Commons category with local link same as on Wikidata","Computer buses","Serial buses"],"permissionLevel":false},"wgWikibaseItemId":"Q849492"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots"
+:0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"aftv5-last-filter":null,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,
+"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,"searchNs109":false,"searchNs446":false,"searchNs447":false
+,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:664b3f39123c8f67ad841d996d382105 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.wikimediaShopLink.core","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><script src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/geoiplookup"></script><link rel="dns-prefetch" href="http://meta.wikimedia.org/"><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf4/skins/vector/csshover.min.htc")}</style><![endif]--><style>@font-face { font-family: 'Autonym';
+	src: url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/Autonym/Autonym.eot?version=20131112');
+	src: local('Autonym'),		url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/Autonym/Autonym.woff?version=20131112') format('woff'),		url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/Autonym/Autonym.ttf?version=20131112') format('truetype');
+	font-style: normal;}
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Serial_Peripheral_Interface_Bus skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><div id="centralNotice"></div><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Serial Peripheral Interface Bus</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><div class="thumb tright">
+<div class="thumbinner" style="width:352px;"><a href="http://en.wikipedia.org/wiki/File:SPI_single_slave.svg" class="image"><img alt="" src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/350px-SPI_single_slave.png" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/SPI_single_slave.svg/525px-SPI_single_slave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ed/SPI_single_slave.svg/700px-SPI_single_slave.svg.png 2x" height="109" width="350"></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:SPI_single_slave.svg" class="internal" title="Enlarge"><img src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/magnify-clip.png" alt="" height="11" width="15"></a></div>
+SPI bus: single master and single slave</div>
+</div>
+</div>
+<p>The <b>Serial Peripheral Interface</b> bus or <b>SPI</b> bus is a <a href="http://en.wikipedia.org/wiki/Synchronous_circuit" title="Synchronous circuit">synchronous</a> <a href="http://en.wikipedia.org/wiki/Serial_communications" title="Serial communications" class="mw-redirect">serial data link</a> <a href="http://en.wikipedia.org/wiki/De_facto_standard" title="De facto standard"><i>de facto</i> standard</a>, named by <a href="http://en.wikipedia.org/wiki/Motorola" title="Motorola">Motorola</a>, that operates in <a href="http://en.wikipedia.org/wiki/Full_duplex" title="Full duplex" class="mw-redirect">full duplex</a> mode. Devices communicate in <a href="http://en.wikipedia.org/wiki/Master-slave_%28technology%29" title="Master-slave (technology)" class="mw-redirect">master/slave</a> mode where the master device initiates the <a href="http://en.wikipedia.org/wiki/Data_frame" title="Data frame">data frame</a>. Multiple slave devices are allowed with individual <a href="http://en.wikipedia.org/wiki/Slave_select" title="Slave select" class="mw-redirect">slave select</a> lines. Sometimes SPI is called a <i>four-wire</i> serial bus, contrasting with <a href="#Three-wire_serial_buses">three-</a>, <a href="http://en.wikipedia.org/wiki/I%C2%B2C" title="I²C">two-</a>, and <a href="http://en.wikipedia.org/wiki/1-Wire" title="1-Wire">one-wire</a> serial buses. SPI is often referred to as SSI (Synchronous Serial Interface).</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+<span class="toctoggle">&nbsp;[<a href="#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Interface"><span class="tocnumber">1</span> <span class="toctext">Interface</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Operation"><span class="tocnumber">2</span> <span class="toctext">Operation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Data_transmission"><span class="tocnumber">2.1</span> <span class="toctext">Data transmission</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Clock_polarity_and_phase"><span class="tocnumber">2.1.1</span> <span class="toctext">Clock polarity and phase</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Mode_numbers"><span class="tocnumber">2.1.2</span> <span class="toctext">Mode numbers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#Independent_slave_SPI_configuration"><span class="tocnumber">2.2</span> <span class="toctext">Independent slave SPI configuration</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Daisy_chain_SPI_configuration"><span class="tocnumber">2.3</span> <span class="toctext">Daisy chain SPI configuration</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Valid_SPI_communications"><span class="tocnumber">2.4</span> <span class="toctext">Valid SPI communications</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Interrupts"><span class="tocnumber">2.5</span> <span class="toctext">Interrupts</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Example_of_bit-banging_the_SPI_master_protocol"><span class="tocnumber">2.6</span> <span class="toctext">Example of bit-banging the SPI master protocol</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Pros_and_cons_of_SPI"><span class="tocnumber">3</span> <span class="toctext">Pros and cons of SPI</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Advantages"><span class="tocnumber">3.1</span> <span class="toctext">Advantages</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Disadvantages"><span class="tocnumber">3.2</span> <span class="toctext">Disadvantages</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Applications"><span class="tocnumber">4</span> <span class="toctext">Applications</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Standards"><span class="tocnumber">5</span> <span class="toctext">Standards</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Development_tools"><span class="tocnumber">6</span> <span class="toctext">Development tools</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Host_adapters"><span class="tocnumber">6.1</span> <span class="toctext">Host adapters</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Protocol_analyzers"><span class="tocnumber">6.2</span> <span class="toctext">Protocol analyzers</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Oscilloscopes"><span class="tocnumber">6.3</span> <span class="toctext">Oscilloscopes</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Logic_analyzers"><span class="tocnumber">6.4</span> <span class="toctext">Logic analyzers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Related_terms"><span class="tocnumber">7</span> <span class="toctext">Related terms</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="#Intelligent_SPI_controllers"><span class="tocnumber">7.1</span> <span class="toctext">Intelligent SPI controllers</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Microwire"><span class="tocnumber">7.2</span> <span class="toctext">Microwire</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Three-wire_serial_buses"><span class="tocnumber">7.3</span> <span class="toctext">Three-wire serial buses</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Multi_I.2FO_SPI"><span class="tocnumber">7.4</span> <span class="toctext">Multi I/O SPI</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#mSPI"><span class="tocnumber">7.5</span> <span class="toctext">mSPI</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Interface">Interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=1" title="Edit section: Interface">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The SPI bus specifies four logic signals:</p>
+<ul>
+<li>SCLK: serial clock (output from master);</li>
+<li>MOSI: master output, slave input (output from master);</li>
+<li>MISO: master input, slave output (output from slave);</li>
+<li>SS: slave select (<a href="http://en.wikipedia.org/wiki/Logic_level" title="Logic level">active low</a>, output from master).</li>
+</ul>
+<p>Alternative naming conventions are also widely used:</p>
+<ul>
+<li>SCLK: SCK, CLK: serial clock (output from master)</li>
+<li>MOSI: SIMO, SDO, DO, DOUT, SO, MTSR: serial data out; data out, serial out, master transmit slave receive</li>
+<li>MISO: SOMI, SDI, DI, DIN, SI, MRST: serial data in; data in, serial in, master receive slave transmit</li>
+<li>SS: nCS, CS, CSB, CSN, nSS, STE, SYNC: chip select, slave transmit enable (<a href="http://en.wikipedia.org/wiki/Logic_level" title="Logic level">active low</a>, output from master)</li>
+</ul>
+<p>The SDI/SDO (DI/DO, SI/SO) convention requires that SDO on the master
+ be connected to SDI on the slave, and vice versa. Chip select polarity 
+is rarely active high, although some notations (such as SS or CS instead
+ of nSS or nCS) suggest otherwise.</p>
+<dl>
+<dd><i>SPI port pin names for particular IC products may differ from those depicted in these illustrations.</i></dd>
+</dl>
+<p>The master does not use an addressing concept while communicating with the slave.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (May 2013)">citation needed</span></a></i>]</sup></p>
+<h2><span class="mw-headline" id="Operation">Operation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=2" title="Edit section: Operation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The SPI bus can operate with a single master device and with one or more slave devices.</p>
+<p>If a single slave device is used, the SS pin <i>may</i> be fixed to <a href="http://en.wikipedia.org/wiki/Logic_level" title="Logic level">logic low</a> if the slave permits it. Some slaves require a falling <a href="http://en.wikipedia.org/wiki/Signal_edge" title="Signal edge">edge</a> of the chip select signal to initiate an action, an example is the <a href="http://en.wikipedia.org/wiki/Maxim_Integrated_Products" title="Maxim Integrated Products" class="mw-redirect">Maxim</a> MAX1242 <a href="http://en.wikipedia.org/wiki/Analog-to-digital_converter" title="Analog-to-digital converter">ADC</a>,
+ which starts conversion on a high→low transition. With multiple slave 
+devices, an independent SS signal is required from the master for each 
+slave device.</p>
+<p>Most slave devices have <a href="http://en.wikipedia.org/wiki/Tri-state_output" title="Tri-state output" class="mw-redirect">tri-state outputs</a> so their MISO signal becomes <a href="http://en.wikipedia.org/wiki/High_impedance" title="High impedance">high impedance</a> (<i>logically disconnected</i>)
+ when the device is not selected. Devices without tri-state outputs 
+can't share SPI bus segments with other devices; only one such slave 
+could talk to the master, and only its chip select could be activated.</p>
+<h3><span class="mw-headline" id="Data_transmission">Data transmission</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=3" title="Edit section: Data transmission">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:402px;"><a href="http://en.wikipedia.org/wiki/File:SPI_8-bit_circular_transfer.svg" class="image"><img alt="" src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/400px-SPI_8-bit_circular_transfer.png" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bb/SPI_8-bit_circular_transfer.svg/600px-SPI_8-bit_circular_transfer.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bb/SPI_8-bit_circular_transfer.svg/800px-SPI_8-bit_circular_transfer.svg.png 2x" height="160" width="400"></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:SPI_8-bit_circular_transfer.svg" class="internal" title="Enlarge"><img src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/magnify-clip.png" alt="" height="11" width="15"></a></div>
+A typical hardware setup using two <a href="http://en.wikipedia.org/wiki/Shift_register" title="Shift register">shift registers</a> to form an inter-chip <a href="http://en.wikipedia.org/wiki/Circular_buffer" title="Circular buffer">circular buffer</a></div>
+</div>
+</div>
+<p>To begin a communication, the bus master first configures the clock, 
+using a frequency less than or equal to the maximum frequency the slave 
+device supports. Such frequencies are commonly in the range of 
+10&nbsp;kHz–100&nbsp;MHz.</p>
+<p>The master then transmits the logic 0 for the desired chip over the 
+chip select line. A logic 0 is transmitted because the chip select line 
+is active low, meaning its <i>off</i> state is a logic 1; <i>on</i> is 
+asserted with a logic 0. If a waiting period is required (such as for 
+analog-to-digital conversion), then the master must wait for at least 
+that period of time before starting to issue clock cycles.</p>
+<p>During each SPI clock cycle, a full duplex data transmission occurs:</p>
+<ul>
+<li>the master sends a bit on the MOSI line; the slave reads it from that same line</li>
+<li>the slave sends a bit on the MISO line; the master reads it from that same line</li>
+</ul>
+<p>Not all transmissions require all four of these operations to be <i>meaningful</i>, but they do happen.</p>
+<p>Transmissions normally involve two shift registers of some given word
+ size, such as eight bits, one in the master and one in the slave; they 
+are connected in a ring. Data is usually shifted out with the most 
+significant bit first, while shifting a new least significant bit into 
+the same register. After that register has been shifted out, the master 
+and slave have exchanged register values. Then each device takes that 
+value and does something with it, such as writing it to memory. If there
+ is more data to exchange, the shift registers are loaded with new data<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> and the process repeats.</p>
+<p>Transmissions may involve any number of clock cycles. When there is 
+no more data to be transmitted, the master stops toggling its clock. 
+Normally, it then deselects the slave.</p>
+<p>Transmissions often consist of 8-bit words, and a master can initiate
+ multiple such transmissions if it wishes/needs. However, other word 
+sizes are also common, such as 16-bit words for touchscreen controllers 
+or audio codecs, like the TSC2101 from <a href="http://en.wikipedia.org/wiki/Texas_Instruments" title="Texas Instruments">Texas Instruments</a>; or 12-bit words for many digital-to-analog or analog-to-digital converters.</p>
+<p>Every slave on the bus that hasn't been activated using its chip 
+select line must disregard the input clock and MOSI signals, and must 
+not drive MISO. The master must select only one slave at a time.</p>
+<h4><span class="mw-headline" id="Clock_polarity_and_phase">Clock polarity and phase</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=4" title="Edit section: Clock polarity and phase">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright">
+<div class="thumbinner" style="width:402px;"><a href="http://en.wikipedia.org/wiki/File:SPI_timing_diagram2.svg" class="image"><img alt="" src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/400px-SPI_timing_diagram2.png" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6b/SPI_timing_diagram2.svg/600px-SPI_timing_diagram2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6b/SPI_timing_diagram2.svg/800px-SPI_timing_diagram2.svg.png 2x" height="233" width="400"></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:SPI_timing_diagram2.svg" class="internal" title="Enlarge"><img src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/magnify-clip.png" alt="" height="11" width="15"></a></div>
+A timing diagram showing clock polarity and phase. The red vertical line
+ represents CPHA=0 and the blue vertical line represents CPHA=1</div>
+</div>
+</div>
+<p>In addition to setting the clock frequency, the master must also 
+configure the clock polarity and phase with respect to the data. 
+Freescale's SPI Block Guide<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> names these two options as CPOL and CPHA respectively, and most vendors have adopted that convention.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/Digital_timing_diagram" title="Digital timing diagram">timing diagram</a> is shown to the right. The timing is further described below and applies to both the master and the slave device.</p>
+<ul>
+<li>At CPOL=0 the base value of the clock is zero
+<ul>
+<li>For CPHA=0, data are captured on the clock's rising edge (low→high 
+transition) and data is propagated on a falling edge (high→low clock 
+transition).</li>
+<li>For CPHA=1, data are captured on the clock's falling edge and data is propagated on a rising edge.</li>
+</ul>
+</li>
+<li>At CPOL=1 the base value of the clock is one (inversion of CPOL=0)
+<ul>
+<li>For CPHA=0, data are captured on clock's falling edge and data is propagated on a rising edge.</li>
+<li>For CPHA=1, data are captured on clock's rising edge and data is propagated on a falling edge.</li>
+</ul>
+</li>
+</ul>
+<p>That is, CPHA=0 means sample on the leading (first) clock edge, while
+ CPHA=1 means sample on the trailing (second) clock edge, regardless of 
+whether that clock edge is rising or falling. Note that with CPHA=0, the
+ data must be stable for a half cycle before the first clock cycle. For 
+all CPOL and CPHA modes, the initial clock value must be stable before 
+the chip select line goes active.</p>
+<p>The MOSI and MISO signals are usually stable (at their reception 
+points) for the half cycle until the next clock transition. SPI master 
+and slave devices may well sample data at different points in that half 
+cycle.</p>
+<p>This adds more flexibility to the communication channel between the master and slave.</p>
+<p>Some products use different naming conventions. For example, the <a href="http://en.wikipedia.org/wiki/TI_MSP430" title="TI MSP430">TI MSP430</a>
+ uses the name UCCKPL instead of CPOL, and its UCCKPH is the inverse of 
+CPHA. When connecting two chips together, carefully examine the clock 
+phase initialization values to be sure of using the right settings.</p>
+<h4><span class="mw-headline" id="Mode_numbers">Mode numbers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=5" title="Edit section: Mode numbers">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The combinations of polarity and phases are often referred to as 
+modes which are commonly numbered according to the following convention,
+ with CPOL as the high order bit and CPHA as the low order bit:</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Mode</th>
+<th>CPOL</th>
+<th>CPHA</th>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>Another commonly used notation represents the mode as a (CPOL, CPHA) 
+tuple; e.g., the value '(0, 1)' would indicate CPOL=0 and CPHA=1</p>
+<h3><span class="mw-headline" id="Independent_slave_SPI_configuration">Independent slave SPI configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=6" title="Edit section: Independent slave SPI configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:352px;"><a href="http://en.wikipedia.org/wiki/File:SPI_three_slaves.svg" class="image"><img alt="" src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/350px-SPI_three_slaves.png" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/SPI_three_slaves.svg/525px-SPI_three_slaves.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fc/SPI_three_slaves.svg/700px-SPI_three_slaves.svg.png 2x" height="278" width="350"></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:SPI_three_slaves.svg" class="internal" title="Enlarge"><img src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/magnify-clip.png" alt="" height="11" width="15"></a></div>
+Typical SPI bus: master and three independent slaves</div>
+</div>
+</div>
+<p>In the independent slave configuration, there is an independent chip 
+select line for each slave. This is the way SPI is normally used. Since 
+the MISO pins of the slaves are connected together, they are required to
+ be tri-state pins.</p>
+<h3><span class="mw-headline" id="Daisy_chain_SPI_configuration">Daisy chain SPI configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=7" title="Edit section: Daisy chain SPI configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:352px;"><a href="http://en.wikipedia.org/wiki/File:SPI_three_slaves_daisy_chained.svg" class="image"><img alt="" src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/350px-SPI_three_slaves_daisy_chained.png" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/97/SPI_three_slaves_daisy_chained.svg/525px-SPI_three_slaves_daisy_chained.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/97/SPI_three_slaves_daisy_chained.svg/700px-SPI_three_slaves_daisy_chained.svg.png 2x" height="278" width="350"></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:SPI_three_slaves_daisy_chained.svg" class="internal" title="Enlarge"><img src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/magnify-clip.png" alt="" height="11" width="15"></a></div>
+Daisy-chained SPI bus: master and cooperative slaves</div>
+</div>
+</div>
+<p>Some products with SPI bus are designed to be capable of being connected in a <a href="http://en.wikipedia.org/wiki/Daisy_chain_%28electrical_engineering%29" title="Daisy chain (electrical engineering)">daisy chain</a>
+ configuration, the first slave output being connected to the second 
+slave input, etc. The SPI port of each slave is designed to send out 
+during the second group of clock pulses an exact copy of what it 
+received during the first group of clock pulses. The whole chain acts as
+ an SPI communication <a href="http://en.wikipedia.org/wiki/Shift_register" title="Shift register">shift register</a>;
+ daisy chaining is often done with shift registers to provide a bank of 
+inputs or outputs through SPI. Such a feature only requires a single SS 
+line from the master, rather than a separate SS line for each slave.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p>Applications (discussed later) that require a daisy chain configuration include <a href="http://en.wikipedia.org/wiki/SGPIO" title="SGPIO">SGPIO</a> and <a href="http://en.wikipedia.org/wiki/JTAG" title="JTAG" class="mw-redirect">JTAG</a>.</p>
+<h3><span class="mw-headline" id="Valid_SPI_communications">Valid SPI communications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=8" title="Edit section: Valid SPI communications">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Some slave devices are designed to ignore any SPI communications in 
+which the number of clock pulses is greater than specified. Others don't
+ care, ignoring extra inputs and continuing to shift the same output 
+bit. It is common for different devices to use SPI communications with 
+different lengths, as, for example, when SPI is used to access the <a href="http://en.wikipedia.org/wiki/Scan_chain" title="Scan chain">scan chain</a>
+ of a digital IC by issuing a command word of one size (perhaps 32 bits)
+ and then getting a response of a different size (perhaps 153 bits, one 
+for each pin in that scan chain).</p>
+<h3><span class="mw-headline" id="Interrupts">Interrupts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=9" title="Edit section: Interrupts">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>SPI devices sometimes use another signal line to send an interrupt 
+signal to a host CPU. Examples include pen-down interrupts from 
+touchscreen sensors, thermal limit alerts from temperature sensors, 
+alarms issued by real time clock chips, <a href="http://en.wikipedia.org/wiki/Secure_Digital#SDIO" title="Secure Digital">SDIO</a>,
+ and headset jack insertions from the sound codec in a cell phone. 
+Interrupts are not covered by the SPI standard; their usage is neither 
+forbidden nor specified by the standard.</p>
+<h3><span class="mw-headline" id="Example_of_bit-banging_the_SPI_master_protocol">Example of bit-banging the SPI master protocol</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=10" title="Edit section: Example of bit-banging the SPI master protocol">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Below is an example of <a href="http://en.wikipedia.org/wiki/Bit-banging" title="Bit-banging" class="mw-redirect">bit-banging</a>
+ the SPI protocol as an SPI master with CPOL=0, CPHA=0, and eight bits 
+per transfer. The example is written in the C programming language. 
+Because this is CPOL=0 the clock must be pulled low before the chip 
+select is activated. The chip select line must be activated, which 
+normally means being toggled low, for the peripheral before the start of
+ the transfer, and then deactivated afterwards. Most peripherals allow 
+or require several transfers while the select line is low; this routine 
+might be called several times before deselecting the chip.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1"><span class="coMULTI">/* return: 0 is OK, */</span>
+<span class="kw4">unsigned</span> <span class="kw4">char</span> SPIWriteData<span class="br0">(</span><span class="kw4">unsigned</span> <span class="kw4">char</span> byte<span class="br0">)</span>
+<span class="br0">{</span>       
+    <span class="kw4">unsigned</span> <span class="kw4">char</span>    bit<span class="sy0">;</span>
+ 
+    <span class="coMULTI">/* Negative clock polarity */</span>
+    SETGPHA<span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span> 
+    <span class="coMULTI">/* Data are propagated on a falling edge (high-&gt;low clock transition). */</span>
+    SETGPOL<span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+    <span class="kw1">for</span> <span class="br0">(</span>bit <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> bit <span class="sy0">&lt;</span> <span class="nu0">8</span><span class="sy0">;</span> bit<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="coMULTI">/* delay between raise of clock */</span>
+        SPIDELAY<span class="br0">(</span>SPISPEED<span class="sy0">/</span><span class="nu0">2</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+        SETCLK<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+        <span class="coMULTI">/* delay between fall of clock */</span>
+        <span class="coMULTI">/* gives the h/w time to setup MISO line */</span>
+        SPIDELAY<span class="br0">(</span>SPISPEED<span class="sy0">/</span><span class="nu0">2</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+        CLRCLK<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+        <span class="coMULTI">/* write MOSI on falling edge of previous clock */</span>
+        <span class="kw1">if</span> <span class="br0">(</span>byte <span class="sy0">&amp;</span> <span class="nu12">0x80</span><span class="br0">)</span>
+            SETMOSI<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="kw1">else</span>
+            CLRMOSI<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        byte <span class="sy0">&lt;&lt;=</span> <span class="nu0">1</span><span class="sy0">;</span>   
+    <span class="br0">}</span>
+ 
+    <span class="kw1">return</span> byte<span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="Pros_and_cons_of_SPI">Pros and cons of SPI</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=11" title="Edit section: Pros and cons of SPI">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Advantages">Advantages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=12" title="Edit section: Advantages">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Full duplex communication</li>
+<li>Higher <a href="http://en.wikipedia.org/wiki/Throughput" title="Throughput">throughput</a> than <a href="http://en.wikipedia.org/wiki/I%C2%B2C" title="I²C">I²C</a> or <a href="http://en.wikipedia.org/wiki/System_Management_Bus" title="System Management Bus">SMBus</a></li>
+<li>Complete protocol flexibility for the bits transferred
+<ul>
+<li>Not limited to 8-bit words</li>
+<li>Arbitrary choice of message size, content, and purpose</li>
+</ul>
+</li>
+<li>Extremely simple hardware interfacing
+<ul>
+<li>Typically lower power requirements than I²C or SMBus due to less circuitry (including pull up resistors)</li>
+<li>No arbitration or associated failure modes</li>
+<li>Slaves use the master's clock, and don't need precision oscillators</li>
+<li>Slaves don't need a unique <a href="http://en.wikipedia.org/wiki/Address_space" title="Address space">address</a> — unlike I²C or <a href="http://en.wikipedia.org/wiki/GPIB" title="GPIB" class="mw-redirect">GPIB</a> or <a href="http://en.wikipedia.org/wiki/SCSI" title="SCSI">SCSI</a></li>
+<li>Transceivers are not needed</li>
+</ul>
+</li>
+<li>Uses only four pins on IC packages, and wires in board layouts or connectors, much fewer than parallel interfaces</li>
+<li>At most one unique bus signal per device (chip select); all others are shared</li>
+<li>Signals are unidirectional allowing for easy <a href="http://en.wikipedia.org/wiki/Galvanic_isolation" title="Galvanic isolation">Galvanic isolation</a></li>
+<li>Not limited to any maximum clock speed, enabling potentially high throughput</li>
+</ul>
+<h3><span class="mw-headline" id="Disadvantages">Disadvantages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=13" title="Edit section: Disadvantages">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Requires more pins on IC packages than I²C, even in the <i><a href="#Three-wire_serial_buses">three-wire</a></i> variant</li>
+<li>No in-band addressing; out-of-band chip select signals are required on shared buses</li>
+<li>No hardware <a href="http://en.wikipedia.org/wiki/Flow_control_%28data%29" title="Flow control (data)">flow control</a> by the slave (but the master can delay the next clock edge to slow the transfer rate)</li>
+<li>No hardware slave acknowledgment (the master could be transmitting to nowhere and not know it)</li>
+<li>Supports only one master device</li>
+<li>No error-checking protocol is defined</li>
+<li>Generally prone to noise spikes causing faulty communication</li>
+<li>Without a formal standard, validating conformance is not possible</li>
+<li>Only handles short distances compared to <a href="http://en.wikipedia.org/wiki/RS-232" title="RS-232">RS-232</a>, <a href="http://en.wikipedia.org/wiki/RS-485" title="RS-485">RS-485</a>, or <a href="http://en.wikipedia.org/wiki/CAN-bus" title="CAN-bus" class="mw-redirect">CAN-bus</a></li>
+<li>Many existing variations, making it difficult to find development tools like host adapters that support those variations</li>
+<li>SPI does not support <a href="http://en.wikipedia.org/wiki/Hot_swapping" title="Hot swapping">hot plugging</a> (dynamically adding nodes).</li>
+</ul>
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=14" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The board real estate savings compared to a parallel I/O bus are 
+significant, and have earned SPI a solid role in embedded systems. That 
+is true for most <a href="http://en.wikipedia.org/wiki/System-on-a-chip" title="System-on-a-chip" class="mw-redirect">system-on-a-chip</a> processors, both with higher end 32-bit processors such as those using <a href="http://en.wikipedia.org/wiki/ARM_architecture" title="ARM architecture">ARM</a>, <a href="http://en.wikipedia.org/wiki/MIPS_architecture" title="MIPS architecture">MIPS</a>, or <a href="http://en.wikipedia.org/wiki/PowerPC" title="PowerPC">PowerPC</a> and with other microcontrollers such as the <a href="http://en.wikipedia.org/wiki/Atmel_AVR" title="Atmel AVR">AVR</a>, <a href="http://en.wikipedia.org/wiki/PIC_microcontroller" title="PIC microcontroller">PIC</a>, and <a href="http://en.wikipedia.org/wiki/MSP430" title="MSP430" class="mw-redirect">MSP430</a>.
+ These chips usually include SPI controllers capable of running in 
+either master or slave mode. In-system programmable AVR controllers 
+(including blank ones) can be programmed using an SPI interface.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<p>Chip or <a href="http://en.wikipedia.org/wiki/FPGA" title="FPGA" class="mw-redirect">FPGA</a>
+ based designs sometimes use SPI to communicate between internal 
+components; on-chip real estate can be as costly as its on-board cousin.</p>
+<p>The full-duplex capability makes SPI very simple and efficient for 
+single master/single slave applications. Some devices use the 
+full-duplex mode to implement an efficient, swift data stream for 
+applications such as <a href="http://en.wikipedia.org/wiki/Digital_audio" title="Digital audio">digital audio</a>, <a href="http://en.wikipedia.org/wiki/Digital_signal_processing" title="Digital signal processing">digital signal processing</a>, or <a href="http://en.wikipedia.org/wiki/Channel_%28communications%29" title="Channel (communications)">telecommunications channels</a>, but most off-the-shelf chips stick to half-duplex request/response protocols.</p>
+<p>SPI is used to talk to a variety of peripherals, such as</p>
+<ul>
+<li>Sensors: temperature, pressure, <a href="http://en.wikipedia.org/wiki/Analog-to-digital_converter" title="Analog-to-digital converter">ADC</a>, touchscreens, video game controllers</li>
+<li>Control devices: <a href="http://en.wikipedia.org/wiki/Audio_codec" title="Audio codec">audio codecs</a>, digital potentiometers, <a href="http://en.wikipedia.org/wiki/Digital-to-analog_converter" title="Digital-to-analog converter">DAC</a></li>
+<li>Camera lenses: <a href="http://en.wikipedia.org/wiki/Canon_EF_lens_mount" title="Canon EF lens mount">Canon EF lens mount</a></li>
+<li>Communications: Ethernet, USB, USART, CAN, <a href="http://en.wikipedia.org/wiki/IEEE_802.15.4" title="IEEE 802.15.4">IEEE 802.15.4</a>, <a href="http://en.wikipedia.org/wiki/IEEE_802.11" title="IEEE 802.11">IEEE 802.11</a>, handheld video games</li>
+<li>Memory: <a href="http://en.wikipedia.org/wiki/Flash_memory#Serial_flash" title="Flash memory">flash</a> and <a href="http://en.wikipedia.org/wiki/EEPROM#Serial_bus_devices" title="EEPROM">EEPROM</a></li>
+<li>Real-time clocks</li>
+<li>LCD, sometimes even for managing image data</li>
+<li>Any <a href="http://en.wikipedia.org/wiki/MultiMediaCard" title="MultiMediaCard">MMC</a> or <a href="http://en.wikipedia.org/wiki/Secure_Digital" title="Secure Digital">SD</a> card (including <a href="http://en.wikipedia.org/wiki/Secure_Digital#SDIO" title="Secure Digital">SDIO</a> variant)</li>
+</ul>
+<p>For high performance systems, <a href="http://en.wikipedia.org/wiki/FPGA" title="FPGA" class="mw-redirect">FPGAs</a>
+ sometimes use SPI to interface as a slave to a host, as a master to 
+sensors, or for flash memory used to bootstrap if they are SRAM-based.</p>
+<p><a href="http://en.wikipedia.org/wiki/JTAG" title="JTAG" class="mw-redirect">JTAG</a> is essentially an application stack for a three-wire SPI flavor, using different signal names<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2010)">citation needed</span></a></i>]</sup>:
+ TCK not SCK, TDI not MOSI, TDO not MISO. It defines a state machine 
+(driven by a TMS signal instead of a chip select line), protocol 
+messages, a core command set, the ability to daisy-chain devices in a 
+"scan chain", and how vendors define new commands. The devices in a scan
+ chain are initially treated as a single device, and transitions on TMS 
+update their state machines; once the individual devices are identified,
+ commands may be issued that affect only one device in that scan chain. 
+Different vendors use different <a href="http://en.wikipedia.org/wiki/JTAG_connector" title="JTAG connector" class="mw-redirect">JTAG connectors</a>.
+ Bit strings used in JTAG are often long and not multiples of 8 bit 
+words; for example, a boundary scan reports signal state on each of 
+several hundred pins.</p>
+<p><a href="http://en.wikipedia.org/wiki/SGPIO" title="SGPIO">SGPIO</a> is essentially another (incompatible) application stack for SPI designed for particular backplane management activities<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2010)">citation needed</span></a></i>]</sup>. SGPIO uses 3-bit messages.</p>
+<h2><span class="mw-headline" id="Standards">Standards</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=15" title="Edit section: Standards">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The SPI bus is a <a href="http://en.wikipedia.org/wiki/De_facto_standard" title="De facto standard"><i>de facto</i> standard</a>.
+ However, the lack of a formal standard is reflected in a wide variety 
+of protocol options. Different word sizes are common. Every device 
+defines its own protocol, including whether or not it supports commands 
+at all. Some devices are transmit-only; others are receive-only. Chip 
+selects are sometimes active-high rather than active-low. Some protocols
+ send the least significant bit first.</p>
+<p>Some devices even have minor variances from the CPOL/CPHA modes 
+described above. Sending data from slave to master may use the opposite 
+clock edge as master to slave. Devices often require extra clock idle 
+time before the first clock or after the last one, or between a command 
+and its response. Some devices have two clocks, one to read data, and 
+another to transmit it into the device. Many of the read clocks run from
+ the chip select line.</p>
+<p>Some devices require an additional flow control signal from slave to 
+master, indicating when data are ready. This leads to a 5-wire protocol 
+instead of the usual 4. Such a <i>ready</i> or <i>enable</i> signal is 
+often active-low, and needs to be enabled at key points such as after 
+commands or between words. Without such a signal, data transfer rates 
+may need to be slowed down significantly, or protocols may need to have 
+dummy bytes inserted, to accommodate the worst case for the slave 
+response time. Examples include initiating an ADC conversion, addressing
+ the right page of flash memory, and processing enough of a command that
+ device firmware can load the first word of the response. (Many SPI 
+masters don't support that signal directly, and instead rely on fixed 
+delays.)</p>
+<p>Many SPI chips only support messages that are multiples of 8 bits. Such chips can not interoperate with the <a href="http://en.wikipedia.org/wiki/JTAG" title="JTAG" class="mw-redirect">JTAG</a> or <a href="http://en.wikipedia.org/wiki/SGPIO" title="SGPIO">SGPIO</a> protocols, or any other protocol that requires messages that are not multiples of 8 bits.</p>
+<p>There are also hardware-level differences. Some chips combine MOSI 
+and MISO into a single data line (SI/SO); this is sometimes called <i>three-wire</i> signaling (in contrast to normal <i>four-wire</i>
+ SPI). Another variation of SPI removes the chip select line, managing 
+protocol state machine entry/exit using other methods; this isn't 
+usually called three-wire though. Anyone needing an external connector 
+for SPI defines their own: <a href="http://en.wikipedia.org/wiki/UEXT" title="UEXT">UEXT</a>, <a href="http://en.wikipedia.org/wiki/JTAG_connector" title="JTAG connector" class="mw-redirect">JTAG connector</a>, <a href="http://en.wikipedia.org/wiki/Secure_Digital" title="Secure Digital">Secure Digital</a> card socket, etc. Signal levels depend entirely on the chips involved.</p>
+<h2><span class="mw-headline" id="Development_tools">Development tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=16" title="Edit section: Development tools">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When developing or troubleshooting systems using SPI, visibility at the level of hardware signals can be important.</p>
+<h3><span class="mw-headline" id="Host_adapters">Host adapters</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=17" title="Edit section: Host adapters">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There are a number of <a href="http://en.wikipedia.org/wiki/USB" title="USB">USB</a> hardware solutions to provide computers, running <a href="http://en.wikipedia.org/wiki/Linux" title="Linux">Linux</a>, <a href="http://en.wikipedia.org/wiki/Macintosh" title="Macintosh">Mac</a>, or <a href="http://en.wikipedia.org/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a>,
+ SPI master and/or slave capabilities. Many of them also provide 
+scripting and/or programming capabilities (Visual Basic, C/C++, VHDL 
+etc.).</p>
+<p>An SPI host adapter lets the user play the role of a master on a SPI 
+bus directly from PC. They are used for embedded systems, chips 
+(FPGA/ASIC/SoC) and peripheral testing, programming and debugging.</p>
+<p>The key parameters of SPI adapters are: the maximum supported 
+frequency for the serial interface, command-to-command latency and the 
+maximum length for SPI commands. It is possible to find SPI adapters on 
+the market today that support up to 100&nbsp;MHz serial interfaces, with
+ virtually unlimited access length.</p>
+<p>SPI protocol being a de facto standard, some SPI host adapters also 
+have the ability of supporting other protocols beyond the traditional 
+4-wires SPI (for example, support of quad-SPI protocol or other custom 
+serial protocol that derive from SPI<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup>).</p>
+<p><b>Examples of SPI adapters</b> <i>(manufacturers in alphabetical order):</i></p>
+<table class="wikitable">
+<tbody><tr>
+<th>Manufacturer</th>
+<th>SPI host adapter</th>
+<th>Host bus</th>
+<th>Bus protocol support</th>
+<th>Max frequency</th>
+</tr>
+<tr>
+<td>Byte Paradigm</td>
+<td><a rel="nofollow" class="external text" href="http://www.byteparadigm.com/product-spi-storm-39.html">SPI Storm</a></td>
+<td>USB</td>
+<td>SPI, dual/quad, custom</td>
+<td>100&nbsp;MHz</td>
+</tr>
+<tr>
+<td>Corelis</td>
+<td><a rel="nofollow" class="external text" href="http://www.corelis.com/products-bus-analyzers/SPI_Exerciser_BusPro-S.htm">BusPro-S</a></td>
+<td>USB</td>
+<td>SPI, dual/quad</td>
+<td>60&nbsp;MHz</td>
+</tr>
+<tr>
+<td>Microchip</td>
+<td><a rel="nofollow" class="external text" href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1406&amp;dDocName=en556988&amp;part=ADM00421">MCP2210 Kit</a></td>
+<td>USB</td>
+<td>SPI</td>
+<td>12&nbsp;MHz</td>
+</tr>
+<tr>
+<td>National Instruments</td>
+<td><a rel="nofollow" class="external text" href="http://sine.ni.com/nips/cds/view/p/lang/en/nid/210256">USB-8542</a></td>
+<td>USB</td>
+<td>I²C, SPI</td>
+<td>50&nbsp;MHz</td>
+</tr>
+<tr>
+<td>Total Phase</td>
+<td><a rel="nofollow" class="external text" href="http://www.totalphase.com/products/cheetah_spi/">Cheetah</a></td>
+<td>USB</td>
+<td>SPI</td>
+<td>40&nbsp;MHz</td>
+</tr>
+</tbody></table>
+<h3><span class="mw-headline" id="Protocol_analyzers">Protocol analyzers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=18" title="Edit section: Protocol analyzers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>SPI protocol analyzers are tools which sample an SPI bus and decode 
+the electrical signals to provide a higher-level view of the data being 
+transmitted on a specific bus.</p>
+<h3><span class="mw-headline" id="Oscilloscopes">Oscilloscopes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=19" title="Edit section: Oscilloscopes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Every major oscilloscope vendor offers oscilloscope-based triggering 
+and protocol decoding for SPI. Most support 2-, 3-, and 4-wire SPI. The 
+triggering and decoding capability is typically offered as an optional 
+extra. SPI signals can be accessed via analog oscilloscope channels or 
+with digital MSO channels.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Logic_analyzers">Logic analyzers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=20" title="Edit section: Logic analyzers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>When developing and/or troubleshooting the SPI bus, examination of hardware signals can be very important. <a href="http://en.wikipedia.org/wiki/Logic_analyzers" title="Logic analyzers" class="mw-redirect">Logic analyzers</a>
+ are tools which collect, analyze, decode, store signals so people can 
+view the high-speed waveforms at their leisure. Logic analyzers display 
+time-stamps of each signal level change, which can help find protocol 
+problems. Most logic analyzers have the capability to decode bus signals
+ into high-level protocol data and show ASCII data.</p>
+<h2><span class="mw-headline" id="Related_terms">Related terms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=21" title="Edit section: Related terms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Intelligent_SPI_controllers">Intelligent SPI controllers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=22" title="Edit section: Intelligent SPI controllers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <b>queued serial peripheral interface</b> (<b>QSPI</b>) is one type of SPI controller, not another bus type. It uses a <a href="http://en.wikipedia.org/wiki/Queue_%28data_structure%29" title="Queue (data structure)" class="mw-redirect">data queue</a> with programmable queue pointers allowing some data transfers without <a href="http://en.wikipedia.org/wiki/CPU" title="CPU" class="mw-redirect">CPU</a> intervention.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup> It also has a <a href="http://en.wikipedia.org/w/index.php?title=Memory_wrap-around&amp;action=edit&amp;redlink=1" class="new" title="Memory wrap-around (page does not exist)">wrap-around</a>
+ mode allowing continuous transfers to and from the queue with no CPU 
+intervention. Consequently, the peripherals appear to the CPU as <a href="http://en.wikipedia.org/wiki/Virtual_memory" title="Virtual memory">memory-mapped</a> parallel devices. This feature is useful in applications such as control of an <a href="http://en.wikipedia.org/wiki/Analog-to-digital_converter" title="Analog-to-digital converter">A/D converter</a>. Other programmable features in QSPI are chip selects and transfer length/delay.</p>
+<p>SPI controllers from different vendors support different feature 
+sets; such DMA queues are not uncommon, although they may be associated 
+with separate DMA engines rather than the SPI controller itself, such as
+ used by <b>multichannel buffered serial port</b> (<b>MCBSP</b>).<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup> Most SPI master controllers integrate support for up to four chip selects,<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> although some require chip selects to be managed separately through GPIO lines.</p>
+<h3><span class="mw-headline" id="Microwire">Microwire</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=23" title="Edit section: Microwire">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Microwire is essentially a predecessor of SPI. It's a strict subset: 
+half duplex, and using SPI mode 0. (Microwire-Plus supports other SPI 
+modes.) Microwire chips tend to need slower clock rates than newer SPI 
+versions; perhaps 2&nbsp;MHz vs. 20&nbsp;MHz. Some Microwire chips also 
+support a three-wire mode (see below), which fits neatly with the 
+restriction to half duplex.</p>
+<h3><span class="mw-headline" id="Three-wire_serial_buses">Three-wire serial buses</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=24" title="Edit section: Three-wire serial buses">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>As mentioned above, one variant of SPI uses single bidirectional data
+ line (slave out/slave in, called SISO) instead of two unidirectional 
+ones (MOSI and MISO). Clearly, this variant is restricted to a half 
+duplex mode. It tends to be used for lower performance parts, such as 
+small EEPROMs used only during system startup and certain sensors, and 
+Microwire. As of this writing, few SPI master controllers support this 
+mode; although it can often be easily <a href="http://en.wikipedia.org/wiki/Bit-banging" title="Bit-banging" class="mw-redirect">bit-banged</a> in software.</p>
+<p>When someone says a part supports SPI or Microwire, you can normally assume that means the four-wire version.</p>
+<p>However, when someone talks about a part supporting a three-wire 
+serial bus you should always find out what it means: standard four-wire 
+SPI, without the chip select pin from that count, since most buses use 
+chip selects but only three wires carry "real" signals; (More, sometimes
+ with an unshared SPI bus segment the device's chip select will be 
+hard-wired as "always selected".) "real" three-wire SPI; or even a <a href="http://en.wikipedia.org/wiki/RS-232#3-wire_and_5-wire_RS-232" title="RS-232">RS-232 cable</a> with RXD, TXD, and shield/ground, or an application-specific signalling scheme.</p>
+<h3><span class="mw-headline" id="Multi_I.2FO_SPI">Multi I/O SPI</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=25" title="Edit section: Multi I/O SPI">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>As opposed to three-wire serial buses, multi I/O SPI uses multiple 
+parallel data lines (e.g., IO0 to IO3) to increase throughput. Dual I/O 
+SPI using two data lines has comparable throughput to fast single I/O 
+(MISO/MOSI). Quad I/O SPI using four data lines has approximately double
+ the throughput.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup>
+ Multi I/O SPI devices tend to be half duplex similar to three-wire 
+devices to avoid adding too many pins. These serial memory devices 
+combine the advantage of more speed with reduced pin count as compared 
+to parallel memory.</p>
+<h3><span class="mw-headline" id="mSPI">mSPI</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=26" title="Edit section: mSPI">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:352px;"><a href="http://en.wikipedia.org/wiki/File:350px-mSPI_three_slaves_svg.png" class="image"><img alt="" src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/350px-mSPI_three_slaves_svg.png" class="thumbimage" height="278" width="350"></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:350px-mSPI_three_slaves_svg.png" class="internal" title="Enlarge"><img src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/magnify-clip.png" alt="" height="11" width="15"></a></div>
+Typical mSPI bus: master and three independent slaves</div>
+</div>
+</div>
+<p>mSPI (mini-SPI) is a modification initially developed in <a rel="nofollow" class="external text" href="http://www.dimitech.com/">Dimitech</a>
+ for their programmable modules. Unlike the standard SPI, four signal 
+lines are always required no matter of the number of slave devices. Its 
+overall simplicity allows the use of standard SPI controllers with a 
+very thin software layer.</p>
+<p>All slave devices share the same SS (Slave Select; active low) line, 
+along with the other three SPI signals: SCLK, MOSI and MISO. 
+Additionally all slave devices normally have their MISO line 
+disconnected from the bus and kept in high impedance state. As in the 
+standard SPI, begin of transmission is marked by the activation of the 
+SS line low and the end is marked by its return back to high. mSPI 
+requires the bus master to issue a "slave address" (typically 8 bits) as
+ mandatory first word in every transmission. Since all slave devices 
+share the same SS line, the address word will be received by all of them
+ at the same time. From that point further, only the device with the 
+specified address will connect its MISO line to the bus and start 
+communicating, while all other slave devices will ignore any data and 
+wait for a new start of transmission and address. mSPI solves some of 
+the basic disadvantages of the standard SPI at the expense of a slight 
+decrease in the overall communication speed due to the initial 
+addressing.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=27" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="noprint tright portal" style="border:solid #aaa 1px;margin:0.5em 0 0.5em 1em;">
+<table style="background:#f9f9f9;font-size:85%;line-height:110%;max-width:175px;">
+<tbody><tr valign="middle">
+<td style="text-align:center;"><a href="http://en.wikipedia.org/wiki/File:Nuvola_apps_ksim.png" class="image"><img alt="Portal icon" src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/28px-Nuvola_apps_ksim.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Nuvola_apps_ksim.png/42px-Nuvola_apps_ksim.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Nuvola_apps_ksim.png/56px-Nuvola_apps_ksim.png 2x" height="28" width="28"></a></td>
+<td style="padding:0 0.2em;vertical-align:middle;font-style:italic;font-weight:bold;"><a href="http://en.wikipedia.org/wiki/Portal:Electronics" title="Portal:Electronics">Electronics portal</a></td>
+</tr>
+</tbody></table>
+</div>
+<ul>
+<li>Related buses
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_network_buses" title="List of network buses">List of network buses</a></li>
+</ul>
+</li>
+<li>Related connectors
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Secure_Digital" title="Secure Digital">Secure Digital</a> - SD, SDHC, SDXC cards.</li>
+<li><a href="http://en.wikipedia.org/wiki/UEXT" title="UEXT">UEXT</a> Connector.</li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Universal_Metering_Interface" title="Universal Metering Interface" class="mw-redirect">Universal Metering Interface</a> (UMI)</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=28" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Note:
+ on chips where a same shift register is used for both input and output 
+(typical hardware), if one of the devices does not update in time the 
+byte to be sent (especially the slave which has no control over the 
+clock), the last data received will be sent back (like an "echo"). This 
+may be taken into consideration when designing a new communication 
+protocol over SPI, which has no flow control.</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.ee.nmt.edu/%7Eteare/ee308l/datasheets/S12SPIV3.pdf">SPI Block Guide V03.06</a>, <a href="http://en.wikipedia.org/wiki/Freescale_Semiconductor" title="Freescale Semiconductor">Freescale Semiconductor</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.maxim-ic.com/appnotes.cfm/an_pk/3947">Maxim-IC application note 3947: "Daisy-Chaining SPI Devices"</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.atmel.com/dyn/resources/prod_documents/DOC0943.PDF">AVR910 - In-system programming</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.byteparadigm.com/product-spi-storm-39.html">SPI Adapter</a> with support of custom serial protocols, Byte Paradigm.</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.home.agilent.com/agilent/product.jspx?nid=-35491.898639.00&amp;lc=eng&amp;cc=US">"N5391B"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASerial+Peripheral+Interface+Bus&amp;rft.btitle=N5391B&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.home.agilent.com%2Fagilent%2Fproduct.jspx%3Fnid%3D-35491.898639.00%26lc%3Deng%26cc%3DUS&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.freescale.com/files/microcontrollers/doc/ref_manual/QSMRM.pdf">Queued Serial Module Reference Manual</a>, Freescale Semiconductor</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Such as with the <a rel="nofollow" class="external text" href="http://focus.ti.com/docs/prod/folders/print/omap3530.html#technicaldocuments">MultiChannel Serial Port Interface</a>,
+ or McSPI, used in Texas Instruments OMAP chips. Download just the 
+chapter about the SPI controller, if you want a good example of a highly
+ engineered modern controller.</span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Such at the SPI controller on <a rel="nofollow" class="external text" href="http://www.atmel.com/products/at91/">Atmel AT91 chips</a> like the at91sam9G20, which is much simpler than TI's McSPI.</span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.spansion.com/Products/Documents/Spansion_MirrorBit_SPI_MIO_backgrounder.pdf">Serial Peripheral Interface (SPI) Flash Memory Backgrounder</a>, Spansion</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit&amp;section=29" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/30px-Commons-logo.png" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" height="40" width="30"></td>
+<td class="mbox-text plainlist" style="">Wikimedia Commons has media related to <i><b><a href="http://commons.wikimedia.org/wiki/Category:Serial_Peripheral_Interface" class="extiw" title="commons:Category:Serial Peripheral Interface">Serial Peripheral Interface</a></b></i>.</td>
+</tr>
+</tbody></table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.byteparadigm.com/kb/article/AA-00255/22/Introduction-to-SPI-and-IC-protocols.html">Introduction to SPI and I2C protocols</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.epanorama.net/links/serialbus.html">Serial buses information page</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.mct.net/faq/spi.html">SPI Introduction</a> with helpful diagrams</li>
+<li><a rel="nofollow" class="external text" href="http://www.serialflash.com/">Serial Flash</a> Lots of good information on SPI part manufacturers and models.</li>
+<li><a rel="nofollow" class="external text" href="http://ww1.microchip.com/downloads/en/DeviceDoc/spi.pdf">SPI - PICmicro Serial Peripheral Interface</a>, Microchip (company) tutorial on SPI.</li>
+<li><a rel="nofollow" class="external text" href="http://www.opencores.org/project,spi">OpenCores</a> Open Source implementation of SPI written in <a href="http://en.wikipedia.org/wiki/Verilog" title="Verilog">Verilog</a>; <a rel="nofollow" class="external text" href="http://www.opencores.org/?do=project&amp;who=simple_spi">simpler MC68HC11 version</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.hdl-dh.com/prodbroch/HIP3100.01.04.2009.pdf">SPI flash memory controller</a>, HDL Design House</li>
+<li><a rel="nofollow" class="external text" href="http://www.corelis.com/education/SPI_Tutorial.htm">SPI Bus Tutorial</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.dimitech.com/downloads/an0001.pdf">mSPI Description</a></li>
+</ul>
+<table class="navbox" style="border-spacing:0;" cellspacing="0">
+<tbody><tr>
+<td style="padding:2px;">
+<table id="collapsibleTable0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;" cellspacing="0">
+<tbody><tr>
+<th scope="col" class="navbox-title" colspan="2"><span class="collapseButton">[<a href="#" id="collapseButton0">hide</a>]</span>
+<div class="noprint plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Computer_bus" title="Template:Computer bus"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Computer_bus" title="Template talk:Computer bus"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Computer_bus&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="http://en.wikipedia.org/wiki/Bus_%28computing%29" title="Bus (computing)">Computer bus</a> — <a href="http://en.wikipedia.org/wiki/Technical_standard" title="Technical standard">technical</a> and <a href="http://en.wikipedia.org/wiki/De_facto_standard" title="De facto standard"><i>de facto</i></a> standards (<a href="http://en.wikipedia.org/wiki/Wired_communication" title="Wired communication">wired</a>)</div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">General</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/System_bus" title="System bus">System bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Front-side_bus" title="Front-side bus">Front-side bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Back-side_bus" title="Back-side bus">Back-side bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Daisy_chain_%28electrical_engineering%29" title="Daisy chain (electrical engineering)">Daisy chain</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Control_bus" title="Control bus">Control bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Address_bus" title="Address bus">Address bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bus_contention" title="Bus contention">Bus contention</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Network_on_a_chip" title="Network on a chip">Network on a chip</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Plug_and_play" title="Plug and play">Plug and play</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_device_bit_rates#Computer_buses" title="List of device bit rates">List of bus bandwidths</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Standards</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/S-100_bus" title="S-100 bus">S-100 bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Unibus" title="Unibus">Unibus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/VAXBI_Bus" title="VAXBI Bus">VAXBI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MBus_%28SPARC%29" title="MBus (SPARC)">MBus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/STD_Bus" title="STD Bus">STD Bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/System_Management_Bus" title="System Management Bus">SMBus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Q-Bus" title="Q-Bus">Q-Bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Industry_Standard_Architecture" title="Industry Standard Architecture">ISA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/STEbus" title="STEbus">STEbus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Amiga_Zorro_II" title="Amiga Zorro II">Zorro II</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Amiga_Zorro_III" title="Amiga Zorro III">Zorro III</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Computer_Automated_Measurement_and_Control" title="Computer Automated Measurement and Control">CAMAC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FASTBUS" title="FASTBUS">FASTBUS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Low_Pin_Count" title="Low Pin Count">LPC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/HP_Precision_Bus" title="HP Precision Bus">HP Precision Bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Extended_Industry_Standard_Architecture" title="Extended Industry Standard Architecture">EISA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/VMEbus" title="VMEbus">VME</a></li>
+<li><a href="http://en.wikipedia.org/wiki/VME_eXtensions_for_Instrumentation" title="VME eXtensions for Instrumentation">VXI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/VXS" title="VXS">VXS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/NuBus" title="NuBus">NuBus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TURBOchannel" title="TURBOchannel">TURBOchannel</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Micro_Channel_architecture" title="Micro Channel architecture">MCA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SBus" title="SBus">SBus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/VESA_Local_Bus" title="VESA Local Bus">VLB</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Conventional_PCI" title="Conventional PCI">PCI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PCI_eXtensions_for_Instrumentation" title="PCI eXtensions for Instrumentation">PXI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GSC_bus" title="GSC bus">HP GSC bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CoreConnect" title="CoreConnect">CoreConnect</a></li>
+<li><a href="http://en.wikipedia.org/wiki/InfiniBand" title="InfiniBand">InfiniBand</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ultra_Port_Architecture" title="Ultra Port Architecture">UPA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PCI-X" title="PCI-X">PCI Extended (PCI-X)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Accelerated_Graphics_Port" title="Accelerated Graphics Port">AGP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PCI_Express" title="PCI Express">PCI Express (PCIe)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/RapidIO" title="RapidIO">RapidIO</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Intel_QuickPath_Interconnect" title="Intel QuickPath Interconnect">Intel QuickPath Interconnect</a></li>
+<li><a href="http://en.wikipedia.org/wiki/HyperTransport" title="HyperTransport">HyperTransport</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Portable</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/PC_Card" title="PC Card">PC Card</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ExpressCard" title="ExpressCard">ExpressCard</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Embedded</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Multidrop_bus" title="Multidrop bus">Multidrop bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture" title="Advanced Microcontroller Bus Architecture">AMBA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wishbone_%28computer_bus%29" title="Wishbone (computer bus)">Wishbone</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Storage</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/ST-506" title="ST-506">ST-506</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Enhanced_Small_Disk_Interface" title="Enhanced Small Disk Interface">ESDI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Storage_Module_Device" title="Storage Module Device">SMD</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Parallel_ATA" title="Parallel ATA">Parallel ATA (PATA)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Direct_memory_access" title="Direct memory access">DMA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Serial_Storage_Architecture" title="Serial Storage Architecture">SSA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Digital_Storage_Systems_Interconnect" title="Digital Storage Systems Interconnect">DSSI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/HIPPI" title="HIPPI">HIPPI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/USB_mass-storage_device_class" title="USB mass-storage device class" class="mw-redirect">USB MSC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IEEE_1394" title="IEEE 1394">IEEE 1394 interface (FireWire)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Serial_ATA" title="Serial ATA">Serial ATA (SATA)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ESATA" title="ESATA" class="mw-redirect">eSATA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ESATAp" title="ESATAp">eSATAp</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SCSI" title="SCSI">SCSI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Parallel_SCSI" title="Parallel SCSI">Parallel SCSI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Serial_attached_SCSI" title="Serial attached SCSI">SAS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Peripheral</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Apple_Desktop_Bus" title="Apple Desktop Bus">Apple Desktop Bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/HIL_bus" title="HIL bus">HIL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MIDI" title="MIDI">MIDI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Multibus" title="Multibus">Multibus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/RS-232" title="RS-232">RS-232</a></li>
+<li><a href="http://en.wikipedia.org/wiki/RS-422" title="RS-422">RS-422</a></li>
+<li><a href="http://en.wikipedia.org/wiki/RS-423" title="RS-423">RS-423</a></li>
+<li><a href="http://en.wikipedia.org/wiki/RS-485" title="RS-485">RS-485</a></li>
+<li><a href="http://en.wikipedia.org/wiki/DMX512-A" title="DMX512-A" class="mw-redirect">DMX512-A</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IEEE-488" title="IEEE-488">IEEE-488 (GPIB)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IEEE_1284" title="IEEE 1284">IEEE-1284 (parallel port)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/UNI/O" title="UNI/O">UNI/O</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ACCESS.bus" title="ACCESS.bus">ACCESS.bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/1-Wire" title="1-Wire">1-Wire</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IEC_61030" title="IEC 61030">D²B</a></li>
+<li><a href="http://en.wikipedia.org/wiki/I%C2%B2C" title="I²C">I²C</a></li>
+<li><strong class="selflink">SPI</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Parallel_SCSI" title="Parallel SCSI">Parallel SCSI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Profibus" title="Profibus">Profibus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/USB" title="USB">USB</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IEEE_1394" title="IEEE 1394">IEEE 1394 (FireWire)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Camera_Link" title="Camera Link">Camera Link</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PCI_Express#PCI_Express_External_Cabling" title="PCI Express">External PCIe</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Thunderbolt_%28interface%29" title="Thunderbolt (interface)">Thunderbolt</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lightning_%28connector%29" title="Lightning (connector)">Lightning</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div><small><i>Note: interfaces are listed in speed ascending order (roughly), the interface at the end of each section should be the fastest</i></small><br>
+<img alt="Category" src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/16px-Folder_Hexagonal_Icon.png" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" height="14" width="16"> <a href="http://en.wikipedia.org/wiki/Category:Computer_buses" title="Category:Computer buses">Category</a></div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1161
+CPU time usage: 0.560 seconds
+Real time usage: 0.647 seconds
+Preprocessor visited node count: 1070/1000000
+Preprocessor generated node count: 4334/1500000
+Post‐expand include size: 26123/2048000 bytes
+Template argument size: 2069/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 4/500
+Lua time usage: 0.052s
+Lua memory usage: 1.24 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:340476-0!*!0!!en!4!* and timestamp 20131130122658
+ -->
+<noscript><img src="//en.wikipedia.org/w/index.php?title=Special:CentralAutoLogin/start&amp;type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;oldid=580960345">http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;oldid=580960345</a>"				</div>
+												<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Computer_buses" title="Category:Computer buses">Computer buses</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Serial_buses" title="Category:Serial buses">Serial buses</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_May_2013" title="Category:Articles with unsourced statements from May 2013">Articles with unsourced statements from May 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_July_2010" title="Category:Articles with unsourced statements from July 2010">Articles with unsourced statements from July 2010</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Commons_category_with_local_link_same_as_on_Wikidata" title="Category:Commons category with local link same as on Wikidata">Commons category with local link same as on Wikidata</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Serial+Peripheral+Interface+Bus&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Serial+Peripheral+Interface+Bus" title="You're encouraged to log in; however, it's not mandatory. [alt-shift-o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus" title="View the content page [alt-shift-c]" accesskey="c">Article</a></span></li>
+					<li id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Serial_Peripheral_Interface_Bus" title="Discussion about the content page [alt-shift-t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 tabindex="0" id="p-variants-label"><span>Variants</span><a tabindex="-1" href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=edit" title="You can edit this page. 
+Please review your changes before saving. [alt-shift-e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=history" title="Past versions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 tabindex="0" id="p-cactions-label"><span>Actions</span><a tabindex="-1" href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input autocomplete="off" tabindex="1" name="search" placeholder="Search" title="Search Wikipedia [alt-shift-f]" accesskey="f" id="searchInput">						<button type="submit" name="button" title="Search Wikipedia for this text" id="searchButton"><img src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/search-ltr.png" alt="Search" height="13" width="12"></button>								<input name="title" value="Special:Search" type="hidden">
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div class="collapsible-nav" id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page"></a></div>
+				<div class="portal first persistent" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label">Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [alt-shift-x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+	<h3 tabindex="2" id="p-interaction-label"><a aria-expanded="true" aria-pressed="true" role="button" aria-controls="p-interaction-list" aria-haspopup="true" href="#">Interaction</a></h3>
+	<div style="display: block;" class="body">
+		<ul id="p-interaction-list">
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+	<h3 tabindex="3" id="p-tb-label"><a aria-expanded="false" aria-pressed="false" role="button" aria-controls="p-tb-list" aria-haspopup="true" href="#">Tools</a></h3>
+	<div class="body">
+		<ul id="p-tb-list">
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Serial_Peripheral_Interface_Bus" title="List of all English Wikipedia pages containing links to this page [alt-shift-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Serial_Peripheral_Interface_Bus" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [alt-shift-u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;oldid=580960345" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q849492" title="Link to connected data repository item">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Serial_Peripheral_Interface_Bus&amp;id=580960345" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+	<h3 tabindex="4" id="p-coll-print_export-label"><a aria-expanded="false" aria-pressed="false" role="button" aria-controls="p-coll-print_export-list" aria-haspopup="true" href="#">Print/export</a></h3>
+	<div class="body">
+		<ul id="p-coll-print_export-list">
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Serial+Peripheral+Interface+Bus">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Serial+Peripheral+Interface+Bus&amp;oldid=580960345&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;printable=yes" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-lang" aria-labelledby="p-lang-label"><span original-title="Language settings" aria-haspopup="true" role="button" tabindex="0" class="uls-settings-trigger"></span>
+	<h3 tabindex="5" id="p-lang-label"><a aria-expanded="true" aria-pressed="true" role="button" aria-controls="p-lang-list" aria-haspopup="true" href="#">Languages</a></h3>
+	<div style="display: block;" class="body">
+		<ul id="p-lang-list">
+			<li class="interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – Catalan" hreflang="ca" lang="ca">Català</a></li>
+			<li class="interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – Czech" hreflang="cs" lang="cs">Čeština</a></li>
+			<li class="interwiki-da"><a href="http://da.wikipedia.org/wiki/Serial_Peripheral_Interface-bus" title="Serial Peripheral Interface-bus – Danish" hreflang="da" lang="da">Dansk</a></li>
+			<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – German" hreflang="de" lang="de">Deutsch</a></li>
+			<li class="interwiki-es"><a href="http://es.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – Spanish" hreflang="es" lang="es">Español</a></li>
+			<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – French" hreflang="fr" lang="fr">Français</a></li>
+			<li class="interwiki-ko"><a href="http://ko.wikipedia.org/wiki/%EC%A7%81%EB%A0%AC_%EC%A3%BC%EB%B3%80%EA%B8%B0%EA%B8%B0_%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4_%EB%B2%84%EC%8A%A4" title="직렬 주변기기 인터페이스 버스 – Korean" hreflang="ko" lang="ko">한국어</a></li>
+			<li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – Italian" hreflang="it" lang="it">Italiano</a></li>
+			<li class="interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – Dutch" hreflang="nl" lang="nl">Nederlands</a></li>
+			<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%BB%E3%83%9A%E3%83%AA%E3%83%95%E3%82%A7%E3%83%A9%E3%83%AB%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9" title="シリアル・ペリフェラル・インタフェース – Japanese" hreflang="ja" lang="ja">日本語</a></li>
+			<li class="interwiki-no"><a href="http://no.wikipedia.org/wiki/SPI" title="SPI – Norwegian (bokmål)" hreflang="no" lang="no">Norsk bokmål</a></li>
+			<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – Polish" hreflang="pl" lang="pl">Polski</a></li>
+			<li class="interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – Portuguese" hreflang="pt" lang="pt">Português</a></li>
+			<li class="interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Interfa%C8%9Ba_serial%C4%83_SPI" title="Interfața serială SPI – Romanian" hreflang="ro" lang="ro">Română</a></li>
+			<li class="interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – Russian" hreflang="ru" lang="ru">Русский</a></li>
+			<li class="interwiki-sl"><a href="http://sl.wikipedia.org/wiki/SPI" title="SPI – Slovenian" hreflang="sl" lang="sl">Slovenščina</a></li>
+			<li class="interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – Swedish" hreflang="sv" lang="sv">Svenska</a></li>
+			<li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – Turkish" hreflang="tr" lang="tr">Türkçe</a></li>
+			<li class="interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – Ukrainian" hreflang="uk" lang="uk">Українська</a></li>
+			<li class="interwiki-vi"><a href="http://vi.wikipedia.org/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface – Vietnamese" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+			<li class="interwiki-zh"><a href="http://zh.wikipedia.org/wiki/%E5%BA%8F%E5%88%97%E5%91%A8%E9%82%8A%E4%BB%8B%E9%9D%A2" title="序列周邊介面 – Chinese" hreflang="zh" lang="zh">中文</a></li>
+			
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q849492#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 9 November 2013 at 22:41.<br></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Serial_Peripheral_Interface_Bus&amp;title=Serial_Peripheral_Interface_Bus" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/wikimedia-button.png" alt="Wikimedia Foundation" height="31" width="88"></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" height="31" width="88"></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.articleFeedbackv5.startup","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","skins.vector.collapsibleNav"],null,true);
+}</script><div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div>
+<script src="Serial%20Peripheral%20Interface%20Bus%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load.php"></script>
+<!-- Served by mw1093 in 0.211 secs. -->
+	
+
+</body></html>

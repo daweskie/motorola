@@ -1,0 +1,242 @@
+# depslib dependency file v1.0
+1240987252 source:/home/zamek/c/serialframe/crc.c
+	"crc.h"
+
+1240987252 /home/zamek/c/serialframe/crc.h
+	<stdint.h>
+
+1241690134 
+
+1240990604 source:/home/zamek/c/serialframe/main.c
+	<string.h>
+	<stdlib.h>
+	"serial.h"
+	"client.h"
+	"master.h"
+	"kb.h"
+
+1241008309 /home/zamek/c/serialframe/serial.h
+	"global.h"
+
+1241010682 source:/home/zamek/c/serialframe/packet.c
+	<stdlib.h>
+	<stdio.h>
+	"packet.h"
+	"macros.h"
+	"crc.h"
+	"serial.h"
+
+1241010702 /home/zamek/c/serialframe/packet.h
+
+1240987252 /home/zamek/c/serialframe/macros.h
+
+1241010637 source:/home/zamek/c/serialframe/client.c
+	<stdio.h>
+	"packet.h"
+	"serial.h"
+
+1240987252 /home/zamek/c/serialframe/client.h
+
+1239462279 /home/zamek/c/serialframe/server.h
+
+1239555472 source:/home/zamek/c/serialframe/server.c
+	<stdio.h>
+	"serial.h"
+	"packet.h"
+	"kb.h"
+
+1240989557 source:/home/zamek/c/serialframe/kb.c
+	<termios.h>
+	<unistd.h>
+	<stdio.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<linux/kd.h>
+
+1241690373 h>
+
+1240987252 /home/zamek/c/serialframe/kb.h
+
+1240989395 source:/home/zamek/c/serialframe/master.c
+	<stdio.h>
+	"serial.h"
+	"packet.h"
+	"kb.h"
+
+1240987252 /home/zamek/c/serialframe/master.h
+
+1240991238 /home/zamek/c/serialframe/global.h
+	<windows.h>
+	<termios.h>
+
+1241687050 >
+
+1241009622 source:/home/zamek/c/serialframe/serial.c
+	"serial.h"
+	"packet.h"
+	<windows.h>
+	<termios.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/signal.h>
+	<sys/types.h>
+	<string.h>
+
+1241020474 source:e:\codeblocks\works\serialframe\crc.c
+	"crc.h"
+
+1241020562 e:\codeblocks\works\serialframe\crc.h
+	<stdint.h>
+
+1241690373 source:e:\codeblocks\works\serialframe\kb.c
+	"global.h"
+	<termios.h>
+	<unistd.h>
+	<stdio.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<linux/kd.h>
+
+1241687050 e:\codeblocks\works\serialframe\global.h
+	<windows.h>
+	<termios.h>
+
+1241014702 source:e:\codeblocks\works\serialframe\main.c
+	<string.h>
+	<stdlib.h>
+	"serial.h"
+	"client.h"
+	"master.h"
+	"kb.h"
+
+1241020184 e:\codeblocks\works\serialframe\serial.h
+	"global.h"
+
+1241019552 e:\codeblocks\works\serialframe\client.h
+
+1241019996 e:\codeblocks\works\serialframe\master.h
+
+1241019956 e:\codeblocks\works\serialframe\kb.h
+
+1241685192 source:e:\codeblocks\works\serialframe\master.c
+	<stdio.h>
+	"serial.h"
+	"packet.h"
+	"kb.h"
+
+1241020076 e:\codeblocks\works\serialframe\packet.h
+
+1241686799 source:e:\codeblocks\works\serialframe\packet.c
+	<stdlib.h>
+	<stdio.h>
+	"packet.h"
+	"macros.h"
+	"crc.h"
+	"serial.h"
+	"global.h"
+
+1241013684 e:\codeblocks\works\serialframe\macros.h
+
+1241690445 source:e:\codeblocks\works\serialframe\client.c
+	<stdio.h>
+	"packet.h"
+	"serial.h"
+
+1241690134 source:e:\codeblocks\works\serialframe\serial.c
+	"serial.h"
+	"packet.h"
+	"global.h"
+	<windows.h>
+	<termios.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/signal.h>
+	<sys/types.h>
+	<string.h>
+
+1321541423 source:/home/zamek/oktat/c/c/serialframe/client.c
+	<stdio.h>
+	"packet.h"
+	"serial.h"
+	"kb.h"
+	"display.h"
+
+1321536528 /home/zamek/oktat/c/c/serialframe/packet.h
+
+1321535246 /home/zamek/oktat/c/c/serialframe/serial.h
+	"global.h"
+
+1321532820 /home/zamek/oktat/c/c/serialframe/global.h
+	<windows.h>
+	<termios.h>
+
+1321543068 /home/zamek/oktat/c/c/serialframe/kb.h
+	<conio.h>
+
+1241710364 source:/home/zamek/oktat/c/c/serialframe/crc.c
+	"crc.h"
+
+1241763370 /home/zamek/oktat/c/c/serialframe/crc.h
+	<stdint.h>
+
+1321534154 source:/home/zamek/oktat/c/c/serialframe/kb.c
+	"global.h"
+	<curses.h>
+
+1321533252 source:/home/zamek/oktat/c/c/serialframe/main.c
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	"serial.h"
+	"client.h"
+	"master.h"
+	"kb.h"
+	"display.h"
+
+1241763370 /home/zamek/oktat/c/c/serialframe/client.h
+
+1241763370 /home/zamek/oktat/c/c/serialframe/master.h
+
+1321541836 source:/home/zamek/oktat/c/c/serialframe/master.c
+	<stdio.h>
+	"serial.h"
+	"packet.h"
+	"kb.h"
+	"display.h"
+
+1321541182 source:/home/zamek/oktat/c/c/serialframe/packet.c
+	<stdlib.h>
+	<stdio.h>
+	"packet.h"
+	"macros.h"
+	"crc.h"
+	"serial.h"
+	"global.h"
+
+1319785548 /home/zamek/oktat/c/c/serialframe/macros.h
+
+1321541610 source:/home/zamek/oktat/c/c/serialframe/serial.c
+	"serial.h"
+	"packet.h"
+	"global.h"
+	<windows.h>
+	<termios.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/signal.h>
+	<sys/types.h>
+	<string.h>
+	<curses.h>
+
+1321543018 /home/zamek/oktat/c/c/serialframe/display.h
+
+1321533912 source:/home/zamek/oktat/c/c/serialframe/display.c
+	"global.h"
+	"display.h"
+

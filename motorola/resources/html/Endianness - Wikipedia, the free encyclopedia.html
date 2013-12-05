@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js ve-not-available" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8"><title>Endianness - Wikipedia, the free encyclopedia</title>
+<meta name="generator" content="MediaWiki 1.23wmf4">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit">
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit">
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png">
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd">
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Endianness">
+<link rel="stylesheet" href="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_002.css">
+<style>
+.tipsy{padding:5px;position:absolute;z-index:100000;cursor:default}.tipsy-inner{padding:5px 8px 4px 8px; background-color:#ffffff;border:solid 1px #a7d7f9;color:black;max-width:15em;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px; }.tipsy-arrow{position:absolute;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALAgMAAADUwp+1AAAACVBMVEX5+fmn1/n///9s6BFKAAAAAXRSTlMAQObYZgAAACpJREFUCB1jZBD4wMiQMoeRcUU4I9uSaYxSE54xZjn8AtMgPkgcJA9UBwAeDw1Qrb3pVAAAAABJRU5ErkJggg==) no-repeat top left;background:url(//bits.wikimedia.org/static-1.23wmf4/resources/jquery.tipsy/images/tipsy.png?2013-11-14T18:10:00Z) no-repeat top left!ie;width:11px;height:6px} .tipsy-n .tipsy-arrow{top:0px;left:50%;margin-left:-5px} .tipsy-nw .tipsy-arrow{top:1px;left:10px} .tipsy-ne .tipsy-arrow{top:1px;right:10px} .tipsy-s .tipsy-arrow{bottom:0px;left:50%;margin-left:-5px;background-position:bottom left} .tipsy-sw .tipsy-arrow{bottom:0px;left:10px;background-position:bottom left} .tipsy-se .tipsy-arrow{bottom:0px;right:10px;background-position:bottom left} .tipsy-e .tipsy-arrow{top:50%;margin-top:-5px;right:1px;width:5px;height:11px;background-position:top right} .tipsy-w .tipsy-arrow{top:50%;margin-top:-5px;left:0px;width:6px;height:11px}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ba28561960b6f903d47015297497d129 */
+.wbc-editpage{list-style:none none;text-align:right;padding-right:.5em !important}.wbc-editpage > a{padding-left:11px;background:no-repeat left center}.wbc-editpage > a:link,.wbc-editpage > a:visited{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEUZAAD///95eXmqqqrY2NjEIQ0cAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGIAASUFENNJCUiqmADZTM5OqExFFZAKRSG4YgBjcwODynSgDwAAAABJRU5ErkJggg==);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/Wikibase/client/resources/images/WBC-Asset-Pencil.png?2013-11-14T18:15:00Z)!ie;color:#797979 !important}.wbc-editpage > a:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEWBAADY2Nj///8GRa0zZrtW2AECAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGYAAWMDEFPYGEgaOgLZzCLCqEwjQ5AKI2W4YgBg5QOTQPzBuAAAAABJRU5ErkJggg==);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/Wikibase/client/resources/images/WBC-Asset-Pencil-Hover.png?2013-11-14T18:15:00Z)!ie;color:#0645AD !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:12a706c5a3716ed31f07360c556a3f3c */
+@media print{#centralNotice{display:none}}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ddb0c98a055632ae8e349c9cf48ac703 */</style><style>
+@-webkit-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-webkit-transform:translateY(-20px)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-moz-transform:translateY(-20px)}100%{opacity:1;-moz-transform:translateY(0)}}@-o-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-o-transform:translateY(-20px)}100%{opacity:1;-o-transform:translateY(0)}}@keyframes centralAuthPPersonalAnimation{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}.centralAuthPPersonalAnimation{-webkit-animation-duration:1s;-moz-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:centralAuthPPersonalAnimation;-moz-animation-name:centralAuthPPersonalAnimation;-o-animation-name:centralAuthPPersonalAnimation;animation-name:centralAuthPPersonalAnimation}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0dcacc990dd02e7db9669ab3090b80f1 */
+.mw-editsection{white-space:nowrap;padding-right:0.25em; unicode-bidi:-moz-isolate;unicode-bidi:-webkit-isolate;unicode-bidi:isolate}.mw-editsection-divider{color:#555} .mw-content-ltr .mw-editsection-expanded .mw-editsection-bracket:first-of-type,.mw-content-rtl .mw-editsection-expanded .mw-editsection-bracket:not(:first-of-type){margin-left:-0.25em;margin-right:0.25em;color:#555} .mw-content-rtl .mw-editsection-expanded .mw-editsection-bracket:first-of-type,.mw-content-ltr .mw-editsection-expanded .mw-editsection-bracket:not(:first-of-type){margin-right:-0.25em;margin-left:0.25em;color:#555}.ve-tabmessage-appendix{font-size:0.7em;vertical-align:top;line-height:1.43em;padding-left:0.5em; background-image:none !important;display:inline !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:542a80e9a1c6a06bda7dfcbb6858ab0f */
+.uls-trigger{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAQCAMAAADQzfSkAAABqlBMVEX////f3/+Ov+/n5+fp6enp6eno6Ojp6enn5+ff39/q6urp6enp6enp6enq6urp6en////q6urr6+upv+rU1NTJycnR0dEaGhrp6enT4/SEuuK9vb3l5eU2ktCxsbFdXV1paWmzwc9ITFDo6OhaWlpsbGxtbW2BipSZpK/X19d2dnZ8hI2/v79PT09gZm2CgoLIyMjD0eGksL1JTVHM2+spKywnKCkcHBzAzt3I1+cxMzZxcXFkZGSvr69WW2C8vLyFjphqcXiLlZ8dHh4gISLa2trQ3/Dc3NzZ2dl7e3uioqIfHyBCRko9QEPh4eFgYGDGxsZoaGiPj4/Ly8uRm6a6yNcbGxuSnKfL2uqVn6scHR20tLR/f3+Kioq4uLienp54gIipqanA2e+71u9GSk5yeoKgoKCAgIB0dHRLS0tlZWWDg4PBwcHFxcWxvsxkanGapbCKlJ7O4fNXo9hQn9bM3/OPmaRfZWve3t6mpqbR0dG+vr6JiYnKyspPVFl1s99+fn5srdzm5ubNzc1BREh2s99xsN7S0tIxMzUiIyQ2OTt/iJFwcHBbYWc3S28lAAAAF3RSTlMACBAg7P3LiTYIX6LmmDzeAYMnDN+1MJx17ncAAAEQSURBVHheddBTb0VREIbhVduYWVuHRm3btm3bNv9zJ2v3IE36Xk3yZG4+xkMKw0BREYwJMzkcO38MY37tG6AmYN48YZFxwsbeiys6y/02rT1Wa4TxwoYgpx4adLMbfRubs9tk0cJuYK8ACv1/Xy5LLlIYS5bf2FTUUlJapptiqKwyuOfJEsjq4M3j+YBPYc02X6utTWnvQEwk6wJRNxn29Pb1D2iIg0bEJMaHYWTU6RyfABPZ5BTa7xBxxo2YzPgcPPGFRb4Ey2Qrq2vrXlRk6xampDK+a94/ODw6PjGfkp2dX1y6ZOvVNWKavsutqt6HbGZ5QCqdMUmSnlXqhY6M12CZtKcaUnhtsKz/Tc5m7AfjN0jzWIipawAAAABJRU5ErkJggg==) no-repeat scroll left center;background:transparent url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.png?2013-11-14T18:13:20Z) no-repeat scroll left center!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.svg?2013-11-14T18:13:20Z);background-image:-moz-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.svg?2013-11-14T18:13:20Z);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.svg?2013-11-14T18:13:20Z);padding-left:30px}#pt-uls a.uls-trigger{padding-left:30px}#p-lang .uls-settings-trigger{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAgCAMAAAAVMLmlAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAALpQTFRF////W1tbgICAWVlZgICAUVFRgICAWVlZhYWFUlJShYWFVFRUgYGBVVVVgYGBVVVVgICAVFRUVVVVVlZWgYGBgICAVFRUgYGBVFRUgICAgYGBVVVVVVVVgYGBVlZWgYGBVFRUgICAVFRUgICAVVVVgICAVlZWgICAVFRUgICAVVVVgICAVFRUgICAVlZWgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICA9Fa9bgAAADx0Uk5TAA4OFBQWFhcXGRlJSUtLWlpbXV9fYGFhZGRlZmlpa2twcIiIioqPj5GRn5+goKGh6+vv7/Dw+fn8/P7+YuRUVgAAAOlJREFUGBmNwcdWAgEURMFLFCUaAcWAEhQYHBRmCN3//1u+BYcVC6s4p2U3OLrrVxN7Xn7uELoH5w65Dx1g6JNnoLazfz++VnZehkZir4pQ3NjzBg5TwtgBhzFh6kDr294UobiykxZc7ezVdLyx8yrw6pM+8GjnDjsf7gj3/WpiJ7Vhl6OW3eC/mlKdo5teZSHNSoM24XqvTCHTvg0MdDIASpn08/6ZSlkJ6jMpLUBhLc3qKEwIIwUURoSJAs2ltC5AIZUWTbjcSulktJayCvCikx7wJG0VttrfEp5eLpfS4uLtgaOmVOeMP8BAM9RClMO9AAAAAElFTkSuQmCC) no-repeat right top;background:transparent url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.png?2013-11-14T18:13:20Z) no-repeat right top!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2013-11-14T18:13:20Z);background-image:-moz-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2013-11-14T18:13:20Z);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2013-11-14T18:13:20Z);height:16px;width:14px;float:right;cursor:pointer}.skin-vector #p-lang .uls-settings-trigger{ margin-top:3px}#p-lang .uls-settings-trigger:hover{background-position:right -16px}   x:-o-prefocus,body.rtl li#pt-uls{ direction:ltr}#settings-block{border-top:1px solid #C9C9C9;background:#f8f8f8;background:-webkit-gradient(linear,left top,left bottom,from(#FBFBFB),to(#F0F0F0));background:-webkit-linear-gradient(top,#FBFBFB,#F0F0F0);background:-moz-linear-gradient(top,#FBFBFB,#F0F0F0);background:-o-linear-gradient(top,#FBFBFB,#F0F0F0);background:linear-gradient(#FBFBFB,#F0F0F0);padding-left:10px;line-height:1.2em;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;border-radius:0 0 5px 5px}.uls-menu a{cursor:pointer}.uls-menu.callout .caret-before{border-top:20px solid transparent;border-right:20px solid #AAA;border-bottom:20px solid transparent;display:inline-block;left:-21px;top:30px;position:absolute}.uls-menu.callout .caret-after{border-top:20px solid transparent;border-right:20px solid #FCFCFC;border-bottom:20px solid transparent;display:inline-block;left:-20px;top:30px;position:absolute}#settings-block div.display-settings-block,#settings-block div.input-settings-block{display:inline-block;margin:8px 15px;color:#565656}#settings-block div.display-settings-block:hover,#settings-block div.input-settings-block:hover{color:#252525}.uls-ui-languages button{width:23%;text-overflow:ellipsis;margin-right:4%}button.uls-more-languages{width:auto}.settings-title{font-size:11pt}.settings-text{color:#555555;font-size:9pt}div.display-settings-block:hover .settings-text{color:#252525} .ime-perime-help{display:none}.ime-checked .ime-perime-help{display:inline-block;width:20px;height:100%;position:absolute;top:0;bottom:0;right:0;opacity:0.75;padding:0;background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAFdQTFRF////AAAAZmZmVVVVSUlJW1tbVVVVV1dXWFhYVVVVV1dXVlZWWFhYV1dXWFhYVlZWV1dXVlZWV1dXV1dXWFhYV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXrNxhuAAAABx0Uk5TAAEFBgcOJCkxNlVla3KDi5WrsrbJ09ny9vf9/uWqFuIAAACESURBVBjTdZDBDsIgEERHai2KUqmllfr+/zs9AFYTnMsmL7uTmZX+yVjnrPkCnU8AyXeVDJGiOJSdCLzmsAIx73ngeZKOC+AlySSA8LjrCiQjyRafmzyAleQymQ7nFcDt6NItVFQOp5Cn/dgzjlDts+vW9xs1RI7KPLNHbRRq1W4951dvPF4RAFiSul8AAAAASUVORK5CYII=) left center no-repeat;background:transparent url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/help.png?2013-11-14T18:13:20Z) left center no-repeat!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB2ZXJzaW9uPSIxLjEiCiAgIHdpZHRoPSIxOCIKICAgaGVpZ2h0PSIxOCIKICAgdmlld0JveD0iMCAwIDE4IDE4LjAwMDAwMSIKICAgaWQ9IkxheWVyXzEiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiPjxtZXRhZGF0YQogICBpZD0ibWV0YWRhdGE5Ij48cmRmOlJERj48Y2M6V29yawogICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlCiAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+PGRjOnRpdGxlPjwvZGM6dGl0bGU+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPjxkZWZzCiAgIGlkPSJkZWZzNyIgLz4KPHBhdGgKICAgZD0ibSA5LjAwMDAwMDMsMS40OTk2NDM3IGMgLTQuMTQxNDE5MSwwIC03LjUwMDAwMDQsMy4zNTc4NjkgLTcuNTAwMDAwNCw3LjUwMDAwMTQgMCw0LjE0MjEzMDkgMy4zNTg1ODEzLDcuNTAwNzExOSA3LjUwMDAwMDQsNy41MDA3MTE5IEMgMTMuMTQyODQ0LDE2LjUwMDM1NyAxNi41LDEzLjE0MTc3NiAxNi41LDguOTk5NjQ1MSAxNi41LDQuODU3NTEyNyAxMy4xNDM1NTYsMS40OTk2NDM3IDkuMDAwMDAwMywxLjQ5OTY0MzcgeiBtIC0wLjAwMTQyLDExLjk0MzQ0MjMgYyAtMC42MTMzMDYyLDAgLTEuMDY3MDUzLC0wLjQ5MDA3NCAtMS4wNjcwNTMsLTEuMDc5ODc0IDAsLTAuNjE0MDE4IDAuNDUzNzQ2OCwtMS4wOTI2OTcgMS4wNjcwNTMsLTEuMDkyNjk3IDAuNTg5Nzk5NSwwIDEuMDY4NDc4NywwLjQ3ODY3OSAxLjA2ODQ3ODcsMS4wOTI2OTcgMCwwLjU4OTA4NyAtMC40Nzg2NzkyLDEuMDc5ODc0IC0xLjA2ODQ3ODcsMS4wNzk4NzQgeiBNIDEwLjUyMDgwOCw4LjgwNDQ3MDIgQyAxMC4wMDU4MDMsOS4yMDkwNjY4IDkuODA4NDg5Myw5LjQ2NzYzODQgOS44MDg0ODkzLDEwLjA0MzE5MSBWIDEwLjM5OTM1IEggOC4yMzc4MTk1IFYgOS45Njk4MjI2IGMgMCwtMS4wODA1ODY2IDAuMzE5ODMxLC0xLjUyMTUxMyAwLjgyMjAxNTgsLTEuOTE0NzEzIDAuNTAzNjA5MywtMC4zOTMxOTkxIDAuODExMzMwNiwtMC42MDE5MDkxIDAuODExMzMwNiwtMS4xNjYwNjQ4IDAsLTAuNDc4Njc4MSAtMC4yOTQ5LC0wLjc0ODY0NjcgLTAuODgzMjc0OCwtMC43NDg2NDY3IC0wLjUwMzYwOTQsMCAtMC45NDU5NTkxLDAuMTM0NjI4MSAtMS40MTE4MTUzLDAuNDU0NDU5MiBMIDYuODI3NDI5MSw1LjMwNzY5NzggQyA3LjQ0MDczNTMsNC44Nzc0NTc1IDguMjAyMjAzNiw0LjU3MTE2MDcgOS4yMDc5OTY5LDQuNTcxMTYwNyBjIDEuMzYxOTUzMSwwIDIuNTA0NTEyMSwwLjc0ODY0NjUgMi41MDQ1MTIxLDIuMTgzOTY4MiAtNy4xMmUtNCwxLjAxODYxNDkgLTAuNTY1NTgsMS41NTg1NTI1IC0xLjE5MTcwOSwyLjA0OTM0MTMgeiIKICAgaWQ9InBhdGgzIgogICBzdHlsZT0iZmlsbDojNTc1NzU3IiAvPgo8L3N2Zz4=);background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/help.svg?2013-11-14T18:13:20Z)!ie;background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB2ZXJzaW9uPSIxLjEiCiAgIHdpZHRoPSIxOCIKICAgaGVpZ2h0PSIxOCIKICAgdmlld0JveD0iMCAwIDE4IDE4LjAwMDAwMSIKICAgaWQ9IkxheWVyXzEiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiPjxtZXRhZGF0YQogICBpZD0ibWV0YWRhdGE5Ij48cmRmOlJERj48Y2M6V29yawogICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlCiAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+PGRjOnRpdGxlPjwvZGM6dGl0bGU+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPjxkZWZzCiAgIGlkPSJkZWZzNyIgLz4KPHBhdGgKICAgZD0ibSA5LjAwMDAwMDMsMS40OTk2NDM3IGMgLTQuMTQxNDE5MSwwIC03LjUwMDAwMDQsMy4zNTc4NjkgLTcuNTAwMDAwNCw3LjUwMDAwMTQgMCw0LjE0MjEzMDkgMy4zNTg1ODEzLDcuNTAwNzExOSA3LjUwMDAwMDQsNy41MDA3MTE5IEMgMTMuMTQyODQ0LDE2LjUwMDM1NyAxNi41LDEzLjE0MTc3NiAxNi41LDguOTk5NjQ1MSAxNi41LDQuODU3NTEyNyAxMy4xNDM1NTYsMS40OTk2NDM3IDkuMDAwMDAwMywxLjQ5OTY0MzcgeiBtIC0wLjAwMTQyLDExLjk0MzQ0MjMgYyAtMC42MTMzMDYyLDAgLTEuMDY3MDUzLC0wLjQ5MDA3NCAtMS4wNjcwNTMsLTEuMDc5ODc0IDAsLTAuNjE0MDE4IDAuNDUzNzQ2OCwtMS4wOTI2OTcgMS4wNjcwNTMsLTEuMDkyNjk3IDAuNTg5Nzk5NSwwIDEuMDY4NDc4NywwLjQ3ODY3OSAxLjA2ODQ3ODcsMS4wOTI2OTcgMCwwLjU4OTA4NyAtMC40Nzg2NzkyLDEuMDc5ODc0IC0xLjA2ODQ3ODcsMS4wNzk4NzQgeiBNIDEwLjUyMDgwOCw4LjgwNDQ3MDIgQyAxMC4wMDU4MDMsOS4yMDkwNjY4IDkuODA4NDg5Myw5LjQ2NzYzODQgOS44MDg0ODkzLDEwLjA0MzE5MSBWIDEwLjM5OTM1IEggOC4yMzc4MTk1IFYgOS45Njk4MjI2IGMgMCwtMS4wODA1ODY2IDAuMzE5ODMxLC0xLjUyMTUxMyAwLjgyMjAxNTgsLTEuOTE0NzEzIDAuNTAzNjA5MywtMC4zOTMxOTkxIDAuODExMzMwNiwtMC42MDE5MDkxIDAuODExMzMwNiwtMS4xNjYwNjQ4IDAsLTAuNDc4Njc4MSAtMC4yOTQ5LC0wLjc0ODY0NjcgLTAuODgzMjc0OCwtMC43NDg2NDY3IC0wLjUwMzYwOTQsMCAtMC45NDU5NTkxLDAuMTM0NjI4MSAtMS40MTE4MTUzLDAuNDU0NDU5MiBMIDYuODI3NDI5MSw1LjMwNzY5NzggQyA3LjQ0MDczNTMsNC44Nzc0NTc1IDguMjAyMjAzNiw0LjU3MTE2MDcgOS4yMDc5OTY5LDQuNTcxMTYwNyBjIDEuMzYxOTUzMSwwIDIuNTA0NTEyMSwwLjc0ODY0NjUgMi41MDQ1MTIxLDIuMTgzOTY4MiAtNy4xMmUtNCwxLjAxODYxNDkgLTAuNTY1NTgsMS41NTg1NTI1IC0xLjE5MTcwOSwyLjA0OTM0MTMgeiIKICAgaWQ9InBhdGgzIgogICBzdHlsZT0iZmlsbDojNTc1NzU3IiAvPgo8L3N2Zz4=);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/help.svg?2013-11-14T18:13:20Z)!ie}.ime-checked .ime-perime-help:hover{opacity:1}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ea93267c4906696831f86bae78aec87c */
+#p-lang ul,.autonym{ font-family:'Autonym',sans-serif}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:5107124d6c4454dabb7fc6e4dcb24c3e */</style><style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.autoellipsis-matched,.highlight{font-weight:bold}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:9780324491b653a3780e2d029bdc140c */
+.wp-teahouse-question-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}#wp-th-question-ask{float:right}.wp-teahouse-ask a.external{background-image:none !important}.wp-teahouse-respond-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}.wp-th-respond{float:right}.wp-teahouse-respond a.external{background-image:none !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ba4e3603af357b5172e85672664d39a8 */
+.referencetooltip{position:absolute;list-style:none;list-style-image:none;opacity:0;font-size:10px;margin:0;z-index:5;padding:0}.referencetooltip li{border:#080086 2px solid;max-width:260px;padding:10px 8px 13px 8px;margin:0px;background-color:#F7F7F7;box-shadow:2px 4px 2px rgba(0,0,0,0.3);-moz-box-shadow:2px 4px 2px rgba(0,0,0,0.3);-webkit-box-shadow:2px 4px 2px rgba(0,0,0,0.3)}.referencetooltip li+li{margin-left:7px;margin-top:-2px;border:0;padding:0;height:3px;width:0px;background-color:transparent;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;border-top:12px #080086 solid;border-right:7px transparent solid;border-left:7px transparent solid}.referencetooltip>li+li::after{content:'';border-top:8px #F7F7F7 solid;border-right:5px transparent solid;border-left:5px transparent solid;margin-top:-12px;margin-left:-5px;z-index:1;height:0px;width:0px;display:block}.client-js body .referencetooltip li li{border:none;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;height:auto;width:auto;margin:auto;padding:0;position:static}.RTflipped{padding-top:13px}.referencetooltip.RTflipped li+li{position:absolute;top:2px;border-top:0;border-bottom:12px #080086 solid}.referencetooltip.RTflipped li+li::after{border-top:0;border-bottom:8px #F7F7F7 solid;position:absolute;margin-top:7px}.RTsettings{float:right;height:16px;width:16px;cursor:pointer;background-image:url(//upload.wikimedia.org/wikipedia/commons/e/ed/Cog.png);margin-top:-9px;margin-right:-7px;-webkit-transition:opacity 0.15s;-moz-transition:opacity 0.15s;-o-transition:opacity 0.15s;-ms-transition:opacity 0.15s;transition:opacity 0.15s;opacity:0.6;filter:alpha(opacity=60)}.RTsettings:hover{opacity:1;filter:alpha(opacity=100)}.RTTarget{border:#080086 2px solid}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3c614aa75cecefe56b27b5e3c9197b7e */
+div#editpage-specialchars{display:block;margin-top:.5em;border:1px solid #c0c0c0;padding:.3em}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:29386c84f9c8f19dfb410df7e5be154b */
+#container{position:relative;min-height:100%}#container,video{width:100%;height:100%}#playerContainer{overflow:hidden;position:relative;height:100%;background:#000}#videoHolder{position:relative;overflow:hidden}.fullscreen #playerContainer{position:absolute !important;width:100% !important;height:100%! important;z-index:9999;min-height:100%;top:0;left:0;margin:0}.mwEmbedPlayer{width:100%;height:100%;overflow:hidden;position:absolute;top:0;left:0}.modal_editor{ left:10px;top:10px;right:10px;bottom:10px;position:fixed;z-index:100}.displayHTML a:visited{color:white}.loadingSpinner{width:32px;height:32px;display:block;padding:0px;background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/loading_ani.gif?2013-11-14T18:11:40Z)}.mw-imported-resource{border:thin solid black}.kaltura-icon{background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/kaltura_logo_sm_transparent.png?2013-11-14T18:11:40Z) !important;background-repeat:no-repeat;display:block;height:12px;width:12px;margin-top:2px !important;margin-left:3px !important}.mw-fullscreen-overlay{background:rgb(0,0,0) none repeat scroll 0% 0%;position:fixed;top:0pt;left:0pt;width:100%;height:100%;-moz-background-clip:border;-moz-background-origin:padding;-moz-background-inline-policy:continuous} .play-btn-large{width:70px;height:53px;background :url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button.png?2013-11-14T18:11:40Z);position :absolute;cursor :pointer;border :none !important;z-index :1}.play-btn-large:hover{background :url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button_hover.png?2013-11-14T18:11:40Z)}.carouselContainer{position :absolute;width :100%;z-index :2}.carouselVideoTitle{position :absolute;top :0px;left :0px;width :100%;background :rgba(0,0,0,0.8);color :white;font-size :small;font-weight :bold;z-index :2}.carouselVideoTitleText{display :block;padding :10px 10px 10px 20px}.carouselTitleDuration{position :absolute;top :0px;right :0px;padding :2px;background-color :#5A5A5A;color :#D9D9D9;font-size :smaller;z-index :2}.carouselImgTitle{position :absolute;width :100%;text-align :center;color :white;font-size :small;background :rgba(0,0,0,0.4)}.carouselImgDuration{position :absolute;top :2px;left :2px;background :rgba( 0,0,0,0.7 );color :white;padding :1px 6px;font-size :small}.carouselPrevButton,.carouselNextButton{display :block;position :absolute;bottom:23px}.carouselPrevButton{left :5px}.carouselNextButton{right:6px}.alert-container{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-image:linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-o-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-moz-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-ms-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0.04,rgb(215,215,215)),color-stop(0.55,rgb(230,230,230)),color-stop(1,rgb(255,255,255)));margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;max-width:80%;max-height:30%}.alert-title{background-color :#E6E6E6;padding :5px;border-bottom :1px solid #D1D1D1;font-weight :normal !important;font-size:14px !important;-webkit-border-top-left-radius:3px;-moz-border-radius-topleft:3px;border-top-left-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-radius-topright:3px;border-top-right-radius:3px }.alert-message{padding :5px;font-weight :normal !important;text-align:center;font-size:14px !important}.alert-buttons-container{text-align:center;padding-bottom:5px}.alert-button{background-color:#474747;color:white;-webkit-border-radius:.5em;-moz-border-radius:.5em;border-radius:.5em;padding:2px 10px;background-image:linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-o-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-moz-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-ms-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-gradient( linear,left bottom,left top,color-stop(0.04,rgb(25,25,25)),color-stop(0.55,rgb(47,47,47)),color-stop(0.68,rgb(71,71,71)) )}.alert-text{color :black !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:4246530442bfd8e2a81d76f365ae06f4 */
+.PopUpMediaTransform a .play-btn-large{position :absolute;top:50%;left :50%;width:70px;height:53px;margin-left:-35px;margin-top:-25px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAA1CAMAAADLRm3ZAAABnlBMVEUAAAAAAAAAAABaWlp4eHh7e3t/f393d3eDg4N0dHRtbW2FhYVra2uJiYmNjY1nZ2eRkZFkZGSUlJRiYmKYmJhgYGCcnJxeXl5cXFyfn58AAACioqKlpaWsrKwAAACpqakAAAAAAAAAAAAAAABEREQFBQUHBwdMTEwAAAAYGBgAAAAAAAABAQEXFxcAAAAAAAAAAABxcXGoqKh3d3eampp8fHyIiIgUFBQcHBw0NDSFhYV+fn5FRUUmJiaNjY11dXWPj4+Hh4c9PT14eHifn59nZ2eBgYFISEiBgYFubm5vb28ODg4lJSVra2tiYmJoaGgEBAQmJiZmZmaLi4saGhpiYmKYmJhZWVlgYGBfX19vb29DQ0MGBgZcXFyBgYFKSkoPDw9ZWVlzc3NQUFBXV1eKiopUVFQdHR1VVVUQEBBYWFglJSVTU1NXV1cKCgosLCySkpJRUVFISEgyMjJPT08dHR2GhoY4ODhNTU09PT0MDAwuLi57e3sTExNJSUkgICBOTk4hISEbGxtTU1MoKChBQUEsLCxXV1cAAABycnIdNM6eAAAAinRSTlOzj6jO1dbX1NfU09nS2drR29Hc0N3Q3c/O3gDf3+Ce4EgIGW7HtbXKnLouq7S5cHIq1ODQ3NTXuLq/1tXEvNjT2NjC093N18bW0dC2vNHM0LW90Ne5z9rLzsrTxbXN1Me3zdDKzdfLu8y3zb3Lyba/2svFwcq618PKxLa/1LjJu8q8u8y+xsDKrdJqj5XQAAABYklEQVR4Xu3XVVNCQRjH4VdQEbvFVRAOIRl2d3d3d3d317d2GEaGOOfM1oUXPB/gN7NX/30BIYPeGMPAqDcgBMhrBUZWLwJBAcwcAriBAzfogAMdKIADBUUmmqm64JAxl2m1k/XMmZkin+YaxsxYqd9iA1OmsfDPajVDZqMgoL1jhzpTmR+k/OCQMlObG+L4dJgq050d5rKVJlOXGaHijjxzny6i94k005YqatBFlmlKEdfy1UeS+UmS0tllwc/0JEhT9WNnBuJlqCy4maE4OSO4mdFYOeO4mQm1jCnAzUyXSJqdm8fOLCRKWVomWIaVZHFrLqJlWE8Ts7lFuAzbGZF294iXYT8rnPLICcSZk5xQyjMzzTKc5wXTXFnoluFaE+TmlnYZipUBpgcA5syjjWU1Tf7I8wvbhr/6Im/vTmDLgO3D9Gn+R5+2aIbXzeABDjwgOIDZtwDIzvwsnR1xujV/AS6zSfMs2bS9AAAAAElFTkSuQmCC);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/TimedMediaHandler/resources/player_big_play_button.png?2013-11-14T18:13:20Z)!ie}.PopUpMediaTransform a .play-btn-large :hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAA1CAMAAADLRm3ZAAABtlBMVEUAAAAAAAAAAAC5ubm1tbWwsLC+vr6Li4vExMSrq6umpqbIyMjOzs6ioqLT09OdnZ3Y2NiZmZnc3NyWlpbh4eGSkpLn5+eQkJCNjY0AAADr6+vv7+/z8/P39/cAAAD9/f0AAAAAAAAAAAAAAAB2dnYAAAAoKCj5+flra2sMDAwAAAAAAAAAAAAAAAAAAAACAgLW1tbPz88wMDCHh4fExMS8vLxKSkpubm6vr6+qqqo0NDQQEBDCwsK1tbUmJiaysrLT09PLy8uIiIgXFxetra2+vr7r6+tycnIbGxvMzMyTk5O1tbU8PDyjo6PR0dG0tLQLCwufn58HBwc9PT2bm5shISEqKiqXl5cICAiJiYmTk5Pj4+OoqKhpaWkKCgqOjo5TU1OXl5cYGBiKioo9PT18fHwlJSWGhoYuLi6CgoIvLy+Dg4Ofn5+oqKg7OzuAgIDk5OSLi4tHR0fIyMh9fX3Z2dlycnJPT08JCQl7e3vJyclhYWFZWVl4eHhhYWEUFBS6urpqamofHx9ycnK2trZzc3N6eno1NTUsLCyKioqAgIBBQUFmZmZHR0cICAjBwcEAAACIiIg+YVJpAAAAknRSTlOzj6jt6+ru4O/p5/Hy5vPl9eT24/ji+eHgAPr7/P2e/hlICG7YLr7+07accipwq7Tw777X6erGzuLjv7fs4rzn8PDYuObr+dK57tjqwuTu6rbjtcPiur3htdvg8+jRtt7H3Lndwdi83b7bwNze5cPb9t/G7drz0Mq22e7MzdjPuOrUu9fo1NnCwN/cxdLItu6t3VahkKcAAAFlSURBVHhe7dfFcgJBFIbRGyLEXegIDBAITtzd3d3d3d3d88ZJigqFzExNyyILzgN8Vb36+wJCGrXWj4JWrUEIkMUElEwWBJwMqNk4sAIDVlACA0qQAQMygowv05fNIDNYplKNFFBnmjN+ZU5SZtrTHHJnqTKVqX8KFykyWSlO9auNxJmmZBebOSWEmZ1EN3v73USZ0ngPxyckmbpYL3n5+JnLaB5FxbiZ20heU+V4mYpwflXVNTiZ2jAhHw1G6Zm1YGEtrZIzbUEiOjqlZrr8xfRIzfQGiOmXmhkIFDEEUjPDIYJGx8YlZyZChdxNYyzDTAS/uXmsZViI4rO0jLkMKzHevtaxl2EjztPWth2wM7sJ7uQHhyTLcJTkSnFqJFuGM4WL8wvSZUiXO11dA1BnbvQ0q2lwRO4f6Db88ekn8vxiB7oM6F8Nb+//6NPmy7C6GczAgBk4G1D75ADpqJ+l1CFGt+Y3XGRJEJqP8KwAAAAASUVORK5CYII=);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/TimedMediaHandler/resources/player_big_play_button_hover.png?2013-11-14T18:13:20Z)!ie}.PopUpMediaTransform{position :relative;display:inline-block}li.gallerybox div.thumb div.PopUpMediaTransform{margin:0 auto}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:1d9d796e8f6ec57bd5c8b8c44f680f32 */</style><style>
+.cite-accessibility-label{position:absolute !important; top:-99999px;clip:rect(1px 1px 1px 1px); clip:rect(1px,1px,1px,1px);padding:0 !important;border:0 !important;height:1px !important;width:1px !important;overflow:hidden}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:6989008023386f50501783f5c5ff5345 */
+.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:4250852ed2349a0d4d0fc6509a3e7d4c */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;-webkit-box-shadow:0 2px 5px 0 #ccc;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(//bits.wikimedia.org/static-1.23wmf4/resources/mediawiki.action/images/green-checkmark.png?2013-11-14T18:10:00Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:6282247611d5f95fa0dbf2f6ce149283 */
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{text-decoration:none;color:black}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:52b1797f70c7e4094dfa4191101944e8 */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load.css">
+<style>a:lang(ar),a:lang(ckb),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0de201fdea5d684523607ed88007b127 */</style>
+
+<script src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_005.php"></script><script src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_002.php"></script><style title="spinjs"></style>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Endianness","wgTitle":"Endianness","wgCurRevisionId":584635405,"wgRevisionId":584635405,"wgArticleId":43026,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All accuracy disputes","Articles with disputed statements from November 2013","Pages containing cite templates with deprecated parameters","Computer memory","Data transmission","Metaphors"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Endianness","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgArticleFeedbackv5Permissions":{"aft-reader":true,"aft-member":false,"aft-editor":false,"aft-monitor":false,"aft-administrator":false,"aft-oversighter":false,"aft-noone":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf4/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr"},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":[],"wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikipedia","aftv5Article":{"id":43026,"title":"Endianness","namespace":0,"categories":["All accuracy disputes","Articles with disputed statements from November 2013","Computer memory","Data transmission","Metaphors","Pages containing cite templates with deprecated parameters"],"permissionLevel":false},"wgWikibaseItemId":"Q339338"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots"
+:0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"aftv5-last-filter":null,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,
+"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,"searchNs109":false,"searchNs446":false,"searchNs447":false
+,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:664b3f39123c8f67ad841d996d382105 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.wikimediaShopLink.core","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script><script src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_003.php"></script>
+<script src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/geoiplookup"></script><link rel="dns-prefetch" href="http://meta.wikimedia.org/"><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf4/skins/vector/csshover.min.htc")}</style><![endif]--><style>@font-face { font-family: 'Autonym';
+	src: url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/Autonym/Autonym.eot?version=20131112');
+	src: local('Autonym'),		url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/Autonym/Autonym.woff?version=20131112') format('woff'),		url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/Autonym/Autonym.ttf?version=20131112') format('truetype');
+	font-style: normal;}
+</style><script src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load_004.php" async=""></script></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Endianness skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><div id="centralNotice"></div><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Endianness</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><div class="dablink">"Endian" redirects here. For Jonathan Swift's Big-Endian and Little-Endian parties in Lilliput, see <a href="http://en.wikipedia.org/wiki/Lilliput_and_Blefuscu" title="Lilliput and Blefuscu">Lilliput and Blefuscu</a>.</div>
+<div class="floatright"><a href="http://en.wikipedia.org/wiki/File:Big-Endian.svg" class="image" title="Big-Endian"><img alt="Big-Endian" src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/200px-Big-Endian.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Big-Endian.svg/300px-Big-Endian.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/54/Big-Endian.svg/400px-Big-Endian.svg.png 2x" height="179" width="200"></a></div>
+<div class="floatright"><a href="http://en.wikipedia.org/wiki/File:Little-Endian.svg" class="image" title="Little-Endian"><img alt="Little-Endian" src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/200px-Little-Endian.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Little-Endian.svg/300px-Little-Endian.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Little-Endian.svg/400px-Little-Endian.svg.png 2x" height="179" width="200"></a></div>
+<p>In computing, <a href="http://en.wikipedia.org/wiki/Computer_memory" title="Computer memory">memory</a> commonly stores binary data by splitting it into 8 bit units (<a href="http://en.wikipedia.org/wiki/Byte" title="Byte">bytes</a>). When a data word uses multiple such units, the order of storing these bytes into memory becomes important. The terms <b>endian</b> and <b>endianness</b>, refer to how bytes of a data word are ordered within memory. (See below for <i>endianness in networking</i>).</p>
+<p>Each byte of memory is associated with an index, called its <i>address</i>, which indicates its position. Bytes of a single data <a href="http://en.wikipedia.org/wiki/Word_%28data_type%29" title="Word (data type)" class="mw-redirect">word</a>
+ (such as a 32 bit integer datatype) are generally stored in consecutive
+ memory addresses (a 32 bit int needs 4 such locations). <b>Big-endian</b> systems are systems in which the <i>most significant byte</i> of the word is stored in the <i>smallest address</i> given and the least significant byte is stored in the largest. In contrast, <b>little endian</b> systems are those in which the <i>least significant byte</i> is stored in the <i>smallest address</i>. Say the data word was "0A 0B 0C 0D" (a set of 4 bytes) and memory addresses starting at <i>a</i>
+ with offsets 0, 1, 2 and 3 are given. Then, in big endian systems, byte
+ 0A is placed in offset 0, 0B in 1, 0C in 2 and 0D in 3. In 
+little-endian systems, the order is the reverse of it (See the diagram 
+on right).</p>
+<p>An example on <i>endianness</i> is to think of how a decimal number is written and read in <a href="http://en.wikipedia.org/wiki/Positional_notation" title="Positional notation">place-value notation</a>.
+ Since a number is written left to right, the leftmost position is 
+analogous to the smallest address of memory used, and rightmost position
+ the largest. For example, the number one hundred twenty three is 
+written <b>1 2 3</b>, with the hundred’s place left-most. Anyone who 
+reads this number also knows that the leftmost digit has the biggest 
+place value. This is an example of a big-endian convention followed in 
+daily life. The little-endian way of writing the same number would be to
+ put the units digit in leftmost position: <b>3 2 1</b>. A person 
+following place-value notation who is not alerted of this special 
+ordering would assume the number was three hundred and twenty one. <b>Endianness</b> is this same issue of ordering, appearing in computing on a base of 2 rather than 10.</p>
+<p>The main reason for implementing either format is the underlying operation of the system. The <b>Intel</b> <a href="http://en.wikipedia.org/wiki/X86" title="X86">x86</a> processor is a common example of a <i>little-endian system</i> and the <b>IBM</b> <a href="http://en.wikipedia.org/wiki/S/360" title="S/360" class="mw-redirect">S/360</a> was a <i>big-endian</i>
+ system. In modern days, big-endian is generally used in computer 
+networks, and little-endian in microprocessors. Mixed forms also exist, 
+for instance the ordering of bytes within a 16-bit word may differ from 
+the ordering of 16-bit words within a 32-bit word. Such cases are 
+sometimes referred to as mixed-endian or middle-endian.</p>
+<p>Endianness is important as a low-level attribute of a particular data
+ format. Failure to account for varying endianness across architectures 
+when writing code for mixed platforms can lead to failures and <a href="http://en.wikipedia.org/wiki/Software_bug" title="Software bug">bugs</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+<span class="toctoggle">&nbsp;[<a href="#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Etymology"><span class="tocnumber">1</span> <span class="toctext">Etymology</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#History"><span class="tocnumber">2</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Endianness_and_hardware"><span class="tocnumber">3</span> <span class="toctext">Endianness and hardware</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Bi-endian_hardware"><span class="tocnumber">3.1</span> <span class="toctext">Bi-endian hardware</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Floating-point_and_endianness"><span class="tocnumber">3.2</span> <span class="toctext">Floating-point and endianness</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Optimization"><span class="tocnumber">4</span> <span class="toctext">Optimization</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Calculation_order"><span class="tocnumber">4.1</span> <span class="toctext">Calculation order</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Diagram_for_mapping_registers_to_memory_locations"><span class="tocnumber">5</span> <span class="toctext">Diagram for mapping registers to memory locations</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Examples_of_storing_the_value_0A0B0C0Dh_in_memory"><span class="tocnumber">6</span> <span class="toctext">Examples of storing the value 0A0B0C0D<sub>h</sub> in memory</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Big-endian"><span class="tocnumber">6.1</span> <span class="toctext">Big-endian</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Atomic_element_size_8-bit"><span class="tocnumber">6.1.1</span> <span class="toctext">Atomic element size 8-bit</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Atomic_element_size_16-bit"><span class="tocnumber">6.1.2</span> <span class="toctext">Atomic element size 16-bit</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="#Little-endian"><span class="tocnumber">6.2</span> <span class="toctext">Little-endian</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Atomic_element_size_8-bit_2"><span class="tocnumber">6.2.1</span> <span class="toctext">Atomic element size 8-bit</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Atomic_element_size_16-bit_2"><span class="tocnumber">6.2.2</span> <span class="toctext">Atomic element size 16-bit</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#When_organized_by_Byte_addresses"><span class="tocnumber">6.2.3</span> <span class="toctext">When organized by Byte addresses</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-17"><a href="#Middle-endian"><span class="tocnumber">6.3</span> <span class="toctext">Middle-endian</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#Endianness_in_networking"><span class="tocnumber">7</span> <span class="toctext">Endianness in networking</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Endianness_in_files_and_byte_swap"><span class="tocnumber">8</span> <span class="toctext">Endianness in files and byte swap</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#.22Bit_endianness.22"><span class="tocnumber">9</span> <span class="toctext">"Bit endianness"</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#References_and_notes"><span class="tocnumber">10</span> <span class="toctext">References and notes</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Further_reading"><span class="tocnumber">11</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#External_links"><span class="tocnumber">12</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Etymology">Etymology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=1" title="Edit section: Etymology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/38px-Wikisource-logo.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/57px-Wikisource-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/76px-Wikisource-logo.svg.png 2x" height="40" width="38"></td>
+<td class="mbox-text plainlist" style=""><a href="http://en.wikipedia.org/wiki/Wikisource" title="Wikisource">Wikisource</a> has original text related to this article:
+<div style="margin-left: 10px;"><b><a href="http://en.wikisource.org/wiki/Gulliver%27s_Travels/Part_I/Chapter_IV" class="extiw" title="wikisource:Gulliver's Travels/Part I/Chapter IV">Gulliver's Travels (Part I, Chapter IV)</a></b></div>
+</td>
+</tr>
+</tbody></table>
+<p>In 1726, <a href="http://en.wikipedia.org/wiki/Jonathan_Swift" title="Jonathan Swift">Jonathan Swift</a> described in his satirical novel <i><a href="http://en.wikipedia.org/wiki/Gulliver%27s_Travels" title="Gulliver's Travels">Gulliver’s Travels</a></i> tensions in <a href="http://en.wikipedia.org/wiki/Lilliput_and_Blefuscu" title="Lilliput and Blefuscu">Lilliput and Blefuscu</a>: whereas royal edict in Lilliput requires cracking open one's <a href="http://en.wikipedia.org/wiki/Soft-boiled_egg" title="Soft-boiled egg" class="mw-redirect">soft-boiled egg</a> at the small end, inhabitants of the rival kingdom of Blefuscu crack theirs at the big end (giving them the moniker <i>Big-endians</i>).<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-HOLY_2-0" class="reference"><a href="#cite_note-HOLY-2"><span>[</span>2<span>]</span></a></sup> The terms <i>little-endian</i> and <i>endianness</i> have a similar intent.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p><a href="http://en.wikipedia.org/wiki/Danny_Cohen_%28engineer%29" title="Danny Cohen (engineer)">Danny Cohen</a>'s "On Holy Wars and a Plea for Peace" published in 1980<sup id="cite_ref-HOLY_2-1" class="reference"><a href="#cite_note-HOLY-2"><span>[</span>2<span>]</span></a></sup>
+ ends with: "Swift's point is that the difference between breaking the 
+egg at the little-end and breaking it at the big-end is trivial. 
+Therefore, he suggests, that everyone does it in his own preferred way. 
+We agree that the difference between sending eggs with the little- or 
+the big-end first is trivial, but we insist that everyone must do it in 
+the same way, to avoid anarchy. Since the difference is trivial we may 
+choose either way, but a decision must be made."</p>
+<p>This trivial difference was the reason for a hundred-years war 
+between the fictional kingdoms. It is widely assumed that Swift was 
+either alluding to the historic <a href="http://en.wikipedia.org/wiki/War_of_the_Roses" title="War of the Roses" class="mw-redirect">War of the Roses</a>
+ or — more likely — parodying through oversimplification the religious 
+discord in England and Scotland brought about by the conflicts between 
+the <a href="http://en.wikipedia.org/wiki/Catholic_Church" title="Catholic Church">Roman Catholics</a> (Big Endians) on the one side and the <a href="http://en.wikipedia.org/wiki/Church_of_England" title="Church of England">Anglicans</a> and <a href="http://en.wikipedia.org/wiki/Presbyterianism" title="Presbyterianism">Presbyterians</a> (Little Endians) on the other.</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=2" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Historically, byte order distinction was born out of the <a href="http://en.wikipedia.org/wiki/Mainframe_computer" title="Mainframe computer">mainframe</a> vs. <a href="http://en.wikipedia.org/wiki/Microprocessor" title="Microprocessor">microprocessor</a> approach.<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Disputed_statement" title="Wikipedia:Disputed statement" class="mw-redirect"><span title="The material near this tag is possibly inaccurate or nonfactual. (November 2013)">dubious</span></a> <span class="metadata">– <a href="http://en.wikipedia.org/wiki/Talk:Endianness#This_totally_ignores_the_large_and_active_microcomputer_market.2C_especially_the_12_and_24_bit_processors_fielded_during_the_60s_and_early-mid-70s._All_due_respect_to_Lunde.2C_but_he.27s_full_of_shit_on_that_claim._It.27s_probably_and_age_thing.2C_but_having_your_hands_in_the_guts_of_such_will_give_you_a_hardware_reason_to_dispute_written_software.2C_however_cited._Fabartus" title="Talk:Endianness">discuss</a></span></i>]</sup>
+ Until the 1970s virtually all processors were big-endian. The 
+introduction of microprocessors using initially simpler logic and byte 
+level computations led to the little-endian approach.<sup id="cite_ref-Lunde2009_4-0" class="reference"><a href="#cite_note-Lunde2009-4"><span>[</span>4<span>]</span></a></sup></p>
+<p>The problem of dealing with data in different representations is sometimes termed the <i>NUXI problem</i>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup>
+ This terminology alludes to the issue that a value represented by the 
+byte-string "UNIX" on a big-endian system may be stored as "NUXI" on a 
+PDP-11 middle-endian system; <a href="http://en.wikipedia.org/wiki/UNIX" title="UNIX" class="mw-redirect">UNIX</a>
+ was one of the first systems to allow the same code to run on, and 
+transfer data between, platforms with different internal 
+representations.</p>
+<h2><span class="mw-headline" id="Endianness_and_hardware">Endianness and hardware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=3" title="Edit section: Endianness and hardware">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/Computer_memory" title="Computer memory">Computer memory</a> consists of a sequence of cells, usually <a href="http://en.wikipedia.org/wiki/Byte" title="Byte">bytes</a>, and each cell has a number called its <a href="http://en.wikipedia.org/wiki/Memory_address" title="Memory address">address</a> that programs use to refer to it. If total number of bytes in memory is <code>n</code> then bytes addresses would be enumerated <code>0</code> to <code>n-1</code>. Multi-byte <a href="http://en.wikipedia.org/wiki/CPU_register" title="CPU register" class="mw-redirect">CPU registers</a> are stored in memory as a simple concatenation of bytes. The simple forms are:<sup id="cite_ref-TanenbaumAustin2012_6-0" class="reference"><a href="#cite_note-TanenbaumAustin2012-6"><span>[</span>6<span>]</span></a></sup></p>
+<ul>
+<li>increasing numeric significance with increasing memory addresses (or increasing time), known as <i>little-endian</i>, and</li>
+<li>decreasing numeric significance with increasing memory addresses (or increasing time), known as <i>big-endian</i><sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></li>
+</ul>
+<p>The <a href="http://en.wikipedia.org/wiki/Intel" title="Intel">Intel</a> <a href="http://en.wikipedia.org/wiki/X86" title="X86">x86</a> and <a href="http://en.wikipedia.org/wiki/X86-64" title="X86-64">x86-64</a> series of processors use the little-endian format, and for this reason, the little-endian format is also known as the <b>Intel convention</b>. Other well-known little-endian processor architectures are the <a href="http://en.wikipedia.org/wiki/MOS_Technology_6502" title="MOS Technology 6502">6502</a> (including <a href="http://en.wikipedia.org/wiki/65802" title="65802" class="mw-redirect">65802</a>, <a href="http://en.wikipedia.org/wiki/65C816" title="65C816" class="mw-redirect">65C816</a>), <a href="http://en.wikipedia.org/wiki/Z80" title="Z80" class="mw-redirect">Z80</a> (including <a href="http://en.wikipedia.org/wiki/Z180" title="Z180" class="mw-redirect">Z180</a>, <a href="http://en.wikipedia.org/wiki/EZ80" title="EZ80" class="mw-redirect">eZ80</a> etc.), <a href="http://en.wikipedia.org/wiki/MCS-48" title="MCS-48" class="mw-redirect">MCS-48</a>, <a href="http://en.wikipedia.org/wiki/8051" title="8051" class="mw-redirect">8051</a>, <a href="http://en.wikipedia.org/wiki/DEC_Alpha" title="DEC Alpha">DEC Alpha</a>, <a href="http://en.wikipedia.org/wiki/Altera" title="Altera">Altera</a> <a href="http://en.wikipedia.org/wiki/Nios_II" title="Nios II">Nios II</a>, <a href="http://en.wikipedia.org/wiki/Atmel_AVR" title="Atmel AVR">Atmel AVR</a>, <a href="http://en.wikipedia.org/wiki/VAX" title="VAX">VAX</a>, and, largely, <a href="http://en.wikipedia.org/wiki/PDP-11" title="PDP-11">PDP-11</a>.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/Motorola" title="Motorola">Motorola</a> <a href="http://en.wikipedia.org/wiki/Motorola_6800" title="Motorola 6800">6800</a> and <a href="http://en.wikipedia.org/wiki/68k" title="68k" class="mw-redirect">68k</a> series of processors use the big-endian format, and for this reason, the big-endian format is also known as the <b>Motorola convention</b>. Other well-known processors that use the big-endian format include the Xilinx <a href="http://en.wikipedia.org/wiki/Microblaze" title="Microblaze" class="mw-redirect">Microblaze</a>, <a href="http://en.wikipedia.org/wiki/SuperH" title="SuperH">SuperH</a>, <a href="http://en.wikipedia.org/wiki/IBM_POWER_Instruction_Set_Architecture" title="IBM POWER Instruction Set Architecture">IBM POWER</a>, and <a href="http://en.wikipedia.org/wiki/System/360" title="System/360" class="mw-redirect">System/360</a> and its successors such as <a href="http://en.wikipedia.org/wiki/System/370" title="System/370" class="mw-redirect">System/370</a>, <a href="http://en.wikipedia.org/wiki/ESA/390" title="ESA/390" class="mw-redirect">ESA/390</a>, and <a href="http://en.wikipedia.org/wiki/Z/Architecture" title="Z/Architecture">z/Architecture</a>. The <a href="http://en.wikipedia.org/wiki/PDP-10" title="PDP-10">PDP-10</a> also used big-endian addressing for byte-oriented instructions.</p>
+<p><a href="http://en.wikipedia.org/wiki/SPARC" title="SPARC">SPARC</a> historically used big-endian until version 9, which is bi-endian, similarly the <a href="http://en.wikipedia.org/wiki/ARM_architecture" title="ARM architecture">ARM architecture</a> was little-endian before version 3 when it became bi-endian, and the <a href="http://en.wikipedia.org/wiki/PowerPC" title="PowerPC">PowerPC</a> and <a href="http://en.wikipedia.org/wiki/Power_Architecture" title="Power Architecture">Power Architecture</a> descendants of POWER are also bi-endian (see below).</p>
+<h3><span class="mw-headline" id="Bi-endian_hardware">Bi-endian hardware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=4" title="Edit section: Bi-endian hardware">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Some architectures (including <a href="http://en.wikipedia.org/wiki/ARM_architecture" title="ARM architecture">ARM</a> versions 3 and above, <a href="http://en.wikipedia.org/wiki/PowerPC" title="PowerPC">PowerPC</a>, <a href="http://en.wikipedia.org/wiki/DEC_Alpha" title="DEC Alpha">Alpha</a>, <a href="http://en.wikipedia.org/wiki/SPARC" title="SPARC">SPARC</a> V9, <a href="http://en.wikipedia.org/wiki/MIPS_architecture" title="MIPS architecture">MIPS</a>, <a href="http://en.wikipedia.org/wiki/PA-RISC" title="PA-RISC">PA-RISC</a>, <a href="http://en.wikipedia.org/wiki/SuperH" title="SuperH">SuperH SH-4</a> and <a href="http://en.wikipedia.org/wiki/IA-64" title="IA-64">IA-64</a>)
+ feature a setting which allows for switchable endianness in data 
+segments, code segments or both. This feature can improve performance or
+ simplify the logic of networking devices and software. The word <i>bi-endian</i>, when said of hardware, denotes the capability of the machine to compute or pass data in either endian format.</p>
+<p>Many of these architectures can be switched via software to default 
+to a specific endian format (usually done when the computer starts up); 
+however, on some systems the default endianness is selected by hardware 
+on the motherboard and cannot be changed via software (e.g. the Alpha, 
+which runs only in big-endian mode on the <a href="http://en.wikipedia.org/wiki/Cray_T3E" title="Cray T3E">Cray T3E</a>).</p>
+<p>Note that the term "bi-endian" refers primarily to how a processor treats <i>data</i> accesses. <i>Instruction</i> accesses (fetches of instruction words) on a given processor may still assume a fixed endianness, even if <i>data</i> accesses are fully bi-endian, though this is not always the case, such as on Intel's <a href="http://en.wikipedia.org/wiki/IA-64" title="IA-64">IA-64</a>-based Itanium CPU, which allows both.</p>
+<p>Note, too, that some nominally bi-endian CPUs require motherboard 
+help to fully switch endianness. For instance, the 32-bit 
+desktop-oriented <a href="http://en.wikipedia.org/wiki/PowerPC" title="PowerPC">PowerPC</a>
+ processors in little-endian mode act as little-endian from the point of
+ view of the executing programs but they require the motherboard to 
+perform a 64-bit swap across all 8 byte lanes to ensure that the 
+little-endian view of things will apply to <a href="http://en.wikipedia.org/wiki/Input/Output" title="Input/Output" class="mw-redirect">I/O</a>
+ devices. In the absence of this unusual motherboard hardware, device 
+driver software must write to different addresses to undo the incomplete
+ transformation and also must perform a normal byte swap.</p>
+<p>Some CPUs, such as many PowerPC processors intended for embedded use, allow per-page choice of endianness.</p>
+<h3><span class="mw-headline" id="Floating-point_and_endianness">Floating-point and endianness</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=5" title="Edit section: Floating-point and endianness">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Although the ubiquitous x86 of today use little-endian storage for all types of data (integer, floating point, <a href="http://en.wikipedia.org/wiki/Binary_coded_decimal" title="Binary coded decimal" class="mw-redirect">BCD</a>), there have been a few historical machines where <a href="http://en.wikipedia.org/wiki/Floating_point" title="Floating point">floating point</a> numbers were represented in big-endian form while integers were represented in little-endian form.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup>
+ There are old ARM processors that have half little-endian, half 
+big-endian floating point representation. Because there have been many 
+floating point formats with no "<a href="http://en.wikipedia.org/wiki/Computer_network" title="Computer network">network</a>"
+ standard representation for them, there is no formal standard for 
+transferring floating point values between heterogeneous systems. It may
+ therefore appear strange that the widespread <a href="http://en.wikipedia.org/wiki/IEEE_754" title="IEEE 754" class="mw-redirect">IEEE 754</a> floating point standard does not specify endianness.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup>
+ Theoretically, this means that even standard IEEE floating point data 
+written by one machine might not be readable by another. However, on 
+modern standard computers (i.e., implementing IEEE 754), one may in 
+practice safely assume that the endianness is the same for floating 
+point numbers as for integers, making the conversion straightforward 
+regardless of data type. (Small <a href="http://en.wikipedia.org/wiki/Embedded_system" title="Embedded system">embedded systems</a> using special floating point formats may be another matter however.)</p>
+<h2><span class="mw-headline" id="Optimization">Optimization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=6" title="Edit section: Optimization">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The little-endian system has the property that the same value can be 
+read from memory at different lengths without using different addresses 
+(even when <a href="http://en.wikipedia.org/wiki/Byte_alignment" title="Byte alignment" class="mw-redirect">alignment</a>
+ restrictions are imposed). For example, a 32-bit memory location with 
+content 4A 00 00 00 can be read at the same address as either <a href="http://en.wikipedia.org/wiki/8-bit" title="8-bit">8-bit</a> (value = 4A), <a href="http://en.wikipedia.org/wiki/16-bit" title="16-bit">16-bit</a> (004A), <a href="http://en.wikipedia.org/wiki/24-bit" title="24-bit">24-bit</a> (00004A), or <a href="http://en.wikipedia.org/wiki/32-bit" title="32-bit">32-bit</a>
+ (0000004A), all of which retain the same numeric value. Although this 
+little-endian property is rarely used directly by high-level 
+programmers, it is often employed by code optimizers as well as by <a href="http://en.wikipedia.org/wiki/Assembly_language" title="Assembly language">assembly language</a> programmers.</p>
+<p>On the other hand, in some situations it may be useful to obtain an 
+approximation of a multi-byte or multi-word value by reading only its 
+most-significant portion instead of the complete representation; a 
+big-endian processor may read such an approximation using the same 
+base-address that would be used for the full value.</p>
+<h3><span class="mw-headline" id="Calculation_order">Calculation order</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=7" title="Edit section: Calculation order">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Little-endian representation simplifies hardware in processors that 
+add multi-byte integral values a byte at a time, such as small-scale 
+byte-addressable processors and <a href="http://en.wikipedia.org/wiki/Microcontroller" title="Microcontroller">microcontrollers</a>.
+ As carry propagation must start at the least significant bit (and thus 
+byte), multi-byte addition can then be carried out with a 
+monotonically-incrementing address sequence, a simple operation already 
+present in hardware. On a big-endian processor, its addressing unit has 
+to be told how big the addition is going to be so that it can hop 
+forward to the least significant byte, then count back down towards the 
+most significant. However, high-performance processors usually perform 
+these operations simultaneously, fetching multi-byte operands from 
+memory as a single operation, so that the complexity of the hardware is 
+not affected by the byte ordering.</p>
+<h2><span class="mw-headline" id="Diagram_for_mapping_registers_to_memory_locations">Diagram for mapping registers to memory locations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=8" title="Edit section: Diagram for mapping registers to memory locations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="floatright"><a href="http://en.wikipedia.org/wiki/File:Endianessmap.svg" class="image" title="Mapping registers to memory locations"><img alt="Mapping registers to memory locations" src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/250px-Endianessmap.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Endianessmap.svg/375px-Endianessmap.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Endianessmap.svg/500px-Endianessmap.svg.png 2x" height="353" width="250"></a></div>
+<p>Using this chart, one can map an access (or, for a concrete example: 
+"write 32 bit value to address 0") from register to memory or from 
+memory to register. To help in understanding that access, little and big
+ endianness can be seen in the diagram as differing in their coordinate 
+system's orientation. Big endianness's atomic units (in this example the
+ atomic unit is the byte) and memory coordinate system increases in the 
+diagram from left to right, while little endianness's units increase 
+from right to left.</p>
+<p>A simple way to remember is "In <b>L</b>ittle Endian, The <b>L</b>east significant byte goes into the <b>L</b>owest value slot". So in the above example, D, the least significant byte, goes into slot 0.</p>
+<p>If you are writing in a western language the hex value 0x0a0b0c0d you are writing the bytes from <i>left to right</i>,
+ you are implicitly writing Big-Endian style. 0x0a at 0, 0x0b at 1, 0x0c
+ at 2, 0x0d at 3. On the other hand the output of memory is normally 
+also printed out bytewise from left to right, first memory address 0, 
+then memory address 1, then memory address 2, then memory address 3. So 
+on a Big-Endian system when you write a 32-bit value (from a register) 
+to an address in memory and after that output the memory, you "see what 
+you have written" (because you are using the left to right coordinate 
+system for the output of values in registers as well as the output of 
+memory). However on a Little-Endian system the logical 0 address of a 
+value in a register (for 8-bit, 16-bit and 32-bit) is the <i>least significant byte</i>,
+ the one to the right. 0x0d at 0, 0x0c at 1, 0x0b at 2, 0x0a at 3. If 
+you write a 32 bit register value to a memory location on a 
+Little-Endian system and after that output the memory location (with 
+growing addresses from left to right), then the output of the memory 
+will appear <i>reversed</i> (byte-swapped). You have 2 choices now to 
+synchronize the output of what you are seeing as values in registers and
+ what you are seeing as memory: You can swap the output of the register 
+values (0x0a0b0c0d =&gt; 0x0d0c0b0a) or you can swap the output of the 
+memory (print from right to left). Because the values of registers are 
+interpreted as numbers, which are, in western languages, written from 
+left to right, it is natural to use the second approach, to display the 
+memory from right to left. The above diagram does exactly that, when 
+visualizing memory (when "thinking memory") on a Little-Endian system 
+the memory should be seen growing to the <i>left</i>.</p>
+<h2><span class="mw-headline" id="Examples_of_storing_the_value_0A0B0C0Dh_in_memory">Examples of storing the value <tt>0A0B0C0D<sub>h</sub></tt> in memory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=9" title="Edit section: Examples of storing the value 0A0B0C0Dh in memory">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<dl>
+<dd><i>Note that <a href="http://en.wikipedia.org/wiki/Hexadecimal" title="Hexadecimal">hexadecimal</a> notation is used.</i></dd>
+</dl>
+<p>To illustrate the notions this section provides example layouts of the 32-bit number <tt>0A0B0C0D<sub>h</sub></tt>
+ in the most common variants of endianness. There exist several digital 
+processors that use other formats, but these two are the most common in 
+general processors. That is true for typical <a href="http://en.wikipedia.org/wiki/Embedded_system" title="Embedded system">embedded systems</a>
+ as well as for general computer CPU(s). Most processors used in non CPU
+ roles in typical computers (in storage units, peripherals etc.) also 
+use one of these two basic formats, although not always 32-bit of 
+course.</p>
+<p>All the examples refer to the storage in memory of the value.</p>
+<h3><span class="mw-headline" id="Big-endian">Big-endian</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=10" title="Edit section: Big-endian">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="floatright"><a href="http://en.wikipedia.org/wiki/File:Big-Endian.svg" class="image"><img alt="Big-Endian.svg" src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/280px-Big-Endian.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Big-Endian.svg/420px-Big-Endian.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/54/Big-Endian.svg/560px-Big-Endian.svg.png 2x" height="250" width="280"></a></div>
+<h4><span class="mw-headline" id="Atomic_element_size_8-bit">Atomic element size 8-bit</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=11" title="Edit section: Atomic element size 8-bit">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<dl>
+<dt>address increment 1-byte (octet)</dt>
+</dl>
+<table style="border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;" cellpadding="4">
+<tbody><tr>
+<td colspan="6"><i>increasing addresses</i>&nbsp;&nbsp;→</td>
+</tr>
+<tr>
+<td style="border: 1px solid; border-left: hidden;"><tt>…</tt></td>
+<td style="border: 1px solid;"><tt>0A<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0B<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0C<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0D<sub>h</sub></tt></td>
+<td style="border: 1px solid; border-right: hidden;"><tt>…</tt></td>
+</tr>
+</tbody></table>
+<p>The <a href="http://en.wikipedia.org/wiki/Most_significant_byte" title="Most significant byte" class="mw-redirect">most significant byte</a> (<i>MSB</i>) value, which is <tt>0A<sub>h</sub></tt> in our example, is stored at the memory location with the lowest address, the next byte value in significance, <tt>0B<sub>h</sub></tt>, is stored at the following memory location and so on. This is akin to Left-to-Right reading in hexadecimal order.</p>
+<h4><span class="mw-headline" id="Atomic_element_size_16-bit">Atomic element size 16-bit</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=12" title="Edit section: Atomic element size 16-bit">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<table style="border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;" cellpadding="4">
+<tbody><tr>
+<td colspan="6"><i>increasing addresses</i>&nbsp;&nbsp;→</td>
+</tr>
+<tr>
+<td style="border: 1px solid; border-left: hidden;"><tt>…</tt></td>
+<td style="border: 1px solid;"><tt>0A0B<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0C0D<sub>h</sub></tt></td>
+<td style="border: 1px solid; border-right: hidden;"><tt>…</tt></td>
+</tr>
+</tbody></table>
+<p>The most significant atomic element stores now the value <tt>0A0B<sub>h</sub></tt>, followed by <tt>0C0D<sub>h</sub></tt>.</p>
+<h3><span class="mw-headline" id="Little-endian">Little-endian</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=13" title="Edit section: Little-endian">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="floatright"><a href="http://en.wikipedia.org/wiki/File:Little-Endian.svg" class="image"><img alt="Little-Endian.svg" src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/280px-Little-Endian.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Little-Endian.svg/420px-Little-Endian.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Little-Endian.svg/560px-Little-Endian.svg.png 2x" height="250" width="280"></a></div>
+<h4><span class="mw-headline" id="Atomic_element_size_8-bit_2">Atomic element size 8-bit</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=14" title="Edit section: Atomic element size 8-bit">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<dl>
+<dt>address increment 1-byte (octet)</dt>
+</dl>
+<table style="border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;" cellpadding="4">
+<tbody><tr>
+<td colspan="6"><i>increasing addresses</i>&nbsp;&nbsp;→</td>
+</tr>
+<tr>
+<td style="border: 1px solid; border-left: hidden;"><tt>…</tt></td>
+<td style="border: 1px solid;"><tt>0D<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0C<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0B<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0A<sub>h</sub></tt></td>
+<td style="border: 1px solid; border-right: hidden;"><tt>…</tt></td>
+</tr>
+</tbody></table>
+<p>The <a href="http://en.wikipedia.org/wiki/Least_significant_byte" title="Least significant byte" class="mw-redirect">least significant byte</a> (<i>LSB</i>) value, <tt>0D<sub>h</sub></tt>, is at the lowest address. The other bytes follow in increasing order of significance.</p>
+<h4><span class="mw-headline" id="Atomic_element_size_16-bit_2">Atomic element size 16-bit</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=15" title="Edit section: Atomic element size 16-bit">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<table style="border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;" cellpadding="4">
+<tbody><tr>
+<td colspan="6"><i>increasing addresses</i>&nbsp;&nbsp;→</td>
+</tr>
+<tr>
+<td style="border: 1px solid; border-left: hidden;"><tt>…</tt></td>
+<td style="border: 1px solid;"><tt>0C0D<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0A0B<sub>h</sub></tt></td>
+<td style="border: 1px solid; border-right: hidden;"><tt>…</tt></td>
+</tr>
+</tbody></table>
+<p>The least significant 16-bit unit stores the value <tt>0C0D<sub>h</sub></tt>, immediately followed by <tt>0A0B<sub>h</sub></tt>. Note that <tt>0C0D<sub>h</sub></tt> and <tt>0A0B<sub>h</sub></tt> represent integers, not bit layouts (see <a href="http://en.wikipedia.org/wiki/Bit_numbering" title="Bit numbering">bit numbering</a>).</p>
+<h4><span class="mw-headline" id="When_organized_by_Byte_addresses">When organized by Byte addresses</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=16" title="Edit section: When organized by Byte addresses">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<dl>
+<dt>Byte addresses increasing from right to left</dt>
+</dl>
+<p>Visualising memory addresses from left to right makes little-endian 
+values appear backwards. If the addresses are written increasing <i>towards</i>
+ the left instead, each individual little-endian value will appear 
+forwards. However strings of values or characters appear reversed 
+instead.</p>
+<p>With 8-bit atomic elements:</p>
+<table style="border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;" cellpadding="4">
+<tbody><tr>
+<td colspan="6">←&nbsp;&nbsp;<i>increasing addresses</i></td>
+</tr>
+<tr>
+<td style="border: 1px solid; border-left: hidden;"><tt>…</tt></td>
+<td style="border: 1px solid;"><tt>0A<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0B<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0C<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0D<sub>h</sub></tt></td>
+<td style="border: 1px solid; border-right: hidden;"><tt>…</tt></td>
+</tr>
+</tbody></table>
+<p>The <a href="http://en.wikipedia.org/wiki/Least_significant_byte" title="Least significant byte" class="mw-redirect">least significant byte</a> (<i>LSB</i>) value, <tt>0D<sub>h</sub></tt>, is at the lowest address. The other bytes follow in increasing order of significance.</p>
+<p>With 16-bit atomic elements:</p>
+<table style="border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;" cellpadding="4">
+<tbody><tr>
+<td colspan="6">←&nbsp;&nbsp;<i>increasing addresses</i></td>
+</tr>
+<tr>
+<td style="border: 1px solid; border-left: hidden;"><tt>…</tt></td>
+<td style="border: 1px solid;"><tt>0A0B<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0C0D<sub>h</sub></tt></td>
+<td style="border: 1px solid; border-right: hidden;"><tt>…</tt></td>
+</tr>
+</tbody></table>
+<p>The least significant 16-bit unit stores the value <tt>0C0D<sub>h</sub></tt>, immediately followed by <tt>0A0B<sub>h</sub></tt>.</p>
+<p>The display of text is reversed from the normal display of languages 
+such as English that read from left to right. For example, the word 
+"XRAY" displayed in this manner, with each character stored in an 8-bit 
+atomic element:</p>
+<table style="border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;" cellpadding="4">
+<tbody><tr>
+<td colspan="6">←&nbsp;&nbsp;<i>increasing addresses</i></td>
+</tr>
+<tr>
+<td style="border: 1px solid; border-left: hidden;"><tt>…</tt></td>
+<td style="border: 1px solid;"><tt>"Y"</tt></td>
+<td style="border: 1px solid;"><tt>"A"</tt></td>
+<td style="border: 1px solid;"><tt>"R"</tt></td>
+<td style="border: 1px solid;"><tt>"X"</tt></td>
+<td style="border: 1px solid; border-right: hidden;"><tt>…</tt></td>
+</tr>
+</tbody></table>
+<p>If pairs of characters are stored in 16-bit atomic elements (using 8 bits per character), it could look even stranger:</p>
+<table style="border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;" cellpadding="4">
+<tbody><tr>
+<td colspan="4">←&nbsp;&nbsp;<i>increasing addresses</i></td>
+</tr>
+<tr>
+<td style="border: 1px solid; border-left: hidden;"><tt>…</tt></td>
+<td style="border: 1px solid;"><tt>"AY"</tt></td>
+<td style="border: 1px solid;"><tt>"XR"</tt></td>
+<td style="border: 1px solid; border-right: hidden;"><tt>…</tt></td>
+</tr>
+</tbody></table>
+<p>This conflict between the memory arrangements of binary data and text
+ is intrinsic to the nature of the little-endian convention, but is a 
+conflict only for languages written left-to-right, such as English. For 
+right-to-left languages such as <a href="http://en.wikipedia.org/wiki/Arabic" title="Arabic" class="mw-redirect">Arabic</a> and <a href="http://en.wikipedia.org/wiki/Hebrew" title="Hebrew" class="mw-redirect">Hebrew</a>,
+ there is no conflict of text with binary, and the preferred display in 
+both cases would be with addresses increasing to the left. (On the other
+ hand, right-to-left languages have a complementary intrinsic conflict 
+in the big-endian system.)</p>
+<h3><span class="mw-headline" id="Middle-endian">Middle-endian</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=17" title="Edit section: Middle-endian">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Numerous other orderings, generically called <i>middle-endian</i> or <i>mixed-endian</i>, are possible. On the <a href="http://en.wikipedia.org/wiki/PDP-11" title="PDP-11">PDP-11</a>
+ (16-bit little-endian) for example, the compiler stored 32-bit values 
+with the 16-bit halves swapped from the expected little-endian order. 
+This ordering is known as <i>PDP-endian</i>.</p>
+<ul>
+<li><i>storage of a 32-bit word on a PDP-11</i></li>
+</ul>
+<table style="border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;" cellpadding="4">
+<tbody><tr>
+<td colspan="6"><i>increasing addresses</i>&nbsp;&nbsp;→</td>
+</tr>
+<tr>
+<td style="border: 1px solid; border-left: hidden;"><tt>…</tt></td>
+<td style="border: 1px solid;"><tt>0B<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0A<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0D<sub>h</sub></tt></td>
+<td style="border: 1px solid;"><tt>0C<sub>h</sub></tt></td>
+<td style="border: 1px solid; border-right: hidden;"><tt>…</tt></td>
+</tr>
+</tbody></table>
+<p>The <a href="http://en.wikipedia.org/wiki/ARM_architecture" title="ARM architecture">ARM architecture</a> can also produce this format when writing a 32-bit word to an address 2 bytes from a 32-bit word <a href="http://en.wikipedia.org/wiki/Data_structure_alignment" title="Data structure alignment">alignment</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Segment_descriptors" title="Segment descriptors" class="mw-redirect">Segment descriptors</a> on <a href="http://en.wikipedia.org/wiki/Intel_80386" title="Intel 80386">Intel 80386</a>
+ and compatible processors keep a base 32-bit address of the segment 
+stored in little-endian order, but in four nonconsecutive bytes, at 
+relative positions 2,3,4 and 7 of the descriptor start.</p>
+<h2><span class="mw-headline" id="Endianness_in_networking">Endianness in networking</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=18" title="Edit section: Endianness in networking">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Many <a href="http://en.wikipedia.org/wiki/IETF_RFC" title="IETF RFC" class="mw-redirect">IETF RFCs</a> use the term <i>network order</i>, meaning the order of transmission for bits and bytes <i>over the wire</i> in <a href="http://en.wikipedia.org/wiki/Network_protocols" title="Network protocols" class="mw-redirect">network protocols</a>. Among others, the historic <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc1700">RFC 1700</a> (also known as <a href="http://en.wikipedia.org/wiki/Internet_standard" title="Internet standard" class="mw-redirect">Internet standard</a> STD 2) has defined its network order to be <a href="#Big-endian">big endian</a>, though not all protocols do.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></p>
+<p>The <a href="http://en.wikipedia.org/wiki/Telephone_network" title="Telephone network">telephone network</a> has always sent the most significant part first, the <a href="http://en.wikipedia.org/wiki/Area_code" title="Area code" class="mw-redirect">area code</a>; doing so allows <a href="http://en.wikipedia.org/wiki/Routing" title="Routing">routing</a> while a <a href="http://en.wikipedia.org/wiki/Telephone_number" title="Telephone number">telephone number</a> is being composed.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/Internet_Protocol" title="Internet Protocol">Internet Protocol</a> defines big-endian as the standard <i>network byte order</i> used for all numeric values in the <a href="http://en.wikipedia.org/wiki/Packet_header" title="Packet header" class="mw-redirect">packet headers</a> and by many higher level protocols and file formats that are designed for use over IP. The <a href="http://en.wikipedia.org/wiki/Berkeley_sockets" title="Berkeley sockets">Berkeley sockets</a> <a href="http://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">API</a> defines a set of functions to convert 16-bit and 32-bit integers to and from network byte order: the <tt>htons</tt> (host-to-network-short) and <tt>htonl</tt> (host-to-network-long) functions convert 16-bit and 32-bit values respectively from machine (<i>host</i>) to network order; the <tt>ntohs</tt> and <tt>ntohl</tt> functions convert from network to host order. These functions may be a <a href="http://en.wikipedia.org/wiki/No-op" title="No-op" class="mw-redirect">no-op</a> on a big-endian system.</p>
+<p>In <a href="http://en.wikipedia.org/wiki/CANopen" title="CANopen">CANopen</a> multi-byte parameters are always sent <a href="http://en.wikipedia.org/wiki/Least_significant_byte" title="Least significant byte" class="mw-redirect">least significant byte</a> first (little endian). The same is true for <a href="http://en.wikipedia.org/wiki/Ethernet_Powerlink" title="Ethernet Powerlink">Ethernet Powerlink</a>.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup></p>
+<p>While the lowest network protocols may deal with sub-byte formatting, all the layers above them usually consider the <i>byte</i> (mostly meant as <i><a href="http://en.wikipedia.org/wiki/Octet_%28computing%29" title="Octet (computing)">octet</a></i>) as their atomic unit.</p>
+<h2><span class="mw-headline" id="Endianness_in_files_and_byte_swap">Endianness in files and byte swap</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=19" title="Edit section: Endianness in files and byte swap">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Endianness is a problem when a binary file created on a computer is read on another computer with different endianness. Some <a href="http://en.wikipedia.org/wiki/Compiler" title="Compiler">compilers</a> have built-in facilities to deal with data written in other formats. For example, the <a href="http://en.wikipedia.org/wiki/Intel" title="Intel">Intel</a> <a href="http://en.wikipedia.org/wiki/Fortran" title="Fortran">Fortran</a> compiler supports the non-standard <code>CONVERT</code> specifier, so a file can be opened as</p>
+<dl>
+<dd><code>OPEN(unit,CONVERT='BIG_ENDIAN',...)</code></dd>
+</dl>
+<p>or</p>
+<dl>
+<dd><code>OPEN(unit,CONVERT='LITTLE_ENDIAN',...)</code></dd>
+</dl>
+<p>Some compilers have options to generate code that globally enables 
+the conversion for all file IO operations. This allows one to reuse code
+ on a system with the opposite endianness without having to modify the 
+code itself. If the compiler does not support such conversion, the 
+programmer needs to swap the bytes via ad hoc code.</p>
+<p>Fortran sequential unformatted files created with one endianness 
+usually cannot be read on a system using the other endianness because 
+Fortran usually implements a <a href="http://en.wikipedia.org/wiki/Storage_record" title="Storage record">record</a>
+ (defined as the data written by a single Fortran statement) as data 
+preceded and succeeded by count fields, which are integers equal to the 
+number of bytes in the data. An attempt to read such file on a system of
+ the other endianness then results in a run-time error, because the 
+count fields are incorrect. This problem can be avoided by writing out 
+sequential binary files as opposed to sequential unformatted.</p>
+<p><a href="http://en.wikipedia.org/wiki/Unicode" title="Unicode">Unicode</a> text can optionally start with a <a href="http://en.wikipedia.org/wiki/Byte_order_mark" title="Byte order mark">byte order mark</a> (BOM) to signal the endianness of the file or stream. Its code point is U+FEFF. In <a href="http://en.wikipedia.org/wiki/UTF-32" title="UTF-32">UTF-32</a> for example, a big-endian file should start with <code>00 00 FE FF</code>. In a little-endian file these bytes are reversed.</p>
+<p>Application binary data formats, such as for example <a href="http://en.wikipedia.org/wiki/MATLAB" title="MATLAB">MATLAB</a>
+ .mat files, or the .BIL data format, used in topography, are usually 
+endianness-independent. This is achieved by storing the data always in 
+one fixed endianness, or carrying with the data a switch to indicate 
+which endianness the data was written with. When reading the file, the 
+application converts the endianness, invisibly from the user.</p>
+<p>This is the case of <a href="http://en.wikipedia.org/wiki/TIFF" title="TIFF" class="mw-redirect">TIFF</a>
+ image files, which instructs in its header about endianness of their 
+internal binary integers. If a file starts with the signature "<code>MM</code>" it means that integers are represented as big-endian, while "<code>II</code>" means little-endian. Those signatures need a single 16-bit word each, and they are <a href="http://en.wikipedia.org/wiki/Palindrome" title="Palindrome">palindromes</a> (that is, they read the same forwards and backwards), so they are endianness independent. "<code>I</code>" stands for <a href="http://en.wikipedia.org/wiki/Intel" title="Intel">Intel</a> and "<code>M</code>" stands for <a href="http://en.wikipedia.org/wiki/Motorola" title="Motorola">Motorola</a>, the respective <a href="http://en.wikipedia.org/wiki/CPU" title="CPU" class="mw-redirect">CPU</a> providers of the <a href="http://en.wikipedia.org/wiki/IBM_PC" title="IBM PC" class="mw-redirect">IBM PC</a> compatibles (Intel) and <a href="http://en.wikipedia.org/wiki/Apple_Macintosh" title="Apple Macintosh" class="mw-redirect">Apple Macintosh</a>
+ platforms (Motorola) in the 1980s. Intel CPUs are little-endian, while 
+Motorola 680x0 CPUs are big-endian. This explicit signature allows a 
+TIFF reader program to swap bytes if necessary when a given file was 
+generated by a TIFF writer program running on a computer with a 
+different endianness.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/LabVIEW" title="LabVIEW">LabVIEW</a>
+ programming environment, though most commonly installed on Windows 
+machines, was first developed on a Macintosh, and uses Big Endian format
+ for its binary numbers, while most Windows programs use Little Endian 
+format.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup></p>
+<p>Note that since the required byte swap depends on the size of the 
+numbers stored in the file (two 2-byte integers require a different swap
+ than one 4-byte integer), the file format must be known to perform 
+endianness conversion.</p>
+<h2><span class="mw-headline" id=".22Bit_endianness.22">"Bit endianness"</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=20" title="Edit section: &quot;Bit endianness&quot;">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Bit_numbering" title="Bit numbering">bit numbering</a></div>
+<p>The terms <i>bit endianness</i> or <i>bit-level endianness</i> are 
+seldom used when talking about the representation of a stored value, as 
+they are only meaningful for the rare computer architectures where each 
+individual bit has a unique address. They are used however to refer to 
+the transmission order of bits over a serial medium. Most often that 
+order is transparently managed by the hardware and is the bit-level 
+analogue of little-endian (low-bit first), although protocols exist 
+which require the opposite ordering (e.g. <a href="http://en.wikipedia.org/wiki/Teletext" title="Teletext">Teletext</a>, <a href="http://en.wikipedia.org/wiki/I%C2%B2C" title="I²C">I²C</a>, and <a href="http://en.wikipedia.org/wiki/Synchronous_optical_networking" title="Synchronous optical networking">SONET and SDH</a><sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup>). In networking, the decision about the order of transmission of bits is made in the very bottom of the <a href="http://en.wikipedia.org/wiki/Data_link_layer" title="Data link layer">data link layer</a> of the <a href="http://en.wikipedia.org/wiki/OSI_model" title="OSI model">OSI model</a>.
+ As bit ordering is usually only relevant on a very low level, terming 
+transmissions "LSB first" or "MSB first" is more descriptive than 
+assigning an endianness to bit ordering.</p>
+<p>Bit endianness is also used when referring to certain image formats, particularly <a href="http://en.wikipedia.org/wiki/Black-and-white" title="Black-and-white">bitonal</a>
+ images, which store a series of pixels as individual bits within a 
+byte. If the bit order is incorrect, every group of eight pixels in the 
+image will appear backwards.</p>
+<h2><span class="mw-headline" id="References_and_notes">References and notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=21" title="Edit section: References and notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation book">Jonathan Swift (1726). <a class="external text" href="http://en.wikisource.org/wiki/Gulliver%27s_Travels/Part_I/Chapter_IV"><i>Gulliver's Travels</i></a>.
+ "Which two mighty powers have, as I was going to tell you, been engaged
+ in a most obstinate war for six-and-thirty moons past. (…) the 
+primitive way of breaking eggs, before we eat them, was upon the larger 
+end; … the emperor his father published an edict, commanding all his 
+subjects, upon great penalties, to break the smaller end of their eggs. …
+ Many hundred large volumes have been published upon this controversy: 
+but the books of the Big-endians have been long forbidden …"</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEndianness&amp;rft.au=Jonathan+Swift&amp;rft.aulast=Jonathan+Swift&amp;rft.btitle=Gulliver%27s+Travels&amp;rft.date=1726&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fen.wikisource.org%2Fwiki%2FGulliver%2527s_Travels%2FPart_I%2FChapter_IV&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-HOLY-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-HOLY_2-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-HOLY_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation IETF_document"><a href="http://en.wikipedia.org/wiki/Danny_Cohen_%28engineer%29" title="Danny Cohen (engineer)">Danny Cohen</a> (1980-04-01). <a rel="nofollow" class="external text" href="http://www.ietf.org/rfc/ien/ien137.txt"><i>On Holy Wars and a Plea for Peace</i></a>. IEN 137<span class="printonly">. <a rel="nofollow" class="external free" href="http://www.ietf.org/rfc/ien/ien137.txt">http://www.ietf.org/rfc/ien/ien137.txt</a></span>.
+ "…which bit should travel first, the bit from the little end of the 
+word, or the bit from the big end of the word? The followers of the 
+former approach are called the Little-Endians, and the followers of the 
+latter are called the Big-Endians."</span> Also published at <i><a href="http://en.wikipedia.org/wiki/IEEE_Computer" title="IEEE Computer" class="mw-redirect">IEEE Computer</a></i>, <a rel="nofollow" class="external text" href="http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=1667115">October 1981 issue</a>.</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">David Cary. <a rel="nofollow" class="external text" href="http://david.carybros.com/html/endian_faq.html">"Endian FAQ"</a><span class="reference-accessdate">. Retrieved 2010-10-11</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEndianness&amp;rft.au=David+Cary&amp;rft.aulast=David+Cary&amp;rft.btitle=Endian+FAQ&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdavid.carybros.com%2Fhtml%2Fendian_faq.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-Lunde2009-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-Lunde2009_4-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation book">Ken Lunde (13 January 2009). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=SA92uQqTB-AC&amp;pg=PA29"><i>CJKV Information Processing</i></a>. O'Reilly Media, Inc. p.&nbsp;29. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-596-51447-1" title="Special:BookSources/978-0-596-51447-1">978-0-596-51447-1</a><span class="reference-accessdate">. Retrieved 21 May 2013</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEndianness&amp;rft.au=Ken+Lunde&amp;rft.aulast=Ken+Lunde&amp;rft.btitle=CJKV+Information+Processing&amp;rft.date=13+January+2009&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DSA92uQqTB-AC%26pg%3DPA29&amp;rft.isbn=978-0-596-51447-1&amp;rft.pages=29&amp;rft.pub=O%27Reilly+Media%2C+Inc.&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://catb.org/jargon/html/N/NUXI-problem.html">"NUXI problem"</a>. <i>The <a href="http://en.wikipedia.org/wiki/Jargon_File" title="Jargon File">Jargon File</a></i><span class="reference-accessdate">. Retrieved 2008-12-20</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEndianness&amp;rft.atitle=NUXI+problem&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fcatb.org%2Fjargon%2Fhtml%2FN%2FNUXI-problem.html&amp;rft.jtitle=The+Jargon+File&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-TanenbaumAustin2012-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-TanenbaumAustin2012_6-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation book">Andrew S. Tanenbaum; Todd M. Austin (4 August 2012). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=m0HHygAACAAJ"><i>Structured Computer Organization</i></a>. Prentice Hall PTR. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-13-291652-3" title="Special:BookSources/978-0-13-291652-3">978-0-13-291652-3</a><span class="reference-accessdate">. Retrieved 18 May 2013</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEndianness&amp;rft.au=Andrew+S.+Tanenbaum&amp;rft.aulast=Andrew+S.+Tanenbaum&amp;rft.au=Todd+M.+Austin&amp;rft.btitle=Structured+Computer+Organization&amp;rft.date=4+August+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Dm0HHygAACAAJ&amp;rft.isbn=978-0-13-291652-3&amp;rft.pub=Prentice+Hall+PTR&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Note that, in these expressions, the term "end" is meant as "extremity", not as "last part"; and that <i>big</i> and <i>little</i> say which extremity is written <i>first</i>.</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.quadibloc.com/comp/cp0201.htm">"Floating point formats"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEndianness&amp;rft.btitle=Floating+point+formats&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.quadibloc.com%2Fcomp%2Fcp0201.htm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.perl.com/doc/manual/html/pod/perlfunc/pack.html">"pack – convert a list into a binary representation"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEndianness&amp;rft.btitle=pack+%E2%80%93+convert+a+list+into+a+binary+representation&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.perl.com%2Fdoc%2Fmanual%2Fhtml%2Fpod%2Fperlfunc%2Fpack.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation IETF_document"><a href="http://en.wikipedia.org/wiki/Joyce_K._Reynolds" title="Joyce K. Reynolds">Reynolds, J.</a>; <a href="http://en.wikipedia.org/wiki/Jon_Postel" title="Jon Postel">Postel, J.</a> (October 1994). <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc1700#page-3">"Data Notations"</a>. <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc1700"><i>Assigned Numbers</i></a>. <a href="http://en.wikipedia.org/wiki/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">IETF</a>. p.&nbsp;3. STD 2. RFC 1700<span class="printonly">. <a rel="nofollow" class="external free" href="https://tools.ietf.org/html/rfc1700#page-3">https://tools.ietf.org/html/rfc1700#page-3</a></span><span class="reference-accessdate">. Retrieved 2012-03-02</span>.</span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Ethernet POWERLINK Standardisation Group (2012), <i>EPSG Working Draft Proposal 301: Ethernet POWERLINK Communication Profile Specification Version 1.1.4</i>, chapter 6.1.1.</span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://digital.ni.com/public.nsf/allkb/97332426D63630EE862565070049FFBB">read write binary files with LabVIEW</a></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Cf. Sec. 2.1 Bit Transmission of <a rel="nofollow" class="external free" href="http://tools.ietf.org/html/draft-ietf-pppext-sonet-as-00">http://tools.ietf.org/html/draft-ietf-pppext-sonet-as-00</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=22" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="citation IETF_document"><a href="http://en.wikipedia.org/wiki/Danny_Cohen_%28engineer%29" title="Danny Cohen (engineer)">Danny Cohen</a> (1980-04-01). <a rel="nofollow" class="external text" href="http://www.ietf.org/rfc/ien/ien137.txt"><i>On Holy Wars and a Plea for Peace</i></a>. IEN 137<span class="printonly">. <a rel="nofollow" class="external free" href="http://www.ietf.org/rfc/ien/ien137.txt">http://www.ietf.org/rfc/ien/ien137.txt</a></span>.</span> <small>Also published at <i><a href="http://en.wikipedia.org/wiki/IEEE_Computer" title="IEEE Computer" class="mw-redirect">IEEE Computer</a></i>, <a rel="nofollow" class="external text" href="http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=1667115">October 1981 issue</a>.</small></li>
+<li><span class="citation journal">David V. James (June 1990). <a rel="nofollow" class="external text" href="http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=56322">"Multiplexed buses: the endian wars continue"</a>. <i><a href="http://en.wikipedia.org/wiki/IEEE_Micro" title="IEEE Micro">IEEE Micro</a></i> <b>10</b> (3): 9–21. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2F40.56322">10.1109/40.56322</a>. <a href="http://en.wikipedia.org/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a>&nbsp;<a rel="nofollow" class="external text" href="http://www.worldcat.org/issn/0272-1732">0272-1732</a><span class="reference-accessdate">. Retrieved 2008-12-20</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEndianness&amp;rft.atitle=Multiplexed+buses%3A+the+endian+wars+continue&amp;rft.au=David+V.+James&amp;rft.aulast=David+V.+James&amp;rft.date=1990&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fieeexplore.ieee.org%2Fxpl%2Ffreeabs_all.jsp%3Farnumber%3D56322&amp;rft_id=info%3Adoi%2F10.1109%2F40.56322&amp;rft.issn=0272-1732&amp;rft.issue=3&amp;rft.jtitle=IEEE+Micro&amp;rft.pages=9%E2%80%9321&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=10" class="Z3988"><span style="display:none;">&nbsp;</span></span></li>
+<li><span class="citation journal">Bertrand Blanc, Bob Maaraoui (December 2005). <a rel="nofollow" class="external text" href="http://3bc.bertrand-blanc.com/endianness05.pdf"><i>Endianness or Where is Byte 0?</i></a><span class="reference-accessdate">. Retrieved 2008-12-21</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEndianness&amp;rft.au=Bertrand+Blanc%2C+Bob+Maaraoui&amp;rft.aulast=Bertrand+Blanc%2C+Bob+Maaraoui&amp;rft.btitle=Endianness+or+Where+is+Byte+0%3F&amp;rft.date=December+2005&amp;rft.genre=book&amp;rft_id=http%3A%2F%2F3bc.bertrand-blanc.com%2Fendianness05.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit&amp;section=23" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://betterexplained.com/articles/understanding-big-and-little-endian-byte-order/">Understanding big and little endian byte order</a></li>
+<li><a rel="nofollow" class="external text" href="http://developer.apple.com/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/ByteOrdering.html">Byte Ordering PPC</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/aix/library/au-endianc/index.html?ca=drs-">Writing endian-independent code in C</a></li>
+<li><a rel="nofollow" class="external text" href="http://techforb.blogspot.com/2007/10/how-to-convert-integer-to-little-endian.html">How to convert an integer to little endian or big endian</a></li>
+<li><a rel="nofollow" class="external text" href="http://sites.google.com/site/insideoscore/endianness">C-Level Code Illustration</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.stanford.edu/dept/its/support/uspires/xlong/">xlong/xshort data-types, the Big-Endian, Little-Endian Rosetta stone</a></li>
+<li><a rel="nofollow" class="external text" href="http://sourceforge.net/p/predef/wiki/Endianness/">Predef endianness recommendations</a></li>
+</ul>
+<p><span class="citation foldoc">This article is based on material taken from the <a href="http://en.wikipedia.org/wiki/Free_On-line_Dictionary_of_Computing" title="Free On-line Dictionary of Computing">Free On-line Dictionary of Computing</a> prior to 1 November 2008 and incorporated under the "relicensing" terms of the <a href="http://en.wikipedia.org/wiki/GNU_Free_Documentation_License" title="GNU Free Documentation License">GFDL</a>, version 1.3 or later.</span></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1194
+CPU time usage: 0.752 seconds
+Real time usage: 0.817 seconds
+Preprocessor visited node count: 2788/1000000
+Preprocessor generated node count: 19983/1500000
+Post‐expand include size: 30384/2048000 bytes
+Template argument size: 7563/2048000 bytes
+Highest expansion depth: 23/40
+Expensive parser function count: 2/500
+Lua time usage: 0.039s
+Lua memory usage: 1.7 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:43026-0!*!0!!en!4!* and timestamp 20131205040000
+ -->
+<noscript><img src="//en.wikipedia.org/w/index.php?title=Special:CentralAutoLogin/start&amp;type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;oldid=584635405">http://en.wikipedia.org/w/index.php?title=Endianness&amp;oldid=584635405</a>"				</div>
+												<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Computer_memory" title="Category:Computer memory">Computer memory</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Data_transmission" title="Category:Data transmission">Data transmission</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Metaphors" title="Category:Metaphors">Metaphors</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:All_accuracy_disputes" title="Category:All accuracy disputes">All accuracy disputes</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_disputed_statements_from_November_2013" title="Category:Articles with disputed statements from November 2013">Articles with disputed statements from November 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Pages_containing_cite_templates_with_deprecated_parameters" title="Category:Pages containing cite templates with deprecated parameters">Pages containing cite templates with deprecated parameters</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Endianness&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Endianness" title="You're encouraged to log in; however, it's not mandatory. [alt-shift-o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/Endianness" title="View the content page [alt-shift-c]" accesskey="c">Article</a></span></li>
+					<li id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Endianness" title="Discussion about the content page [alt-shift-t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 tabindex="0" id="p-variants-label"><span>Variants</span><a tabindex="-1" href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/Endianness">Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=edit" title="You can edit this page. 
+Please review your changes before saving. [alt-shift-e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=history" title="Past versions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 tabindex="0" id="p-cactions-label"><span>Actions</span><a tabindex="-1" href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input autocomplete="off" tabindex="1" name="search" placeholder="Search" title="Search Wikipedia [alt-shift-f]" accesskey="f" id="searchInput">						<button type="submit" name="button" title="Search Wikipedia for this text" id="searchButton"><img src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/search-ltr.png" alt="Search" height="13" width="12"></button>								<input name="title" value="Special:Search" type="hidden">
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div class="collapsible-nav" id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page"></a></div>
+				<div class="portal first persistent" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label">Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [alt-shift-x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+	<h3 tabindex="2" id="p-interaction-label"><a aria-expanded="true" aria-pressed="true" role="button" aria-controls="p-interaction-list" aria-haspopup="true" href="#">Interaction</a></h3>
+	<div style="display: block;" class="body">
+		<ul id="p-interaction-list">
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+	<h3 tabindex="3" id="p-tb-label"><a aria-expanded="false" aria-pressed="false" role="button" aria-controls="p-tb-list" aria-haspopup="true" href="#">Tools</a></h3>
+	<div class="body">
+		<ul id="p-tb-list">
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Endianness" title="List of all English Wikipedia pages containing links to this page [alt-shift-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Endianness" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [alt-shift-u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;oldid=584635405" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q339338" title="Link to connected data repository item">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Endianness&amp;id=584635405" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+	<h3 tabindex="4" id="p-coll-print_export-label"><a aria-expanded="false" aria-pressed="false" role="button" aria-controls="p-coll-print_export-list" aria-haspopup="true" href="#">Print/export</a></h3>
+	<div class="body">
+		<ul id="p-coll-print_export-list">
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Endianness">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Endianness&amp;oldid=584635405&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Endianness&amp;printable=yes" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-lang" aria-labelledby="p-lang-label"><span original-title="Language settings" aria-haspopup="true" role="button" tabindex="0" class="uls-settings-trigger"></span>
+	<h3 tabindex="5" id="p-lang-label"><a aria-expanded="true" aria-pressed="true" role="button" aria-controls="p-lang-list" aria-haspopup="true" href="#">Languages</a></h3>
+	<div style="display: block;" class="body">
+		<ul id="p-lang-list">
+			<li class="interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Endianness" title="Endianness – Catalan" hreflang="ca" lang="ca">Català</a></li>
+			<li class="interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Endianita" title="Endianita – Czech" hreflang="cs" lang="cs">Čeština</a></li>
+			<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Byte-Reihenfolge" title="Byte-Reihenfolge – German" hreflang="de" lang="de">Deutsch</a></li>
+			<li class="interwiki-el"><a href="http://el.wikipedia.org/wiki/Endianness" title="Endianness – Greek" hreflang="el" lang="el">Ελληνικά</a></li>
+			<li class="interwiki-es"><a href="http://es.wikipedia.org/wiki/Endianness" title="Endianness – Spanish" hreflang="es" lang="es">Español</a></li>
+			<li class="interwiki-fa"><a href="http://fa.wikipedia.org/wiki/%D8%A7%D9%86%D8%AF%DB%8C%D8%A7%D9%86" title="اندیان – Persian" hreflang="fa" lang="fa">فارسی</a></li>
+			<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Endianness" title="Endianness – French" hreflang="fr" lang="fr">Français</a></li>
+			<li class="interwiki-ko"><a href="http://ko.wikipedia.org/wiki/%EC%97%94%EB%94%94%EC%96%B8" title="엔디언 – Korean" hreflang="ko" lang="ko">한국어</a></li>
+			<li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/Ordine_dei_byte" title="Ordine dei byte – Italian" hreflang="it" lang="it">Italiano</a></li>
+			<li class="interwiki-he"><a href="http://he.wikipedia.org/wiki/%D7%A1%D7%93%D7%A8_%D7%91%D7%AA%D7%99%D7%9D" title="סדר בתים – Hebrew" hreflang="he" lang="he">עברית</a></li>
+			<li class="interwiki-lt"><a href="http://lt.wikipedia.org/wiki/Bait%C5%B3_seka_%C5%BEodyje" title="Baitų seka žodyje – Lithuanian" hreflang="lt" lang="lt">Lietuvių</a></li>
+			<li class="interwiki-hu"><a href="http://hu.wikipedia.org/wiki/B%C3%A1jtsorrend" title="Bájtsorrend – Hungarian" hreflang="hu" lang="hu">Magyar</a></li>
+			<li class="interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Endianness" title="Endianness – Dutch" hreflang="nl" lang="nl">Nederlands</a></li>
+			<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3" title="エンディアン – Japanese" hreflang="ja" lang="ja">日本語</a></li>
+			<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Kolejno%C5%9B%C4%87_bajt%C3%B3w" title="Kolejność bajtów – Polish" hreflang="pl" lang="pl">Polski</a></li>
+			<li class="interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Extremidade_%28ordena%C3%A7%C3%A3o%29" title="Extremidade (ordenação) – Portuguese" hreflang="pt" lang="pt">Português</a></li>
+			<li class="interwiki-ru"><a href="http://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA_%D0%B1%D0%B0%D0%B9%D1%82%D0%BE%D0%B2" title="Порядок байтов – Russian" hreflang="ru" lang="ru">Русский</a></li>
+			<li class="interwiki-simple"><a href="http://simple.wikipedia.org/wiki/Endianness" title="Endianness – Simple English" hreflang="simple" lang="simple">Simple English</a></li>
+			<li class="interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Endianita" title="Endianita – Slovak" hreflang="sk" lang="sk">Slovenčina</a></li>
+			<li class="interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Big_endian" title="Big endian – Serbian" hreflang="sr" lang="sr">Српски / srpski</a></li>
+			<li class="interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Tavuj%C3%A4rjestys" title="Tavujärjestys – Finnish" hreflang="fi" lang="fi">Suomi</a></li>
+			<li class="interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Endian" title="Endian – Swedish" hreflang="sv" lang="sv">Svenska</a></li>
+			<li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Endian" title="Endian – Turkish" hreflang="tr" lang="tr">Türkçe</a></li>
+			<li class="interwiki-uk"><a href="http://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA_%D0%B1%D0%B0%D0%B9%D1%82%D1%96%D0%B2" title="Порядок байтів – Ukrainian" hreflang="uk" lang="uk">Українська</a></li>
+			<li class="interwiki-zh"><a href="http://zh.wikipedia.org/wiki/%E5%AD%97%E8%8A%82%E5%BA%8F" title="字节序 – Chinese" hreflang="zh" lang="zh">中文</a></li>
+			
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q339338#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 5 December 2013 at 03:59.<br></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Endianness&amp;title=Endianness" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/wikimedia-button.png" alt="Wikimedia Foundation" height="31" width="88"></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" height="31" width="88"></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.articleFeedbackv5.startup","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="Endianness%20-%20Wikipedia,%20the%20free%20encyclopedia_elemei/load.php"></script><div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div>
+<!-- Served by mw1166 in 0.171 secs. -->
+	
+
+</body></html>
