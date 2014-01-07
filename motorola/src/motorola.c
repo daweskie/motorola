@@ -49,22 +49,23 @@ static struct Motorola_t{                   //
 };
 
 struct hls_data_t *motorola_init_by_direct(char *serial_id, int queue_size,
-                                           int mtu, char preamble, int preamble_counts)
+                                           int mtu, char preamble, int preamble_counts)     // hls_data  motorola inintt by direct (serila id ,  soron merte  , mtu , bevezetes beveyetes syama
+)
 {
-    struct hls_data_t *result = hls_init(serial_id,
+    struct hls_data_t *result = hls_init(serial_id,                         // structura
                         motorola_receive_char, motorola_send_frame,
                         queue_size, mtu);
-    if (!result)
+    if (!result)                                                            // ha eredmeny nem 1 akkor null
         return NULL;
 
-    struct Motorola_t *private_data;
-    MALLOC(private_data, sizeof(struct motorola_t));
-    MALLOC(private_data->temp_buffer,result->mtu);
-    private_data->frame_state = mfs_none;
-    private_data->preamble = preamble;
-    private_data->preamble_counts = preamble_counts;
-    result->private_data = private_data;
-    return result;
+    struct Motorola_t *private_data;                                        // moto provat data
+    MALLOC(private_data, sizeof(struct motorola_t));                        // memorial alloc privat data   motorola_t m;ret;ben
+    MALLOC(private_data->temp_buffer,result->mtu);                          // malloc privat data--> temp buffer       ,, result --> mtu mennyisegben
+    private_data->frame_state = mfs_none;                                   // privat data --> fram stat == mfs_none
+    private_data->preamble = preamble;                                      // provat data -> preambel == preambel
+    private_data->preamble_counts = preamble_counts;                        // privat data--> preambel counts == preambel counts
+    result->private_data = private_data;                                    // result -> privat data === privat data
+    return result;                                                          // vissza reult
 }
 
 struct hls_data_t *motorola_init(char *serial_id)  //data int
@@ -86,7 +87,8 @@ static inline struct Motorola_t *extract_private_data(struct hls_data_t *hls_dat
     return (struct Motorola_t *) hls_data->private_data;
 }
 
-void Motorola_receive_char(struct hls_data_t *hls_data)
+void Motorola_receive_char(struct hls_data_t *hls_data)              // motorla charater fogadas
+
 {
     #define crc_calc() \
         private_data->on_the_fly_crc = crc_add_byte(private_data->on_the_fly_crc, ch)
