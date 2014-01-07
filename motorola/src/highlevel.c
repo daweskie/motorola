@@ -18,15 +18,15 @@
 #include <macros.h>
 #include <highlevel.h>
 
-static struct keret *lok_keret(int adat_hossz)
+static struct Keret *lok_keret(int adat_hossz)
 {
     struct keret *hl_keret;
     MALLOC(hl_keret, sizeof(struct keret));
-    hl_keret->cim = 0;
-    hl_keret->cim = 0;
-    hl_keret->adat_hossz = 0;
-    hl_keret->ervenyesseg = 0;
-    MALLOC(hl_keret->anyag, adat_hossz);
+    hl_Keret->cim = 0;
+    hl_Keret->cim = 0;
+    hl_Keret->adat_hossz = 0;
+    hl_Keret->ervenyesseg = 0;
+    MALLOC(hl_Keret->anyag, adat_hossz);
     return hl_keret;
 }
 

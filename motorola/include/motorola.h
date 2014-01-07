@@ -4,14 +4,14 @@
 /**
     Frame format:
 
-    n*0x55      (MOTOROLA_PREAMBLE_COUNT*MOTOROLA_PREAMBLE)
-    0xff        (1 byte)
-    1           (1 byte)
-    address     (1 byte)
-    command     (1 byte)
-    data length (2 byte little endian (LH) format)
-    data bytes  (data_length*byte
-    crc         (2 byte little endian (LH) format)
+    n*0x55      (MOTOROLA_PREAMBLE_COUNT*MOTOROLA_PREAMBLE)  // legalabb 1 db 0x55
+    0xff        (1 byte)                                     //
+    1           (1 byte)                                     //
+    address     (1 byte)                                     // a keret cimzetje
+    command     (1 byte)                                     //?
+    data length (2 byte little endian (LH) format)           // adat hossza
+    data bytes  (data_length*byte                            // adadt    ha data lenght 0 akkor nincs !
+    crc         (2 byte little endian (LH) format)           // crc
 */
 
 
@@ -32,11 +32,11 @@
 //#include <motorola.h>
 
 
-struct adat *MotInit(char *soros_azonosito);
+struct adat *MotInit(char *soros_azonosito); //
 
 struct adat *MotInitDirect(char *soros_azonosito,
-                                           int sor_meret, int mtu,
-                                           char bevezetes, int bevezetes_sz);
+                                           int sor_meret, int mtu, ///?
+                                           char bevezetes, int bevezetes_sz);//?
 
 void MotReceive(struct adat *adat_m);
 
