@@ -68,10 +68,10 @@ struct hls_data_t *motorola_init_by_direct(char *serial_id, int queue_size,
     return result;                                                          // vissza reult
 }
 
-struct hls_data_t *motorola_init(char *serial_id)  //data int
+struct hls_data_t *motorola_init(char *serial_id)                                                           //data int
 {
-    char temp[128];
-    return motorola_init_by_direct(
+    char temp[128];                                                                                         // char tipus temp 128 nagysag
+    return motorola_init_by_direct(                                                                         //
             serial_id, cfg_get_int_def(cfg_create_key(serial_id, MOTOROLA_KEY_FRAME_QUEUE_SIZE, temp),
                                        MOTOROLA_DEF_FRAME_QUEUE_SIZE),
                        cfg_get_int_def(cfg_create_key(serial_id, MOTOROLA_KEY_MTU, temp),
@@ -93,7 +93,7 @@ void Motorola_receive_char(struct hls_data_t *hls_data)              // motorla 
     #define crc_calc() \
         private_data->on_the_fly_crc = crc_add_byte(private_data->on_the_fly_crc, ch)
 
-    if (! (hls_data && hls_data->private_data) )
+    if (! (hls_data && hls_data->private_data)
         return;
 
     struct Motorola_t *private_data = extract_private_data(hls_data);
